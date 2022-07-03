@@ -5,7 +5,8 @@ const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
 
 const indexData = {
-  cssIndex: 'index.css'
+  cssIndex: 'index.css',
+  jsIndex: 'main.js'
 };
 
 const port = 3000;
