@@ -1,11 +1,16 @@
-const path = require('path');
+'use strict';
+
 const express = require('express');
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
 
+const indexData = {
+  cssIndex: 'index.css'
+};
+
 const port = 3000;
-const publicPath = path.join(__dirname, '/../public');
-const viewsPath = path.join(__dirname, '/../views');
+const publicPath = `${__dirname}/../public`;
+const viewsPath = `${__dirname}/../views`;
 
 const app = express();
 
@@ -17,7 +22,7 @@ app.set('views', viewsPath);
 app.use(express.static(publicPath));
 
 app.get('/', function (req, res) {
-  res.render('index');
+  res.render('index', indexData);
 });
 
 app.listen(port, () => {

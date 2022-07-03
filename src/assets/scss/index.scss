@@ -1,9 +1,10 @@
 @import "variables";
+@import "normalize";
 
 body {
-  background-color: gray;
+  background-color: pink;
 
-  div {
+  div:nth-child(1) {
     background-color: black;
     background-color: $color-1;
   }
