@@ -1,0 +1,10 @@
+@import "variables";
+
+body {
+  background-color: gray;
+
+  div {
+    background-color: black;
+    background-color: $color-1;
+  }
+}
