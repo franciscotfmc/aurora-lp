@@ -32,11 +32,12 @@ app.listen(port, () => {
 
 const liveReloadServer = livereload
   .createServer({
-    usePolling: true
+    usePolling: true,
+    extraExts: ['ejs']
   });
 
 liveReloadServer
-  .watch(publicPath);
+  .watch([publicPath, viewsPath]);
 
 liveReloadServer.server.once("connection", () => {
   setTimeout(() => {

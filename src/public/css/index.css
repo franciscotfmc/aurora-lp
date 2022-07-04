@@ -345,19 +345,40 @@ figure {
 }
 
 body {
-  background-color: cadetblue;
+  font-family: "Raleway";
+  background-color: #FFFFFF;
 }
-
-header {
-  background-color: aliceblue;
+body h1 {
+  font-weight: 400;
 }
-
-main {
-  background-color: aquamarine;
+body strong {
+  font-weight: 600;
 }
-
-footer {
-  background-color: beige;
+body a {
+  all: unset;
+}
+body .action-button {
+  width: 240px;
+  background-color: #FAE14B;
+  color: #696969;
+  font-weight: 700;
+  display: block;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 5px 5px 1px #696969;
+}
+body .conceito .container {
+  min-height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #9B1982;
+  color: white;
+}
+body .conceito .container div {
+  flex: 1;
+}
+body .conceito .container .tagline p {
+  max-width: 280px;
 }
 
 /*# sourceMappingURL=index.css.map */

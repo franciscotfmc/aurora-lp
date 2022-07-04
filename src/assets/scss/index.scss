@@ -2,17 +2,11 @@
 @import "normalize";
 
 body {
-  background-color: cadetblue;
-}
+  font-family: 'Raleway';
+  background-color: $branco;
 
-header {
-  background-color: aliceblue;
-}
-
-main {
-  background-color: aquamarine;
-}
-
-footer {
-  background-color: beige;
+  @import "common";
+  @import "header";
+  @import "main";
+  @import "footer";
 }

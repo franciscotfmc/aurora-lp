@@ -1,0 +1,22 @@
+h1 {
+  font-weight: 400;
+}
+
+strong {
+  font-weight: 600
+}
+
+a {
+  all: unset;
+}
+
+.action-button {
+  width: 240px;
+  background-color: $amarelo;
+  color: $cinza;
+  font-weight: 700;
+  display: block;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 5px 5px 1px $cinza;
+}
