@@ -2,10 +2,17 @@
 @import "normalize";
 
 body {
-  background-color: pink;
+  background-color: cadetblue;
+}
 
-  div:nth-child(1) {
-    background-color: black;
-    background-color: $color-1;
-  }
+header {
+  background-color: aliceblue;
+}
+
+main {
+  background-color: aquamarine;
+}
+
+footer {
+  background-color: beige;
 }

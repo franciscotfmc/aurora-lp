@@ -337,12 +337,27 @@ template {
   display: none;
 }
 
-body {
-  background-color: pink;
+figure {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
-body div:nth-child(1) {
-  background-color: black;
-  background-color: red;
+
+body {
+  background-color: cadetblue;
+}
+
+header {
+  background-color: aliceblue;
+}
+
+main {
+  background-color: aquamarine;
+}
+
+footer {
+  background-color: beige;
 }
 
 /*# sourceMappingURL=index.css.map */
