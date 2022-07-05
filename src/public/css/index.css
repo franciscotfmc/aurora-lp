@@ -391,7 +391,7 @@ body header .container .menu #menu {
   transition-timing-function: cubic-bezier(10, 2, 3, 1);
   transform: translateX(-100%);
   top: 0;
-  z-index: 0;
+  z-index: 3;
   transition: 0.5s;
 }
 body header .container .menu #menu .items {
@@ -446,7 +446,7 @@ body header .container .menu #menuButton:checked ~ #menuLabel > div:nth-child(3)
   transform: translateY(-15px) rotate(-45deg);
 }
 body .conceito .container {
-  min-height: 500px;
+  min-height: 800px;
   display: flex;
   flex-wrap: wrap;
   background-color: #9B1982;
@@ -454,6 +454,39 @@ body .conceito .container {
 }
 body .conceito .container div {
   flex: 1;
+}
+body .conceito .container .circulos span {
+  position: absolute;
+  border-radius: 50%;
+  display: inline-block;
+}
+body .conceito .container .circulos .foto {
+  width: 690px;
+  height: 690px;
+  left: -110px;
+  top: 214px;
+  z-index: 1;
+  background-image: url("/img/conceito.jpg");
+  background-size: cover;
+  background-position: -90px 0;
+}
+body .conceito .container .circulos .circulo {
+  width: 680px;
+  height: 680px;
+  background-color: transparent;
+  border: 3px solid #A56E73;
+  left: -10px;
+  top: 84px;
+}
+body .conceito .container .circulos .bola {
+  height: 372px;
+  width: 372px;
+  background-color: #D2B4AF;
+  left: 312px;
+  top: 590px;
+}
+body .conceito .container .tagline {
+  padding-left: 100px;
 }
 body .conceito .container .tagline h1 {
   font-size: 3em;
@@ -463,7 +496,7 @@ body .conceito .container .tagline h1 {
 }
 body .conceito .container .tagline p {
   font-size: 1.25em;
-  width: 412px;
+  max-width: 512px;
   margin: 0 0 40px 0;
 }
 body .conceito .container .tagline a {

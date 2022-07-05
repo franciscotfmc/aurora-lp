@@ -18,7 +18,7 @@ header {
         transition-timing-function: cubic-bezier(10, 2, 3, 1);
         transform: translateX(-100%);
         top: 0;
-        z-index: 0;
+        z-index: 3;
         transition: 0.5s;
 
         .items {
