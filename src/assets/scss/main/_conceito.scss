@@ -1,49 +1,69 @@
-.conceito {
+#conceito {
   .container {
-
-    min-height: 800px;
     display: flex;
     flex-wrap: wrap;
     background-color: $roxo;
     color: white;
+    flex-flow: wrap-reverse;
 
     div {
       flex: 1
     }
 
     .circulos {
+      height: 800px;
+
       span {
-        position: absolute;
+        position: relative;
         border-radius: 50%;
-        display: inline-block;
+        display: block;
+        overflow: hidden;
       }
 
       .foto {
         width: 690px;
         height: 690px;
-        left: -110px;
-        top: 214px;
-        z-index: 1;
+        display: inline-block;
         background-image: url("/img/conceito.jpg");
         background-size: cover;
         background-position: -90px 0;
+        left: -110px;
+        z-index: 3;
+        // width: 75%;
+        // width: calc((0.47916 * 100vw) + (690px - (0.57916 * 100vw))/2);
+        // padding-bottom: calc((0.47916 * 100vw) + (690px - (0.57916 * 100vw))/2);
+        // height: 0%;
+        // max-height: 690px;
       }
 
       .circulo {
-        width: 680px;
-        height: 680px;
+        z-index: 1;
+        top: -800px;
+        left: -20px;
         background-color: transparent;
         border: 3px solid $cobreEscuro;
-        left: -10px;
-        top: 84px;
+        width: 680px;
+        height: 680px;
+        // width: 77%;
+        // height: 0%;
+        // padding-bottom: 77%;
+        // top: -800px;
       }
 
       .bola {
         height: 372px;
         width: 372px;
         background-color: $cobreClaro;
+        z-index: 2;
         left: 312px;
-        top: 590px;
+        top: -1010px;
+        // margin-top: -22%;
+        // margin-left: 33%;
+        // width: 40%;
+        // height: 0%;
+        // padding-bottom: 40%;
+        // left: 312px;
+        // top: -1000px;
       }
     }
 
