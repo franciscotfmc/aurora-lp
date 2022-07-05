@@ -347,6 +347,7 @@ figure {
 body {
   font-family: "Raleway";
   background-color: #FFFFFF;
+  font-size: 16px;
 }
 body h1 {
   font-weight: 400;
@@ -358,14 +359,91 @@ body a {
   all: unset;
 }
 body .action-button {
-  width: 240px;
+  width: 310px;
+  height: 68px;
+  line-height: 68px;
+  text-align: center;
+  font-size: 18px;
   background-color: #FAE14B;
   color: #696969;
   font-weight: 700;
-  display: block;
-  padding: 20px;
-  margin: 10px 0;
-  box-shadow: 5px 5px 1px #696969;
+  display: inline-block;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+body .action-button:hover {
+  color: #9B1982;
+  cursor: pointer;
+}
+body header .container {
+  padding: 45px 0 70px 0;
+  background-color: #9B1982;
+  text-align: center;
+}
+body header .container img {
+  width: 162.21px;
+}
+body header .container .menu #menu {
+  background: rgba(155, 25, 130, 0.85);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  transition-timing-function: cubic-bezier(10, 2, 3, 1);
+  transform: translateX(-100%);
+  top: 0;
+  z-index: 0;
+  transition: 0.5s;
+}
+body header .container .menu #menu .items {
+  color: white;
+  position: absolute;
+  cursor: pointer;
+  width: 312px;
+  left: 140px;
+  top: 107px;
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  flex-direction: column;
+  font-size: 1.5em;
+}
+body header .container .menu #menu .items a {
+  padding: 0 0 32px 0;
+}
+body header .container .menu #menuButton {
+  display: none;
+}
+body header .container .menu #menuButton:checked ~ #menu {
+  transform: translateX(0rem);
+}
+body header .container .menu #menuLabel {
+  position: absolute;
+  cursor: pointer;
+  width: 49px;
+  height: 2rem;
+  left: 60px;
+  top: 67px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+body header .container .menu #menuLabel > div {
+  height: 2px;
+  background-color: white;
+  transition: 0.5s;
+  z-index: 999;
+}
+body header .container .menu #menuButton:checked ~ #menuLabel > div {
+  background-color: #fff;
+}
+body header .container .menu #menuButton:checked ~ #menuLabel > div:nth-child(1) {
+  transform: translateY(15px) rotate(45deg);
+}
+body header .container .menu #menuButton:checked ~ #menuLabel > div:nth-child(2) {
+  opacity: 0;
+}
+body header .container .menu #menuButton:checked ~ #menuLabel > div:nth-child(3) {
+  transform: translateY(-15px) rotate(-45deg);
 }
 body .conceito .container {
   min-height: 500px;
@@ -377,8 +455,19 @@ body .conceito .container {
 body .conceito .container div {
   flex: 1;
 }
+body .conceito .container .tagline h1 {
+  font-size: 3em;
+  line-height: 56px;
+  width: 293px;
+  margin: 0 0 40px 0;
+}
 body .conceito .container .tagline p {
-  max-width: 280px;
+  font-size: 1.25em;
+  width: 412px;
+  margin: 0 0 40px 0;
+}
+body .conceito .container .tagline a {
+  margin-bottom: 171px;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -11,12 +11,19 @@ a {
 }
 
 .action-button {
-  width: 240px;
+  width: 310px;
+  height: 68px;
+  line-height: 68px;
+  text-align: center;
+  font-size: 18px;
   background-color: $amarelo;
   color: $cinza;
   font-weight: 700;
-  display: block;
-  padding: 20px;
-  margin: 10px 0;
-  box-shadow: 5px 5px 1px $cinza;
+  display: inline-block;
+  box-shadow: 5px 5px 0px $sombra;
+
+  &:hover {
+    color: $roxo;
+    cursor: pointer;
+  }
 }
