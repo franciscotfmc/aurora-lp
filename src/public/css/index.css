@@ -510,8 +510,8 @@ body #conceito .container .tagline a {
   margin-bottom: 10.6888rem;
 }
 body #draluciana .arco {
-  height: 400px;
-  margin-top: -240px;
+  height: 25rem;
+  margin-top: -15rem;
   background-image: url("/img/elipse.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -519,7 +519,7 @@ body #draluciana .arco {
 body #draluciana .container {
   top: -200px;
   display: inline-block;
-  height: 500px;
+  height: 31.25rem;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -552,13 +552,14 @@ body #draluciana .container .sobre p {
   line-height: 28px;
 }
 body #draluciana .container .foto {
-  display: block;
-  width: 567px;
-  height: 567px;
+  width: 35.438rem;
+  height: 35.438rem;
   border-radius: 50%;
-  background-color: white;
-  background-image: url("/img/draluciana-3.png");
-  background-repeat: no-repeat;
+}
+body #draluciana .container .foto img {
+  width: 35.438rem;
+  height: 35.438rem;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=index.css.map */
