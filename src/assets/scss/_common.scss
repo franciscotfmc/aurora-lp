@@ -1,4 +1,7 @@
-h1 {
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
   font-weight: 400;
 }
 
@@ -10,20 +13,31 @@ a {
   all: unset;
 }
 
-.action-button {
+.button {
   width: 310px;
   height: 68px;
   line-height: 68px;
   text-align: center;
   font-size: 18px;
-  background-color: $amarelo;
+  // background-color: $amarelo;
   color: $cinza;
   font-weight: 700;
   display: inline-block;
   box-shadow: 5px 5px 0px $sombra;
 
   &:hover {
-    color: $roxo;
+    color: $preto;
     cursor: pointer;
   }
+}
+
+.action-button {
+  @extend .button;
+  background-color: $amarelo;
+}
+
+.action-button-inverse {
+  @extend .button;
+  background-color: $amareloPastel;
+  border: 1px solid $amarelo;
 }

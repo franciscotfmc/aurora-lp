@@ -348,7 +348,10 @@ body {
   font-family: "Raleway";
   font-size: 16px;
 }
-body h1 {
+body h1,
+body h2 {
+  margin: 0;
+  padding: 0;
   font-weight: 400;
 }
 body strong {
@@ -357,21 +360,27 @@ body strong {
 body a {
   all: unset;
 }
-body .action-button {
+body .button, body .action-button-inverse, body .action-button {
   width: 310px;
   height: 68px;
   line-height: 68px;
   text-align: center;
   font-size: 18px;
-  background-color: #FAE14B;
   color: #696969;
   font-weight: 700;
   display: inline-block;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
 }
-body .action-button:hover {
-  color: #9B1982;
+body .button:hover, body .action-button-inverse:hover, body .action-button:hover {
+  color: #000000;
   cursor: pointer;
+}
+body .action-button {
+  background-color: #FAE14B;
+}
+body .action-button-inverse {
+  background-color: #FFF5DC;
+  border: 1px solid #FAE14B;
 }
 body header .container {
   padding: 45px 0 70px 0;
@@ -517,15 +526,11 @@ body #draluciana .arco {
   background-size: cover;
 }
 body #draluciana .container {
-  top: -200px;
+  margin-top: -12.5rem;
   display: inline-block;
-  height: 31.25rem;
-  position: relative;
   display: flex;
   flex-wrap: wrap;
-  background-color: #A56E73;
   color: white;
-  border-radius: 30% 30% 0 0;
 }
 body #draluciana .container div {
   flex: 1;
@@ -551,15 +556,49 @@ body #draluciana .container .sobre p {
   font-size: 18px;
   line-height: 28px;
 }
-body #draluciana .container .foto {
+body #draluciana .container .imagem .foto {
   width: 35.438rem;
   height: 35.438rem;
   border-radius: 50%;
 }
-body #draluciana .container .foto img {
+body #draluciana .container .imagem .foto img {
   width: 35.438rem;
   height: 35.438rem;
   object-fit: cover;
+}
+body #draluciana .bg {
+  margin-top: -40vh;
+  background-color: #A56E73;
+  height: 33vh;
+}
+body #comentarios {
+  background-color: #FFF5DC;
+  padding-bottom: 20px;
+}
+body #comentarios .container h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 2.938rem;
+  color: #9B1982;
+  text-align: center;
+  padding-top: 8.188rem;
+  padding-bottom: 6.313rem;
+}
+body #comentarios .container .comentarios {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+body #comentarios .container .comentarios .slider {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+body #comentarios .container .actions {
+  text-align: center;
+}
+body #comentarios .container .actions a {
+  margin-right: 36px;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=index.css.map */

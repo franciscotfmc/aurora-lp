@@ -1,5 +1,4 @@
 #draluciana {
-
   .arco {
     height: 25rem;
     margin-top: -15rem;
@@ -9,15 +8,11 @@
   }
 
   .container {
-    top: -200px;
+    margin-top: -12.5rem;
     display: inline-block;
-    height: 31.25rem;
-    position: relative;
     display: flex;
     flex-wrap: wrap;
-    background-color: $cobreEscuro;
     color: white;
-    border-radius: 30% 30% 0 0;
 
     div {
       flex: 1;
@@ -47,16 +42,24 @@
       }
     }
 
-    .foto {
-      width: 35.438rem;
-      height: 35.438rem;
-      border-radius: 50%;
-
-      img {
+    .imagem {
+      .foto {
         width: 35.438rem;
         height: 35.438rem;
-        object-fit: cover;
+        border-radius: 50%;
+
+        img {
+          width: 35.438rem;
+          height: 35.438rem;
+          object-fit: cover;
+        }
       }
     }
+  }
+
+  .bg {
+    margin-top: -40vh;
+    background-color: $cobreEscuro;
+    height: 33vh;
   }
 }
