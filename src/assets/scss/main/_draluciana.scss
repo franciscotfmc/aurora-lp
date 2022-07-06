@@ -2,20 +2,26 @@
   .arco {
     height: 25rem;
     margin-top: -15rem;
-    background-image: url("/img/elipse.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-image: url("/img/elipse.svg");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-color: $cobreEscuro;
+    // clip-path: ellipse(3408px 3211px at 508px 3218px);
   }
 
   .container {
     margin-top: -12.5rem;
+    padding-top: 12rem;
     display: inline-block;
     display: flex;
     flex-wrap: wrap;
     color: white;
 
+    background-color: $cobreEscuro;
+    clip-path: ellipse(3000px 3223px at 880px 3223px);
+
     div {
-      flex: 1;
+      flex: 1 1 auto;
     }
 
     .sobre {
@@ -58,8 +64,10 @@
   }
 
   .bg {
-    margin-top: -40vh;
-    background-color: $cobreEscuro;
+    background-color: $amareloPastel;
     height: 33vh;
+    width: 100%;
+    margin-top: -4.438rem;
+    z-index: -1;
   }
 }

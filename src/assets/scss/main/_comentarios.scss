@@ -1,6 +1,5 @@
 #comentarios {
   background-color: $amareloPastel;
-  padding-bottom: 20px;
 
   .container {
 
@@ -22,6 +21,7 @@
       .slider {
         grid-column-start: 1;
         grid-column-end: 5;
+        text-align: center;
       }
     }
 
@@ -33,5 +33,16 @@
         margin-bottom: 20px;
       }
     }
+  }
+
+  .teste22 {
+    margin-top: 55px;
+    display: inline-block;
+    height: 500px;
+    background-color: $branco;
+    width: 100%;
+
+    // clip-path: circle(4190px at 100px 4193px);
+    clip-path: ellipse(3408px 3211px at 508px 3218px);
   }
 }
