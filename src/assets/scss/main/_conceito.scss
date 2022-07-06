@@ -21,54 +21,42 @@
       }
 
       .foto {
-        width: 690px;
-        height: 690px;
-        display: inline-block;
-        background-image: url("/img/conceito.jpg");
-        background-size: cover;
-        background-position: -90px 0;
+        width: 43.125rem;
+        height: 43.125rem;
         left: -110px;
         z-index: 3;
-        // width: 75%;
-        // width: calc((0.47916 * 100vw) + (690px - (0.57916 * 100vw))/2);
-        // padding-bottom: calc((0.47916 * 100vw) + (690px - (0.57916 * 100vw))/2);
-        // height: 0%;
-        // max-height: 690px;
+
+        img {
+          width: 43.125rem;
+          height: 43.125rem;
+          position: relative;
+          left: 100px;
+          object-fit: cover;
+        }
       }
 
       .circulo {
+        width: 42.5rem;
+        height: 42.5rem;
         z-index: 1;
         top: -800px;
         left: -20px;
         background-color: transparent;
         border: 3px solid $cobreEscuro;
-        width: 680px;
-        height: 680px;
-        // width: 77%;
-        // height: 0%;
-        // padding-bottom: 77%;
-        // top: -800px;
       }
 
       .bola {
-        height: 372px;
-        width: 372px;
+        height: 23.25rem;
+        width: 23.25rem;
         background-color: $cobreClaro;
         z-index: 2;
-        left: 312px;
-        top: -1010px;
-        // margin-top: -22%;
-        // margin-left: 33%;
-        // width: 40%;
-        // height: 0%;
-        // padding-bottom: 40%;
-        // left: 312px;
-        // top: -1000px;
+        left: 19.5rem;
+        top: -63.125rem;
       }
     }
 
     .tagline {
-      padding-left: 100px;
+      padding-left: 6.25rem;
 
       h1 {
         font-size: 3em;
@@ -84,7 +72,7 @@
       }
 
       a {
-        margin-bottom: 171px;
+        margin-bottom: 10.6888rem;
       }
     }
   }
