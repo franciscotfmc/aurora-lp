@@ -17,7 +17,7 @@ header {
         position: fixed;
         left: -100%;
         top: 0;
-        z-index: 4;
+        z-index: 9;
         transition: 0.5s;
 
         .items {
@@ -81,6 +81,36 @@ header {
 
       #menuButton:checked~#menuLabel>div:nth-child(3) {
         transform: translateY(-15px) rotate(-45deg);
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      padding: 20px 30px 20px 0;
+      text-align: right;
+
+      .menu {
+        #menu {
+          left: -100%;
+          top: -10px;
+
+          .items {
+            color: white;
+            position: absolute;
+            cursor: pointer;
+            width: 312px;
+            left: 10%;
+            top: 12%;
+
+            a {
+              padding: 0 0 32px 0;
+            }
+          }
+        }
+
+        #menuLabel {
+          left: 3%;
+          top: 3%;
+        }
       }
     }
   }

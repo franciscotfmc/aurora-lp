@@ -1,6 +1,12 @@
 @import "variables";
 @import "normalize";
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,7 +15,6 @@
 
 body {
   font-family: 'Raleway';
-
 
   @import "common";
   @import "header";

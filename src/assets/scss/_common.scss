@@ -26,7 +26,6 @@ p {
   line-height: 68px;
   text-align: center;
   font-size: 18px;
-  // background-color: $amarelo;
   color: $cinza;
   font-weight: 700;
   display: inline-block;
@@ -35,6 +34,11 @@ p {
   &:hover {
     color: $preto;
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 480px) {
+    width: 283px;
+    font-size: 16px;
   }
 }
 
