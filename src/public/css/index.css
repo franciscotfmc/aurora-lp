@@ -348,6 +348,7 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+  height: 100%;
 }
 
 * {
@@ -481,6 +482,9 @@ body header .container .menu #menuButton:checked ~ #menuLabel > div:nth-child(3)
     padding: 20px 30px 20px 0;
     text-align: right;
   }
+  body header .container img {
+    width: 130px;
+  }
   body header .container .menu #menu {
     left: -100%;
     top: -10px;
@@ -497,7 +501,7 @@ body header .container .menu #menuButton:checked ~ #menuLabel > div:nth-child(3)
     padding: 0 0 32px 0;
   }
   body header .container .menu #menuLabel {
-    left: 3%;
+    left: 7%;
     top: 3%;
   }
 }
@@ -517,7 +521,6 @@ body #conceito .container div {
   flex: 1;
 }
 body #conceito .container .circulos {
-  height: 86.11vh;
   position: relative;
   padding-right: 6vw;
 }
@@ -625,9 +628,6 @@ body #conceito .container .tagline a {
   }
   body #conceito .container .tagline a {
     margin-bottom: 0;
-  }
-  body #conceito .container .tagline .l-action {
-    display: none;
   }
 }
 body #draluciana {
