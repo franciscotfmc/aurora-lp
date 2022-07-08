@@ -1,1 +1,25 @@
-footer {}
+footer {
+  #rodape {
+    display: flex;
+    background-color: $roxo;
+    height: 40vw;
+
+    .container {
+      filter: drop-shadow(10px 10px 50px rgba(0, 0, 0, 0.2));
+
+      .info {
+        margin-top: -10vw;
+        position: absolute;
+        background-color: $amareloPastel;
+        clip-path: ellipse(55vw 50vw at -16vw 48vw);
+        width: 50vw;
+        height: 50vw;
+      }
+    }
+
+    .mapa {
+      display: flex;
+      flex: 1;
+    }
+  }
+}

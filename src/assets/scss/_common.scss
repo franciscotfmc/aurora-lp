@@ -1,5 +1,7 @@
 h1,
-h2 {
+h2,
+h3,
+ul {
   margin: 0;
   padding: 0;
   font-weight: 400;
@@ -11,6 +13,11 @@ strong {
 
 a {
   all: unset;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .button {

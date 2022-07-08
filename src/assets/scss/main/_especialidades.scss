@@ -1,0 +1,179 @@
+#especialidades {
+  background-color: $amareloPastel;
+
+  p {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: $cinza;
+  }
+
+  .container {
+    padding-top: 8.063rem;
+    margin-top: 3.438rem;
+    display: inline-block;
+    background-color: $branco;
+    width: 100%;
+    clip-path: ellipse(3408px 3211px at 508px 3218px);
+
+    .flex-row-principais {
+      display: flex;
+      flex-basis: auto;
+      justify-content: center;
+      padding: 0 5rem;
+    }
+
+    .principais {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+      column-gap: 5vw;
+
+      .titulo {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+
+        h2 {
+          font-weight: 700;
+          font-size: 3rem;
+          line-height: 3.5rem;
+          color: $roxo;
+          margin-bottom: 0.875rem;
+        }
+      }
+
+      .esp-1,
+      .esp-2,
+      .esp-3 {
+        h3 {
+          font-weight: 500;
+          font-size: 2rem;
+          line-height: 2.375rem;
+          color: $cinza;
+          margin-top: 1.75rem;
+          margin-bottom: 1.5rem;
+          text-align: center;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 1rem;
+          line-height: 1.688rem;
+          color: $cinza;
+        }
+      }
+
+      .esp-1 {
+        .ilustracao {
+          margin-top: 55px;
+
+          .circulo-1 {
+            margin: 0 auto;
+            position: relative;
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background-color: $amareloPastel;
+            background-image: url("/img/odontopediatria-icon.svg");
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center center;
+          }
+
+          .circulo-2 {
+            z-index: -1;
+            top: -0.625rem;
+            right: -0.938rem;
+            position: absolute;
+            width: 4.438rem;
+            height: 4.438rem;
+            border-radius: 50%;
+            background-color: $amarelo;
+          }
+        }
+      }
+
+      .esp-2 {
+        @extend .esp-1;
+
+        .ilustracao {
+          .circulo-1 {
+            width: 6.375rem;
+            height: 6.375rem;
+            background-image: url("/img/ortodontia-icon.svg");
+          }
+
+          .circulo-2 {
+            width: 5.25rem;
+            height: 5.25rem;
+            background-color: white;
+            border: 2px solid $cobreClaro;
+            top: 0.975rem;
+            right: 2.662rem;
+          }
+        }
+      }
+
+      .esp-3 {
+        @extend .esp-1;
+
+        .ilustracao {
+          .circulo-1 {
+            width: 6.6938rem;
+            height: 6.938rem;
+            background-image: url("/img/estetica-icon.svg");
+            background-size: auto;
+            background-position: 1.563rem 1.188rem;
+          }
+
+          .circulo-2 {
+            width: 3.938rem;
+            height: 3.938rem;
+            background-color: $cobreClaro;
+            top: -0.3rem;
+            right: 3.7rem;
+          }
+        }
+      }
+    }
+
+    .mais {
+      padding-top: 5.313rem;
+      padding-left: 2.5rem;
+      grid-column: 1 / -1;
+
+      p {
+        margin-bottom: 20px;
+      }
+    }
+
+    .mais-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+      grid-template-rows: auto;
+
+      ul {
+        list-style: none;
+        font-weight: 500;
+        font-size: 1.625rem;
+        color: $cinza;
+
+        li {
+          line-height: 2.938rem;
+
+          &:before {
+            content: "";
+            vertical-align: middle;
+            margin-right: 0.563rem;
+            display: inline-block;
+            border-radius: 50%;
+            width: 1.25rem;
+            height: 1.25rem;
+            background-color: white;
+            border: 0.188rem solid $amarelo;
+          }
+        }
+      }
+    }
+  }
+}

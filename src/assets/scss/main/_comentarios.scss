@@ -2,6 +2,7 @@
   background-color: $amareloPastel;
 
   .container {
+    padding-top: 2rem;
 
     h2 {
       font-style: normal;
@@ -10,13 +11,54 @@
       line-height: 2.938rem;
       color: $roxo;
       text-align: center;
-      padding-top: 8.188rem;
-      padding-bottom: 6.313rem;
     }
 
-    .comentarios {
+    .carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      .left,
+      .right {
+        position: relative;
+
+        .arrow {
+          position: absolute;
+          top: 50%;
+          width: 4vmin;
+          height: 4vmin;
+          background: transparent;
+          border-top: 0.5vmin solid $cobreClaro;
+          border-right: 0.5vmin solid $cobreClaro;
+          box-shadow: 0 0 0 $sombra;
+          transition: all 200ms ease;
+          border-radius: 1px;
+
+          &.left {
+            left: 50%;
+            transform: translate3d(0, -50%, 0) rotate(-135deg);
+          }
+
+          &.right {
+            right: 50%;
+            transform: translate3d(0, -50%, 0) rotate(45deg);
+          }
+
+          &:hover {
+            border-color: $roxo;
+            box-shadow: 0.5vmin -0.5vmin 0 $cobreClaro;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-40%, -60%) rotate(45deg);
+            width: 200%;
+            height: 200%;
+          }
+        }
+      }
 
       .slider {
         grid-column-start: 1;
@@ -35,14 +77,5 @@
     }
   }
 
-  .teste22 {
-    margin-top: 55px;
-    display: inline-block;
-    height: 500px;
-    background-color: $branco;
-    width: 100%;
 
-    // clip-path: circle(4190px at 100px 4193px);
-    clip-path: ellipse(3408px 3211px at 508px 3218px);
-  }
 }

@@ -344,12 +344,19 @@ figure {
   margin-inline-end: 0;
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-family: "Raleway";
-  font-size: 16px;
 }
 body h1,
-body h2 {
+body h2,
+body h3,
+body ul {
   margin: 0;
   padding: 0;
   font-weight: 400;
@@ -359,6 +366,10 @@ body strong {
 }
 body a {
   all: unset;
+}
+body p {
+  margin: 0;
+  padding: 0;
 }
 body .button, body .action-button-inverse, body .action-button {
   width: 310px;
@@ -383,6 +394,7 @@ body .action-button-inverse {
   border: 1px solid #FAE14B;
 }
 body header .container {
+  font-size: 1rem;
   padding: 45px 0 70px 0;
   background-color: #9B1982;
   text-align: center;
@@ -452,6 +464,9 @@ body header .container .menu #menuButton:checked ~ #menuLabel > div:nth-child(2)
 body header .container .menu #menuButton:checked ~ #menuLabel > div:nth-child(3) {
   transform: translateY(-15px) rotate(-45deg);
 }
+body #conceito {
+  font-size: 1rem;
+}
 body #conceito .container {
   display: flex;
   flex-wrap: wrap;
@@ -463,7 +478,7 @@ body #conceito .container div {
   flex: 1;
 }
 body #conceito .container .circulos {
-  height: 800px;
+  height: 86.11vh;
 }
 body #conceito .container .circulos span {
   position: relative;
@@ -501,9 +516,6 @@ body #conceito .container .circulos .bola {
   left: 19.5rem;
   top: -63.125rem;
 }
-body #conceito .container .tagline {
-  padding-left: 6.25rem;
-}
 body #conceito .container .tagline h1 {
   font-size: 3em;
   line-height: 56px;
@@ -518,43 +530,39 @@ body #conceito .container .tagline p {
 body #conceito .container .tagline a {
   margin-bottom: 10.6888rem;
 }
-body #draluciana .arco {
-  height: 25rem;
-  margin-top: -15rem;
+body #draluciana {
+  margin-top: -15.5rem;
+  background-color: #9B1982;
 }
 body #draluciana .container {
-  margin-top: -12.5rem;
-  padding-top: 12rem;
-  display: inline-block;
+  position: relative;
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
   color: white;
+  padding: 15rem 20% 0 20%;
   background-color: #A56E73;
-  clip-path: ellipse(3000px 3223px at 880px 3223px);
+  clip-path: ellipse(100vw 100vw at 50vw 100vw);
 }
 body #draluciana .container div {
   flex: 1 1 auto;
 }
 body #draluciana .container .sobre {
-  height: 500px;
-  background-color: #A56E73;
-  margin-left: 150px;
-  margin-right: 30px;
+  padding-right: 30px;
   text-align: justify;
 }
-body #draluciana .container .sobre h1 {
-  margin-left: 200px;
+body #draluciana .container .sobre h2 {
   font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 3rem;
+  line-height: 3.5rem;
   color: #FAE14B;
 }
 body #draluciana .container .sobre p {
-  margin-left: 200px;
   max-width: 512px;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 20px;
 }
 body #draluciana .container .imagem .foto {
   width: 35.438rem;
@@ -568,13 +576,20 @@ body #draluciana .container .imagem .foto img {
 }
 body #draluciana .bg {
   background-color: #FFF5DC;
-  height: 33vh;
   width: 100%;
-  margin-top: -4.438rem;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -1px;
+  display: inline-block;
+  height: 100px;
   z-index: -1;
 }
 body #comentarios {
   background-color: #FFF5DC;
+}
+body #comentarios .container {
+  padding-top: 2rem;
 }
 body #comentarios .container h2 {
   font-style: normal;
@@ -583,14 +598,54 @@ body #comentarios .container h2 {
   line-height: 2.938rem;
   color: #9B1982;
   text-align: center;
-  padding-top: 8.188rem;
-  padding-bottom: 6.313rem;
 }
-body #comentarios .container .comentarios {
+body #comentarios .container .carousel {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-body #comentarios .container .comentarios .slider {
+body #comentarios .container .carousel .left,
+body #comentarios .container .carousel .right {
+  position: relative;
+}
+body #comentarios .container .carousel .left .arrow,
+body #comentarios .container .carousel .right .arrow {
+  position: absolute;
+  top: 50%;
+  width: 4vmin;
+  height: 4vmin;
+  background: transparent;
+  border-top: 0.5vmin solid #D2B4AF;
+  border-right: 0.5vmin solid #D2B4AF;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  transition: all 200ms ease;
+  border-radius: 1px;
+}
+body #comentarios .container .carousel .left .arrow.left,
+body #comentarios .container .carousel .right .arrow.left {
+  left: 50%;
+  transform: translate3d(0, -50%, 0) rotate(-135deg);
+}
+body #comentarios .container .carousel .left .arrow.right,
+body #comentarios .container .carousel .right .arrow.right {
+  right: 50%;
+  transform: translate3d(0, -50%, 0) rotate(45deg);
+}
+body #comentarios .container .carousel .left .arrow:hover,
+body #comentarios .container .carousel .right .arrow:hover {
+  border-color: #9B1982;
+  box-shadow: 0.5vmin -0.5vmin 0 #D2B4AF;
+}
+body #comentarios .container .carousel .left .arrow:before,
+body #comentarios .container .carousel .right .arrow:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -60%) rotate(45deg);
+  width: 200%;
+  height: 200%;
+}
+body #comentarios .container .carousel .slider {
   grid-column-start: 1;
   grid-column-end: 5;
   text-align: center;
@@ -602,13 +657,293 @@ body #comentarios .container .actions a {
   margin-right: 36px;
   margin-bottom: 20px;
 }
-body #comentarios .teste22 {
-  margin-top: 55px;
+body #especialidades {
+  background-color: #FFF5DC;
+}
+body #especialidades p {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #696969;
+}
+body #especialidades .container {
+  padding-top: 8.063rem;
+  margin-top: 3.438rem;
   display: inline-block;
-  height: 500px;
   background-color: #FFFFFF;
   width: 100%;
   clip-path: ellipse(3408px 3211px at 508px 3218px);
+}
+body #especialidades .container .flex-row-principais {
+  display: flex;
+  flex-basis: auto;
+  justify-content: center;
+  padding: 0 5rem;
+}
+body #especialidades .container .principais {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  column-gap: 5vw;
+}
+body #especialidades .container .principais .titulo {
+  grid-column: 1/-1;
+  justify-content: flex-start;
+}
+body #especialidades .container .principais .titulo h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  color: #9B1982;
+  margin-bottom: 0.875rem;
+}
+body #especialidades .container .principais .esp-1 h3,
+body #especialidades .container .principais .esp-2 h3,
+body #especialidades .container .principais .esp-3 h3 {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.375rem;
+  color: #696969;
+  margin-top: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+body #especialidades .container .principais .esp-1 p,
+body #especialidades .container .principais .esp-2 p,
+body #especialidades .container .principais .esp-3 p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.688rem;
+  color: #696969;
+}
+body #especialidades .container .principais .esp-1 .ilustracao, body #especialidades .container .principais .esp-3 .ilustracao, body #especialidades .container .principais .esp-2 .ilustracao {
+  margin-top: 55px;
+}
+body #especialidades .container .principais .esp-1 .ilustracao .circulo-1, body #especialidades .container .principais .esp-3 .ilustracao .circulo-1, body #especialidades .container .principais .esp-2 .ilustracao .circulo-1 {
+  margin: 0 auto;
+  position: relative;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: #FFF5DC;
+  background-image: url("/img/odontopediatria-icon.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+}
+body #especialidades .container .principais .esp-1 .ilustracao .circulo-2, body #especialidades .container .principais .esp-3 .ilustracao .circulo-2, body #especialidades .container .principais .esp-2 .ilustracao .circulo-2 {
+  z-index: -1;
+  top: -0.625rem;
+  right: -0.938rem;
+  position: absolute;
+  width: 4.438rem;
+  height: 4.438rem;
+  border-radius: 50%;
+  background-color: #FAE14B;
+}
+body #especialidades .container .principais .esp-2 .ilustracao .circulo-1 {
+  width: 6.375rem;
+  height: 6.375rem;
+  background-image: url("/img/ortodontia-icon.svg");
+}
+body #especialidades .container .principais .esp-2 .ilustracao .circulo-2 {
+  width: 5.25rem;
+  height: 5.25rem;
+  background-color: white;
+  border: 2px solid #D2B4AF;
+  top: 0.975rem;
+  right: 2.662rem;
+}
+body #especialidades .container .principais .esp-3 .ilustracao .circulo-1 {
+  width: 6.6938rem;
+  height: 6.938rem;
+  background-image: url("/img/estetica-icon.svg");
+  background-size: auto;
+  background-position: 1.563rem 1.188rem;
+}
+body #especialidades .container .principais .esp-3 .ilustracao .circulo-2 {
+  width: 3.938rem;
+  height: 3.938rem;
+  background-color: #D2B4AF;
+  top: -0.3rem;
+  right: 3.7rem;
+}
+body #especialidades .container .mais {
+  padding-top: 5.313rem;
+  padding-left: 2.5rem;
+  grid-column: 1/-1;
+}
+body #especialidades .container .mais p {
+  margin-bottom: 20px;
+}
+body #especialidades .container .mais-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  grid-template-rows: auto;
+}
+body #especialidades .container .mais-grid ul {
+  list-style: none;
+  font-weight: 500;
+  font-size: 1.625rem;
+  color: #696969;
+}
+body #especialidades .container .mais-grid ul li {
+  line-height: 2.938rem;
+}
+body #especialidades .container .mais-grid ul li:before {
+  content: "";
+  vertical-align: middle;
+  margin-right: 0.563rem;
+  display: inline-block;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: white;
+  border: 0.188rem solid #FAE14B;
+}
+body #sobre .container {
+  background-color: #9B1982;
+  clip-path: ellipse(3408px 3211px at 508px 3218px);
+  padding-top: 8.063rem;
+  margin-top: 3.438rem;
+}
+body #sobre .container .grid-1x1 {
+  display: flex;
+  padding: 0 5vw;
+}
+body #sobre .container .grid-1x1 .titulo {
+  max-width: 48.688rem;
+  margin-bottom: 4.25rem;
+}
+body #sobre .container .grid-1x1 .titulo h2 {
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  color: #FFFFFF;
+}
+body #sobre .container .grid-2x2 {
+  display: flex;
+  gap: 5rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: left;
+  padding: 0 5vw;
+}
+body #sobre .container .grid-2x2 > div {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
+  flex-direction: column;
+}
+body #sobre .container .grid-2x2 > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+body #sobre .container .box-1 {
+  max-width: 33rem;
+}
+body #sobre .container .box-2 {
+  max-width: 33rem;
+}
+body #sobre .container .box-3 .imagem {
+  margin-bottom: -120px;
+}
+body #sobre .container .box-3 .imagem .foto {
+  position: relative;
+}
+body #sobre .container .box-3 .imagem .foto img {
+  width: 100%;
+}
+body #sobre .container .box-3 .imagem .foto:after {
+  content: "";
+  display: flex;
+  background-color: #9B1982;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: -1;
+}
+body #sobre .container .box-4 {
+  max-width: 42.5rem;
+}
+body #sobre .container .box-4 a {
+  margin-top: 4rem;
+}
+body #sobre .container h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.375rem;
+  color: #FFFFFF;
+  margin-bottom: 0.875rem;
+}
+body #sobre .container p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #FAE14B;
+}
+body #estrutura .container {
+  font-size: 0;
+  z-index: -1;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+  border: 0;
+}
+body #estrutura .container .gradient {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient(to bottom, #A56E73, transparent);
+}
+body #estrutura .container .titulo {
+  position: absolute;
+  right: 10%;
+  margin-top: 2rem;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+body #estrutura .container .carousel {
+  z-index: -2;
+}
+body #estrutura .container img {
+  width: 100%;
+}
+body #estrutura .container .slider {
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  font-size: 5rem;
+}
+body footer #rodape {
+  display: flex;
+  background-color: #9B1982;
+  height: 40vw;
+}
+body footer #rodape .container {
+  filter: drop-shadow(10px 10px 50px rgba(0, 0, 0, 0.2));
+}
+body footer #rodape .container .info {
+  margin-top: -10vw;
+  position: absolute;
+  background-color: #FFF5DC;
+  clip-path: ellipse(55vw 50vw at -16vw 48vw);
+  width: 50vw;
+  height: 50vw;
+}
+body footer #rodape .mapa {
+  display: flex;
+  flex: 1;
 }
 
 /*# sourceMappingURL=index.css.map */
