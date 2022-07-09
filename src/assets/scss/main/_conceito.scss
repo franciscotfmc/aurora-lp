@@ -15,7 +15,6 @@
     }
 
     .circulos {
-      // height: 86.11vh;
       position: relative;
       padding-right: 6vw;
 
@@ -25,8 +24,8 @@
 
       .foto {
         top: 0;
-        width: 100vw;
-        height: 100vw;
+        // width: 100vw;
+        // height: 100vw;
         max-width: 43.125rem;
         max-height: 43.125rem;
         left: -12vw;
@@ -149,5 +148,50 @@
     @media only screen and (max-width: 1281px) {}
 
     @media only screen and (max-width: 1024px) {}
+  }
+
+  .mobile-action {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    background-color: $roxo;
+    color: white;
+    height: 300px;
+    align-items: center;
+    padding: 0 5%;
+
+    >div {
+      z-index: 4;
+    }
+
+    a {
+      z-index: 4;
+    }
+
+    p {
+      font-size: 1.125rem;
+      max-width: 17.688rem;
+      margin: 0 0 40px 0;
+    }
+  }
+
+  @media only screen and (min-width: 481px) {
+    .mobile-action {
+      display: none;
+    }
+
+    .desktop-action {
+      display: inline-block;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .mobile-action {
+      display: flex;
+    }
+
+    .desktop-action {
+      display: none;
+    }
   }
 }
