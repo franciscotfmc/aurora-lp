@@ -1,30 +1,52 @@
 #draluciana {
-  margin-top: -15.5rem;
+  margin-top: -16rem;
   background-color: $roxo;
 
   .container {
     position: relative;
     display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    align-items: start;
+    flex-flow: wrap-reverse;
     color: white;
-    padding: 15rem 20% 0 20%;
-    background-color: $cobreEscuro;
-    clip-path: ellipse(100vw 100vw at 50vw 100vw);
+    background-color: transparent;
+    padding: 15rem 0 0 0;
+    z-index: 2;
+
+    &:before {
+      content: "";
+      background-color: $cobreEscuro;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      position: absolute;
+      clip-path: ellipse(100vw 100vw at 50vw 100vw);
+      margin-top: -15.5rem;
+      z-index: 1;
+    }
 
     div {
-      flex: 1 1 auto;
+      flex-grow: 1;
     }
 
     .sobre {
-      padding-right: 30px;
+      z-index: 2;
       text-align: justify;
+      background-color: $cobreEscuro;
+
+      >div {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-left: 7%;
+      }
 
       h2 {
         font-weight: 700;
         font-size: 3rem;
         line-height: 3.5rem;
         color: $amarelo;
+        margin-bottom: 32px;
       }
 
       p {
@@ -37,14 +59,13 @@
     }
 
     .imagem {
+      padding: 0 27px;
+      z-index: 2;
+
       .foto {
-        width: 35.438rem;
-        height: 35.438rem;
         border-radius: 50%;
 
         img {
-          width: 35.438rem;
-          height: 35.438rem;
           object-fit: cover;
         }
       }
@@ -53,13 +74,78 @@
 
   .bg {
     background-color: $amareloPastel;
-    width: 100%;
     position: absolute;
     width: 100%;
     left: 0;
     bottom: -1px;
-    display: inline-block;
     height: 100px;
-    z-index: -1;
+    z-index: 1;
+  }
+
+  @media only screen and (max-width: 1132px) {
+    margin-top: 0;
+    padding-top: 100px;
+
+    .container {
+      margin-top: 200px;
+
+      .sobre {
+        >div {
+          align-items: center;
+          padding: 0;
+          margin-top: 32px;
+        }
+
+        padding: 0 5%;
+      }
+
+      .imagem {
+        margin-top: -400px;
+        text-align: center;
+
+        .foto {
+          img {
+            max-width: 80%;
+            min-width: 327px;
+          }
+        }
+      }
+    }
+
+    .bg {
+      background-color: $cobreEscuro;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .container {
+      margin-top: 50px;
+
+      &:before {
+        content: "";
+        margin-top: -15.5rem;
+      }
+
+      .sobre {
+        >div {
+          margin-top: -130px;
+        }
+
+        h2 {
+          font-size: 2.5rem;
+          line-height: 2.938rem;
+        }
+      }
+
+      .imagem {
+        padding: 0 0 150px 0;
+
+        .foto {
+          img {
+            min-width: 290px;
+          }
+        }
+      }
+    }
   }
 }
