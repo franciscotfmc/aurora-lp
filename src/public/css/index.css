@@ -1173,21 +1173,21 @@ body #sobre .container {
   padding-top: 8.063rem;
   margin-top: 3.438rem;
 }
-body #sobre .container .grid-1x1 {
+body #sobre .container .row-1 {
   display: flex;
   padding: 0 5vw;
 }
-body #sobre .container .grid-1x1 .titulo {
+body #sobre .container .row-1 .titulo {
   max-width: 48.688rem;
   margin-bottom: 4.25rem;
 }
-body #sobre .container .grid-1x1 .titulo h2 {
+body #sobre .container .row-1 .titulo h2 {
   font-weight: 500;
   font-size: 3rem;
   line-height: 3.5rem;
   color: #FFFFFF;
 }
-body #sobre .container .grid-2x2 {
+body #sobre .container .row-2 {
   display: flex;
   gap: 5rem;
   flex-wrap: wrap;
@@ -1195,33 +1195,34 @@ body #sobre .container .grid-2x2 {
   justify-content: left;
   padding: 0 5vw;
 }
-body #sobre .container .grid-2x2 > div {
+body #sobre .container .row-2 .row-2-1 {
   display: flex;
-  flex-basis: 50%;
-  justify-content: center;
-  flex-direction: column;
+  gap: 50px;
+  flex-wrap: wrap;
 }
-body #sobre .container .grid-2x2 > div > div {
+body #sobre .container .row-2 .row-2-1 .box-1,
+body #sobre .container .row-2 .row-2-1 .box-2 {
+  max-width: 33rem;
+  min-width: 280px;
+}
+body #sobre .container .row-2 .row-2-2 {
   display: flex;
-  justify-content: center;
-  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 40px;
 }
-body #sobre .container .box-1 {
-  max-width: 33rem;
-}
-body #sobre .container .box-2 {
-  max-width: 33rem;
-}
-body #sobre .container .box-3 .imagem {
+body #sobre .container .row-2 .row-2-2 .box-3 .imagem {
   margin-bottom: -120px;
 }
-body #sobre .container .box-3 .imagem .foto {
+body #sobre .container .row-2 .row-2-2 .box-3 .imagem .foto {
+  display: flex;
+  max-width: 500px;
   position: relative;
 }
-body #sobre .container .box-3 .imagem .foto img {
-  width: 100%;
+body #sobre .container .row-2 .row-2-2 .box-3 .imagem .foto img {
+  max-width: 500px;
 }
-body #sobre .container .box-3 .imagem .foto:after {
+body #sobre .container .row-2 .row-2-2 .box-3 .imagem .foto:after {
   content: "";
   display: flex;
   background-color: #9B1982;
@@ -1233,11 +1234,11 @@ body #sobre .container .box-3 .imagem .foto:after {
   left: 1rem;
   z-index: -1;
 }
-body #sobre .container .box-4 {
-  max-width: 42.5rem;
+body #sobre .container .row-2 .row-2-2 .box-4 {
+  max-width: 680px;
 }
-body #sobre .container .box-4 a {
-  margin-top: 4rem;
+body #sobre .container .row-2 .row-2-2 .box-4 a {
+  margin: 4rem 0;
 }
 body #sobre .container h3 {
   font-style: normal;
@@ -1253,6 +1254,58 @@ body #sobre .container p {
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: #FAE14B;
+}
+@media only screen and (max-width: 1200px) {
+  body #sobre .container .row-2 {
+    gap: 3rem;
+  }
+  body #sobre .container .row-2 .row-2-1 {
+    gap: 3rem;
+  }
+  body #sobre .container .row-2 .row-2-2 {
+    gap: 1rem;
+  }
+  body #sobre .container .row-2 .row-2-2 .box-3 .imagem {
+    margin-left: -30px;
+  }
+  body #sobre .container .row-2 .row-2-2 .box-4 a {
+    margin: 3rem 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  body #sobre .container .row-1 .titulo h2 {
+    font-size: 2.125rem;
+    line-height: 2.5rem;
+  }
+  body #sobre .container .row-2 .row-2-2 .box-3 .imagem {
+    margin-left: -180px;
+  }
+  body #sobre .container .row-2 .row-2-2 .box-4 a {
+    margin: 3rem 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body #sobre .container .row-2 .row-2-2 .box-3 .imagem {
+    margin-left: -180px;
+    margin-bottom: -120px;
+  }
+  body #sobre .container .row-2 .row-2-2 .box-3 .imagem .foto {
+    display: flex;
+  }
+  body #sobre .container .row-2 .row-2-2 .box-4 a {
+    margin: 3rem 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body #sobre .container .row-2 .row-2-2 .box-3 .imagem {
+    margin-left: -150px;
+  }
+  body #sobre .container .row-2 .row-2-2 .box-3 .imagem .foto {
+    display: flex;
+  }
+  body #sobre .container .row-2 .row-2-2 .box-4 a {
+    margin: 3rem 0;
+  }
 }
 body #estrutura .container {
   font-size: 0;
@@ -1290,6 +1343,22 @@ body #estrutura .container .slider {
   text-align: center;
   width: 100%;
   font-size: 5rem;
+}
+@media only screen and (max-width: 1024px) {
+  body #estrutura .container .titulo {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body #estrutura .container {
+    background-color: #A56E73;
+    background-image: linear-gradient(to bottom, #A56E73, transparent);
+    padding-top: 130px;
+  }
+  body #estrutura .container .titulo {
+    font-size: 1.2rem;
+    right: 10%;
+  }
 }
 body footer #rodape {
   display: flex;

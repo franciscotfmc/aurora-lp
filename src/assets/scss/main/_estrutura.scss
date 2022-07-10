@@ -41,4 +41,25 @@
       font-size: 5rem;
     }
   }
+
+  @media only screen and (max-width: 1024px) {
+    .container {
+      .titulo {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .container {
+      background-color: $cobreEscuro;
+      background-image: linear-gradient(to bottom, $cobreEscuro, transparent);
+      padding-top: 130px;
+
+      .titulo {
+        font-size: 1.2rem;
+        right: 10%;
+      }
+    }
+  }
 }
