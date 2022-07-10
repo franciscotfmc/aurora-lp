@@ -1,4 +1,4 @@
-#comentarios {
+#depoimentos {
   background-color: $amareloPastel;
   // display: flex;
   // flex-direction: row;
@@ -18,6 +18,8 @@
       margin-bottom: 4.063rem;
       display: flex;
       justify-content: center;
+      margin-left: 40px;
+      margin-right: 40px;
     }
 
     .carousel {
@@ -25,6 +27,7 @@
       flex-wrap: wrap;
       position: relative;
       flex-direction: column;
+      align-items: center;
       width: 100%;
 
       .slide-left,
@@ -44,6 +47,7 @@
       }
 
       .arrows {
+        cursor: pointer;
         position: relative;
 
         .arrow {
@@ -52,8 +56,8 @@
           width: 4vmin;
           height: 4vmin;
           background: transparent;
-          border-top: 4px solid $cobreClaro;
-          border-right: 4px solid $cobreClaro;
+          border-top: 4px solid $cobreEscuro;
+          border-right: 4px solid $cobreEscuro;
           box-shadow: 0 0 0 $sombra;
           transition: all 200ms ease;
           border-radius: 1px;
@@ -83,12 +87,20 @@
             height: 200%;
           }
         }
+
+        .arrow-disabled {
+          border-color: $cobreClaro;
+
+          &:hover {
+            border-color: $cobreClaro;
+            box-shadow: 0 0 0;
+          }
+        }
       }
 
       #c-slider {
         display: flex;
         width: 100%;
-        height: 286px;
 
         [class*="slide-"] {
           display: flex;
@@ -127,9 +139,23 @@
       }
 
       .dots {
-        // grid-column-start: 1;
-        // grid-column-end: 5;
-        // text-align: center;
+        display: flex;
+        gap: 40px;
+        margin: 50px 10px 60px 10px;
+        align-items: center;
+
+        >span {
+          appearance: none;
+          width: 19px;
+          height: 19px;
+          background-color: $cinzaClaro;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .dot-active {
+          background-color: $cobreEscuro;
+        }
       }
     }
 
@@ -140,7 +166,7 @@
       flex-wrap: wrap-reverse;
       align-items: center;
       gap: 36px;
-      margin-top: 36px;
+      margin: 0px 40px 0 40px;
     }
   }
 
@@ -184,10 +210,6 @@
           }
         }
       }
-
-      .actions {
-        margin-top: 140px;
-      }
     }
   }
 
@@ -221,12 +243,8 @@
         }
       }
 
-      h2 {
-        margin-left: 40px;
-      }
-
       .actions {
-        margin-top: 170px;
+        margin: 0px 0px 0px 0px;
       }
     }
   }

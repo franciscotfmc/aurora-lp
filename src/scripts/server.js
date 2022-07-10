@@ -1,12 +1,14 @@
 'use strict';
 
 const express = require('express');
-const livereload = require("livereload");
-const connectLivereload = require("connect-livereload");
+const livereload = require('livereload');
+const connectLivereload = require('connect-livereload');
+const comentarios = require('./comentarios');
 
 const indexData = {
   cssIndex: 'index.css',
-  jsIndex: 'main.js'
+  jsIndex: 'main.js',
+  comentarios: comentarios
 };
 
 const port = 3000;
@@ -39,8 +41,8 @@ const liveReloadServer = livereload
 liveReloadServer
   .watch([publicPath, viewsPath]);
 
-liveReloadServer.server.once("connection", () => {
+liveReloadServer.server.once('connection', () => {
   setTimeout(() => {
-    liveReloadServer.refresh("/");
+    liveReloadServer.refresh('/');
   }, 100);
 });

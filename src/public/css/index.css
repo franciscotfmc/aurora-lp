@@ -821,13 +821,13 @@ body #draluciana .bg {
     min-width: 290px;
   }
 }
-body #comentarios {
+body #depoimentos {
   background-color: #FFF5DC;
 }
-body #comentarios .container {
+body #depoimentos .container {
   padding-top: 2rem;
 }
-body #comentarios .container h2 {
+body #depoimentos .container h2 {
   font-style: normal;
   font-weight: 700;
   font-size: 2.5rem;
@@ -836,55 +836,59 @@ body #comentarios .container h2 {
   margin-bottom: 4.063rem;
   display: flex;
   justify-content: center;
+  margin-left: 40px;
+  margin-right: 40px;
 }
-body #comentarios .container .carousel {
+body #depoimentos .container .carousel {
   display: flex;
   flex-wrap: wrap;
   position: relative;
   flex-direction: column;
+  align-items: center;
   width: 100%;
 }
-body #comentarios .container .carousel .slide-left,
-body #comentarios .container .carousel .slide-right {
+body #depoimentos .container .carousel .slide-left,
+body #depoimentos .container .carousel .slide-right {
   position: relative;
   z-index: 9;
 }
-body #comentarios .container .carousel .slide-left {
+body #depoimentos .container .carousel .slide-left {
   top: 143px;
   right: 400px;
 }
-body #comentarios .container .carousel .slide-right {
+body #depoimentos .container .carousel .slide-right {
   bottom: 143px;
   left: 400px;
 }
-body #comentarios .container .carousel .arrows {
+body #depoimentos .container .carousel .arrows {
+  cursor: pointer;
   position: relative;
 }
-body #comentarios .container .carousel .arrows .arrow {
+body #depoimentos .container .carousel .arrows .arrow {
   position: absolute;
   top: 50%;
   width: 4vmin;
   height: 4vmin;
   background: transparent;
-  border-top: 4px solid #D2B4AF;
-  border-right: 4px solid #D2B4AF;
+  border-top: 4px solid #A56E73;
+  border-right: 4px solid #A56E73;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
   transition: all 200ms ease;
   border-radius: 1px;
 }
-body #comentarios .container .carousel .arrows .arrow.left {
+body #depoimentos .container .carousel .arrows .arrow.left {
   left: 50%;
   transform: translate3d(0, -50%, 0) rotate(-135deg);
 }
-body #comentarios .container .carousel .arrows .arrow.right {
+body #depoimentos .container .carousel .arrows .arrow.right {
   right: 50%;
   transform: translate3d(0, -50%, 0) rotate(45deg);
 }
-body #comentarios .container .carousel .arrows .arrow:hover {
+body #depoimentos .container .carousel .arrows .arrow:hover {
   border-color: #9B1982;
   box-shadow: 4px -0.5vmin 0 #D2B4AF;
 }
-body #comentarios .container .carousel .arrows .arrow:before {
+body #depoimentos .container .carousel .arrows .arrow:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -893,98 +897,115 @@ body #comentarios .container .carousel .arrows .arrow:before {
   width: 200%;
   height: 200%;
 }
-body #comentarios .container .carousel #c-slider {
+body #depoimentos .container .carousel .arrows .arrow-disabled {
+  border-color: #D2B4AF;
+}
+body #depoimentos .container .carousel .arrows .arrow-disabled:hover {
+  border-color: #D2B4AF;
+  box-shadow: 0 0 0;
+}
+body #depoimentos .container .carousel #c-slider {
   display: flex;
   width: 100%;
-  height: 286px;
 }
-body #comentarios .container .carousel #c-slider [class*=slide-] {
+body #depoimentos .container .carousel #c-slider [class*=slide-] {
   display: flex;
 }
-body #comentarios .container .carousel #c-slider .content {
+body #depoimentos .container .carousel #c-slider .content {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
   gap: 40px;
 }
-body #comentarios .container .carousel #c-slider .content .foto img {
+body #depoimentos .container .carousel #c-slider .content .foto img {
   max-width: 281px;
 }
-body #comentarios .container .carousel #c-slider .content .texto {
+body #depoimentos .container .carousel #c-slider .content .texto {
   color: #696969;
   line-height: 28px;
   max-width: 330px;
 }
-body #comentarios .container .carousel #c-slider .content .texto .nome {
+body #depoimentos .container .carousel #c-slider .content .texto .nome {
   font-weight: 700;
   font-size: 24px;
   margin-bottom: 18px;
 }
-body #comentarios .container .carousel #c-slider .content .texto .descricao {
+body #depoimentos .container .carousel #c-slider .content .texto .descricao {
   font-weight: 400;
   font-size: 18px;
 }
-body #comentarios .container .actions {
+body #depoimentos .container .carousel .dots {
+  display: flex;
+  gap: 40px;
+  margin: 50px 10px 60px 10px;
+  align-items: center;
+}
+body #depoimentos .container .carousel .dots > span {
+  appearance: none;
+  width: 19px;
+  height: 19px;
+  background-color: #C4C4C4;
+  border-radius: 50%;
+  cursor: pointer;
+}
+body #depoimentos .container .carousel .dots .dot-active {
+  background-color: #A56E73;
+}
+body #depoimentos .container .actions {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap-reverse;
   align-items: center;
   gap: 36px;
-  margin-top: 36px;
+  margin: 0px 40px 0 40px;
 }
 @media only screen and (max-width: 1024px) {
-  body #comentarios .container h2 {
+  body #depoimentos .container h2 {
     font-size: 2.25rem;
     line-height: 2.625rem;
   }
-  body #comentarios .container .carousel .slide-left,
-body #comentarios .container .carousel .slide-right {
+  body #depoimentos .container .carousel .slide-left,
+body #depoimentos .container .carousel .slide-right {
     position: absolute;
   }
-  body #comentarios .container .carousel .slide-left {
+  body #depoimentos .container .carousel .slide-left {
     top: 70px;
     left: 10vw;
   }
-  body #comentarios .container .carousel .slide-right {
+  body #depoimentos .container .carousel .slide-right {
     top: 70px;
     right: 10vw;
   }
-  body #comentarios .container .carousel #c-slider .content {
+  body #depoimentos .container .carousel #c-slider .content {
     flex-flow: column;
     justify-content: flex-start;
     gap: 20px;
   }
-  body #comentarios .container .carousel #c-slider .content .foto img {
+  body #depoimentos .container .carousel #c-slider .content .foto img {
     max-width: 141px;
-  }
-  body #comentarios .container .actions {
-    margin-top: 140px;
   }
 }
 @media only screen and (max-width: 480px) {
-  body #comentarios .container .carousel .slide-left,
-body #comentarios .container .carousel .slide-right {
+  body #depoimentos .container .carousel .slide-left,
+body #depoimentos .container .carousel .slide-right {
     position: absolute;
   }
-  body #comentarios .container .carousel .slide-left {
+  body #depoimentos .container .carousel .slide-left {
     top: 70px;
     left: 10vw;
   }
-  body #comentarios .container .carousel .slide-right {
+  body #depoimentos .container .carousel .slide-right {
     top: 70px;
     left: 90vw;
   }
-  body #comentarios .container .carousel #c-slider .content .texto {
+  body #depoimentos .container .carousel #c-slider .content .texto {
     margin-left: 40px;
     margin-right: 20px;
   }
-  body #comentarios .container h2 {
-    margin-left: 40px;
-  }
-  body #comentarios .container .actions {
-    margin-top: 170px;
+  body #depoimentos .container .actions {
+    margin: 0px 0px 0px 0px;
   }
 }
 body #especialidades {

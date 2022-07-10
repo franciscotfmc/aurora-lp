@@ -1,58 +1,40 @@
 <div class="carousel">
   <div class="slide-left">
     <div class="arrows">
-      <a href="" class="arrow left"></a>
+      <a id="commentsArrowLeft" class="arrow left"></a>
     </div>
   </div>
 
   <div id="c-slider">
-    <div class="keen-slider__slide slide-1">
-      <div class="content">
-        <div class="foto">
-          <img alt="Foto de perfil" src="/img/p-thais.png" onerror="this.onerror=null;this.src='/img/p-thais.png'"
-            loading="lazy">
-        </div>
-
-        <div class="texto">
-          <p class="nome">Thaís de Paula</p>
-          <p class="descricao">
-            Curabitur id vestibulum velit, vel lobortis odio. Nulla facilisi. Nulla pretium varius
-            velit suscipit malesuada. Sed vel lobortis lorem, at tincidunt nisl. Pellentesque eleifend libero erat,
-            vel
-            vehicula tellus aliquam a.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="keen-slider__slide slide-2">
-      <div class="content">
-        <div class="foto">
-          <img alt="Foto de perfil" src="/img/p-marina.png" onerror="this.onerror=null;this.src='/img/p-thais.png'"
-            loading="lazy">
-        </div>
-        <div class="texto">
-          <p class="nome">Marina Laport</p>
-          <p class="descricao">
-            Curabitur id vestibulum velit, vel lobortis odio. Nulla facilisi. Nulla pretium varius
-            velit suscipit malesuada. Sed vel lobortis lorem, at tincidunt nisl. Pellentesque eleifend libero erat, vel
-            vehicula tellus aliquam a.
-          </p>
+    <% comentarios.forEach(function(comentario) { %>
+      <div class="keen-slider__slide">
+        <div class="content">
+          <div class="foto">
+            <img alt="Foto de perfil" src="/img/<%= comentario.img %>"
+              onerror="this.onerror=null;this.src='/img/<%= comentario.img %>'" loading="lazy">
+          </div>
+          <div class="texto">
+            <p class="nome">
+              <%= comentario.name %>
+            </p>
+            <p class="descricao">
+              <%= comentario.text %>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-
-
+      <% }); %>
   </div>
 
   <div class="slide-right">
     <div class="arrows">
-      <a href="" class="arrow right"></a>
+      <a id="commentsArrowRight" class="arrow right"></a>
     </div>
   </div>
-</div>
 
-
-
-<!-- <div class="dots">bolotinhas</div> -->
+  <div id="commentsDots" class="dots">
+    <% comentarios.forEach(function(comentario) { %>
+      <span></span>
+      <% }); %>
+  </div>
 </div>
