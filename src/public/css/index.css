@@ -1152,6 +1152,21 @@ body #especialidades .container .mais-grid ul li:before {
   background-color: white;
   border: 0.188rem solid #FAE14B;
 }
+@media only screen and (max-width: 1024px) {
+  body #especialidades .container .principais .titulo h2 {
+    font-size: 2.375rem;
+    line-height: 2.813rem;
+    margin-bottom: 1.625rem;
+  }
+  body #especialidades .container .mais {
+    padding-top: 1.313rem;
+    padding-left: 0;
+    grid-column: 1/-1;
+  }
+  body #especialidades .container .mais p {
+    margin-bottom: 0;
+  }
+}
 body #sobre .container {
   background-color: #9B1982;
   clip-path: ellipse(3408px 3211px at 508px 3218px);

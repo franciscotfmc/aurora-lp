@@ -176,4 +176,28 @@
       }
     }
   }
+
+  @media only screen and (max-width: 1024px) {
+    .container {
+      .principais {
+        .titulo {
+          h2 {
+            font-size: 2.375rem;
+            line-height: 2.813rem;
+            margin-bottom: 1.625rem;
+          }
+        }
+      }
+
+      .mais {
+        padding-top: 1.313rem;
+        padding-left: 0;
+        grid-column: 1 / -1;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
