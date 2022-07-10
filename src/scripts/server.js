@@ -26,7 +26,7 @@ app.get('/', function (req, res) {
   res.render('index', indexData);
 });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`)
 });
 

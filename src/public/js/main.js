@@ -9,5 +9,9 @@ function ready(fn) {
 (function () {
   ready(function () {
     console.log('dom loaded...')
+
+    var slider = new KeenSlider("#c-slider")
+
+
   });
 })();

@@ -406,6 +406,36 @@ body .action-button-inverse {
   background-color: #FFF5DC;
   border: 1px solid #FAE14B;
 }
+body .keen-slider:not([data-keen-slider-disabled]) {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  align-content: flex-start;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -khtml-user-select: none;
+  width: 100%;
+}
+body .keen-slider:not([data-keen-slider-disabled]) .keen-slider__slide {
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+body .keen-slider:not([data-keen-slider-disabled])[data-keen-slider-reverse] {
+  flex-direction: row-reverse;
+}
+body .keen-slider:not([data-keen-slider-disabled])[data-keen-slider-v] {
+  flex-wrap: wrap;
+}
+body [data-keen-slider-moves] * {
+  pointer-events: none;
+}
 body header .container {
   font-size: 1rem;
   padding: 45px 0 70px 0;
@@ -719,6 +749,9 @@ body #draluciana .container .sobre p {
   line-height: 1.75rem;
   margin-bottom: 20px;
 }
+body #draluciana .container .sobre p:last-child {
+  margin-bottom: 67px;
+}
 body #draluciana .container .imagem {
   padding: 0 27px;
   z-index: 2;
@@ -800,46 +833,58 @@ body #comentarios .container h2 {
   font-size: 2.5rem;
   line-height: 2.938rem;
   color: #9B1982;
-  text-align: center;
+  margin-bottom: 4.063rem;
+  display: flex;
+  justify-content: center;
 }
 body #comentarios .container .carousel {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
 }
-body #comentarios .container .carousel .left,
-body #comentarios .container .carousel .right {
+body #comentarios .container .carousel .slide-left,
+body #comentarios .container .carousel .slide-right {
+  position: relative;
+  z-index: 9;
+}
+body #comentarios .container .carousel .slide-left {
+  top: 143px;
+  right: 400px;
+}
+body #comentarios .container .carousel .slide-right {
+  bottom: 143px;
+  left: 400px;
+}
+body #comentarios .container .carousel .arrows {
   position: relative;
 }
-body #comentarios .container .carousel .left .arrow,
-body #comentarios .container .carousel .right .arrow {
+body #comentarios .container .carousel .arrows .arrow {
   position: absolute;
   top: 50%;
   width: 4vmin;
   height: 4vmin;
   background: transparent;
-  border-top: 0.5vmin solid #D2B4AF;
-  border-right: 0.5vmin solid #D2B4AF;
+  border-top: 4px solid #D2B4AF;
+  border-right: 4px solid #D2B4AF;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
   transition: all 200ms ease;
   border-radius: 1px;
 }
-body #comentarios .container .carousel .left .arrow.left,
-body #comentarios .container .carousel .right .arrow.left {
+body #comentarios .container .carousel .arrows .arrow.left {
   left: 50%;
   transform: translate3d(0, -50%, 0) rotate(-135deg);
 }
-body #comentarios .container .carousel .left .arrow.right,
-body #comentarios .container .carousel .right .arrow.right {
+body #comentarios .container .carousel .arrows .arrow.right {
   right: 50%;
   transform: translate3d(0, -50%, 0) rotate(45deg);
 }
-body #comentarios .container .carousel .left .arrow:hover,
-body #comentarios .container .carousel .right .arrow:hover {
+body #comentarios .container .carousel .arrows .arrow:hover {
   border-color: #9B1982;
-  box-shadow: 0.5vmin -0.5vmin 0 #D2B4AF;
+  box-shadow: 4px -0.5vmin 0 #D2B4AF;
 }
-body #comentarios .container .carousel .left .arrow:before,
-body #comentarios .container .carousel .right .arrow:before {
+body #comentarios .container .carousel .arrows .arrow:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -848,17 +893,99 @@ body #comentarios .container .carousel .right .arrow:before {
   width: 200%;
   height: 200%;
 }
-body #comentarios .container .carousel .slider {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  text-align: center;
+body #comentarios .container .carousel #c-slider {
+  display: flex;
+  width: 100%;
+  height: 286px;
+}
+body #comentarios .container .carousel #c-slider [class*=slide-] {
+  display: flex;
+}
+body #comentarios .container .carousel #c-slider .content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+body #comentarios .container .carousel #c-slider .content .foto img {
+  max-width: 281px;
+}
+body #comentarios .container .carousel #c-slider .content .texto {
+  color: #696969;
+  line-height: 28px;
+  max-width: 330px;
+}
+body #comentarios .container .carousel #c-slider .content .texto .nome {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+body #comentarios .container .carousel #c-slider .content .texto .descricao {
+  font-weight: 400;
+  font-size: 18px;
 }
 body #comentarios .container .actions {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  gap: 36px;
+  margin-top: 36px;
 }
-body #comentarios .container .actions a {
-  margin-right: 36px;
-  margin-bottom: 20px;
+@media only screen and (max-width: 1024px) {
+  body #comentarios .container h2 {
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+  }
+  body #comentarios .container .carousel .slide-left,
+body #comentarios .container .carousel .slide-right {
+    position: absolute;
+  }
+  body #comentarios .container .carousel .slide-left {
+    top: 70px;
+    left: 10vw;
+  }
+  body #comentarios .container .carousel .slide-right {
+    top: 70px;
+    right: 10vw;
+  }
+  body #comentarios .container .carousel #c-slider .content {
+    flex-flow: column;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  body #comentarios .container .carousel #c-slider .content .foto img {
+    max-width: 141px;
+  }
+  body #comentarios .container .actions {
+    margin-top: 140px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body #comentarios .container .carousel .slide-left,
+body #comentarios .container .carousel .slide-right {
+    position: absolute;
+  }
+  body #comentarios .container .carousel .slide-left {
+    top: 70px;
+    left: 10vw;
+  }
+  body #comentarios .container .carousel .slide-right {
+    top: 70px;
+    left: 90vw;
+  }
+  body #comentarios .container .carousel #c-slider .content .texto {
+    margin-left: 40px;
+    margin-right: 20px;
+  }
+  body #comentarios .container h2 {
+    margin-left: 40px;
+  }
+  body #comentarios .container .actions {
+    margin-top: 170px;
+  }
 }
 body #especialidades {
   background-color: #FFF5DC;
