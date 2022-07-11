@@ -19,7 +19,7 @@
       height: 100%;
       display: inline-block;
       position: absolute;
-      clip-path: ellipse(100vw 100vw at 50vw 100vw);
+      clip-path: ellipse(2000px 2000px at 1000px 2010px);
       margin-top: -15.5rem;
       z-index: 1;
     }
@@ -31,7 +31,6 @@
     .sobre {
       z-index: 2;
       text-align: justify;
-      background-color: $cobreEscuro;
 
       >div {
         display: flex;
@@ -46,6 +45,7 @@
         font-size: 3rem;
         line-height: 3.5rem;
         color: $amarelo;
+        margin-top: 50px;
         margin-bottom: 32px;
       }
 
@@ -97,10 +97,10 @@
         >div {
           align-items: center;
           padding: 0;
-          margin-top: 32px;
+          margin-top: -20px;
         }
 
-        padding: 0 5%;
+        padding: 0 10%;
       }
 
       .imagem {
@@ -126,13 +126,16 @@
       margin-top: 50px;
 
       &:before {
-        content: "";
-        margin-top: -15.5rem;
+        clip-path: ellipse(2000px 2000px at 1000px 2010px);
+        margin-top: -25.5rem;
+        // height: 900px;
       }
 
       .sobre {
+        background-color: $cobreEscuro;
+
         >div {
-          margin-top: -130px;
+          margin-top: -180px;
         }
 
         h2 {
