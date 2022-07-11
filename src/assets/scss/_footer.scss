@@ -11,7 +11,7 @@ footer {
         margin-top: -13vw;
         position: absolute;
         background-color: $amareloPastel;
-        clip-path: ellipse(1000px 950px at -450px 1390px);
+        clip-path: ellipse(465px 410px at -90px 950px);
         width: 1200px;
         height: 1200px;
         bottom: 0;
@@ -37,10 +37,12 @@ footer {
 
           .telefone,
           .instagram {
+            a {
 
-            >span,
-            >img {
-              vertical-align: middle;
+              >span,
+              >img {
+                vertical-align: middle;
+              }
             }
           }
 
@@ -80,14 +82,14 @@ footer {
 
         .bg {
           bottom: -400px;
-          clip-path: ellipse(800px 870px at -130px 1150px);
+          clip-path: ellipse(465px 410px at -90px 950px);
           width: 800px;
-          height: 850px;
+          height: 1200px;
 
           .info {
             gap: 35px;
             height: 100%;
-            padding-top: 350px;
+            padding-top: 600px;
             padding-left: 50px;
 
             >div {
@@ -113,16 +115,17 @@ footer {
 
   @media only screen and (max-width: 480px) {
     #rodape {
-      height: 700px;
-
       .container {
-        height: 600px;
-
         .bg {
-          bottom: -400px;
-          clip-path: ellipse(800px 870px at -130px 1150px);
+          clip-path: ellipse(465px 410px at -90px 950px);
           width: 779px;
-          height: 900px;
+          height: 1000px;
+
+          .info {
+            gap: 25px;
+            padding-top: 630px;
+            padding-left: 30px;
+          }
         }
       }
     }

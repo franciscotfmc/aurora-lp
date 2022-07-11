@@ -1462,7 +1462,7 @@ body footer #rodape .container .bg {
   margin-top: -13vw;
   position: absolute;
   background-color: #FFF5DC;
-  clip-path: ellipse(1000px 950px at -450px 1390px);
+  clip-path: ellipse(465px 410px at -90px 950px);
   width: 1200px;
   height: 1200px;
   bottom: 0;
@@ -1485,10 +1485,10 @@ body footer #rodape .container .bg .info > div {
   line-height: 1.938rem;
   color: #696969;
 }
-body footer #rodape .container .bg .info .telefone > span,
-body footer #rodape .container .bg .info .telefone > img,
-body footer #rodape .container .bg .info .instagram > span,
-body footer #rodape .container .bg .info .instagram > img {
+body footer #rodape .container .bg .info .telefone a > span,
+body footer #rodape .container .bg .info .telefone a > img,
+body footer #rodape .container .bg .info .instagram a > span,
+body footer #rodape .container .bg .info .instagram a > img {
   vertical-align: middle;
 }
 body footer #rodape .container .bg .info .icon {
@@ -1517,14 +1517,14 @@ body footer #rodape .mapa {
   }
   body footer #rodape .container .bg {
     bottom: -400px;
-    clip-path: ellipse(800px 870px at -130px 1150px);
+    clip-path: ellipse(465px 410px at -90px 950px);
     width: 800px;
-    height: 850px;
+    height: 1200px;
   }
   body footer #rodape .container .bg .info {
     gap: 35px;
     height: 100%;
-    padding-top: 350px;
+    padding-top: 600px;
     padding-left: 50px;
   }
   body footer #rodape .container .bg .info > div {
@@ -1542,17 +1542,15 @@ body footer #rodape .container .bg .info .instagram {
   }
 }
 @media only screen and (max-width: 480px) {
-  body footer #rodape {
-    height: 700px;
-  }
-  body footer #rodape .container {
-    height: 600px;
-  }
   body footer #rodape .container .bg {
-    bottom: -400px;
-    clip-path: ellipse(800px 870px at -130px 1150px);
+    clip-path: ellipse(465px 410px at -90px 950px);
     width: 779px;
-    height: 900px;
+    height: 1000px;
+  }
+  body footer #rodape .container .bg .info {
+    gap: 25px;
+    padding-top: 630px;
+    padding-left: 30px;
   }
 }
 
