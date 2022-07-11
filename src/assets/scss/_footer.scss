@@ -11,9 +11,10 @@ footer {
         margin-top: -13vw;
         position: absolute;
         background-color: $amareloPastel;
-        clip-path: ellipse(50vw 45vw at -20vw 42vw);
-        width: 50vw;
-        height: 50vw;
+        clip-path: ellipse(1000px 950px at -450px 1390px);
+        width: 1200px;
+        height: 1200px;
+        bottom: 0;
 
         .info {
           gap: 35px;
@@ -24,8 +25,8 @@ footer {
           flex-direction: column;
           height: 100%;
           justify-content: center;
-          padding-top: 20%;
-          padding-left: 10%;
+          padding-top: 700px;
+          padding-left: 40px;
 
           >div {
             font-weight: 400;
@@ -70,19 +71,18 @@ footer {
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     #rodape {
-      height: 700px;
+      height: 1000px;
 
       .container {
         height: 600px;
 
         .bg {
           bottom: -400px;
-          clip-path: ellipse(804px 850px at 170px 1150px);
-          // clip-path: ellipse(520px 710px at 100px 1130px);
+          clip-path: ellipse(800px 870px at -130px 1150px);
           width: 800px;
-          height: 890px;
+          height: 850px;
 
           .info {
             gap: 35px;
@@ -99,39 +99,31 @@ footer {
 
             .telefone,
             .instagram {
-
               width: 250px;
-
-              >span,
-              >img {
-                vertical-align: middle;
-              }
-            }
-
-            .icon {
-              line-height: 1.938rem;
-              width: 2rem;
             }
 
             .endereco {
               width: 250px;
-              font-size: 1rem;
-              line-height: 1.188rem;
-            }
-
-            .logo {
-              img {
-                // max-width: 175px;
-              }
             }
           }
         }
       }
+    }
+  }
 
-      .mapa {
-        display: flex;
-        flex: 1;
-        // height: 100vw;
+  @media only screen and (max-width: 480px) {
+    #rodape {
+      height: 700px;
+
+      .container {
+        height: 600px;
+
+        .bg {
+          bottom: -400px;
+          clip-path: ellipse(800px 870px at -130px 1150px);
+          width: 779px;
+          height: 900px;
+        }
       }
     }
   }

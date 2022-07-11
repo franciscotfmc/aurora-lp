@@ -1462,9 +1462,10 @@ body footer #rodape .container .bg {
   margin-top: -13vw;
   position: absolute;
   background-color: #FFF5DC;
-  clip-path: ellipse(50vw 45vw at -20vw 42vw);
-  width: 50vw;
-  height: 50vw;
+  clip-path: ellipse(1000px 950px at -450px 1390px);
+  width: 1200px;
+  height: 1200px;
+  bottom: 0;
 }
 body footer #rodape .container .bg .info {
   gap: 35px;
@@ -1475,8 +1476,8 @@ body footer #rodape .container .bg .info {
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  padding-top: 20%;
-  padding-left: 10%;
+  padding-top: 700px;
+  padding-left: 40px;
 }
 body footer #rodape .container .bg .info > div {
   font-weight: 400;
@@ -1507,18 +1508,18 @@ body footer #rodape .mapa {
   flex: 1;
   height: 100%;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   body footer #rodape {
-    height: 700px;
+    height: 1000px;
   }
   body footer #rodape .container {
     height: 600px;
   }
   body footer #rodape .container .bg {
     bottom: -400px;
-    clip-path: ellipse(804px 850px at 170px 1150px);
+    clip-path: ellipse(800px 870px at -130px 1150px);
     width: 800px;
-    height: 890px;
+    height: 850px;
   }
   body footer #rodape .container .bg .info {
     gap: 35px;
@@ -1536,24 +1537,22 @@ body footer #rodape .mapa {
 body footer #rodape .container .bg .info .instagram {
     width: 250px;
   }
-  body footer #rodape .container .bg .info .telefone > span,
-body footer #rodape .container .bg .info .telefone > img,
-body footer #rodape .container .bg .info .instagram > span,
-body footer #rodape .container .bg .info .instagram > img {
-    vertical-align: middle;
-  }
-  body footer #rodape .container .bg .info .icon {
-    line-height: 1.938rem;
-    width: 2rem;
-  }
   body footer #rodape .container .bg .info .endereco {
     width: 250px;
-    font-size: 1rem;
-    line-height: 1.188rem;
   }
-  body footer #rodape .mapa {
-    display: flex;
-    flex: 1;
+}
+@media only screen and (max-width: 480px) {
+  body footer #rodape {
+    height: 700px;
+  }
+  body footer #rodape .container {
+    height: 600px;
+  }
+  body footer #rodape .container .bg {
+    bottom: -400px;
+    clip-path: ellipse(800px 870px at -130px 1150px);
+    width: 779px;
+    height: 900px;
   }
 }
 
