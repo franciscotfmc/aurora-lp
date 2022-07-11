@@ -6,6 +6,7 @@
   "scripts": {
     "start": "run-p scss:watch server",
     "server": "nodemon ./scripts/server.js",
+    "build-pages": "npm install && node src/scripts/build.js",
     "build": "node src/scripts/build.js",
     "scss:build": "sass src/assets/scss/:src/public/css/",
     "scss:watch": "sass --watch --poll src/assets/scss/:src/public/css/"
