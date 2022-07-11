@@ -1,3 +1,5 @@
+'use strict';
+
 const env = process.env.NODE_ENV;
 
 console.log('ENV: ', env);
@@ -29,6 +31,7 @@ class Build {
   }
 
   async execute() {
+    const fs = require('fs').promises;
     await fs.rm(distPath, { recursive: true, force: true });
     await fs.mkdir(distCssPath, { recursive: true });
     await fs.mkdir(distJsPath, { recursive: true });
