@@ -1328,6 +1328,7 @@ body #sobre .container p {
   }
 }
 body #estrutura .container {
+  background-color: #9B1982;
   font-size: 0;
   position: relative;
   display: flex;
