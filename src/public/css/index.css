@@ -588,7 +588,7 @@ body #conceito .container .circulos .foto img {
   max-height: 43.125rem;
   position: relative;
   object-fit: cover;
-  object-position: 20%;
+  object-position: 50%;
   clip-path: circle(50%);
 }
 body #conceito .container .circulos .foto:after {
@@ -1168,6 +1168,8 @@ body #especialidades .container .mais-grid ul li:before {
   }
 }
 body #sobre .container {
+  z-index: 2;
+  position: relative;
   background-color: #9B1982;
   clip-path: ellipse(3408px 3211px at 508px 3218px);
   padding-top: 8.063rem;
@@ -1220,7 +1222,14 @@ body #sobre .container .row-2 .row-2-2 .box-3 .imagem .foto {
   position: relative;
 }
 body #sobre .container .row-2 .row-2-2 .box-3 .imagem .foto img {
+  width: 100vw;
+  height: 100vw;
   max-width: 500px;
+  max-height: 500px;
+  position: relative;
+  object-fit: cover;
+  object-position: 50%;
+  clip-path: circle(50%);
 }
 body #sobre .container .row-2 .row-2-2 .box-3 .imagem .foto:after {
   content: "";
@@ -1289,8 +1298,10 @@ body #sobre .container p {
     margin-left: -180px;
     margin-bottom: -120px;
   }
-  body #sobre .container .row-2 .row-2-2 .box-3 .imagem .foto {
-    display: flex;
+  body #sobre .container .row-2 .row-2-2 .box-3 .imagem .foto img {
+    max-width: 440px;
+    max-height: 440px;
+    object-position: 20%;
   }
   body #sobre .container .row-2 .row-2-2 .box-4 a {
     margin: 3rem 0;
@@ -1298,10 +1309,16 @@ body #sobre .container p {
 }
 @media only screen and (max-width: 480px) {
   body #sobre .container .row-2 .row-2-2 .box-3 .imagem {
-    margin-left: -150px;
+    margin-bottom: -80px;
+    margin-left: -100px;
   }
   body #sobre .container .row-2 .row-2-2 .box-3 .imagem .foto {
     display: flex;
+  }
+  body #sobre .container .row-2 .row-2-2 .box-3 .imagem .foto img {
+    max-width: 340px;
+    max-height: 340px;
+    object-position: 25%;
   }
   body #sobre .container .row-2 .row-2-2 .box-4 a {
     margin: 3rem 0;
@@ -1309,20 +1326,21 @@ body #sobre .container p {
 }
 body #estrutura .container {
   font-size: 0;
-  z-index: -1;
   position: relative;
   display: flex;
-  justify-content: start;
+  flex-direction: column;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
   border: 0;
 }
 body #estrutura .container .gradient {
+  z-index: 1;
   position: absolute;
   width: 100%;
-  height: 300px;
   background-image: linear-gradient(to bottom, #A56E73, transparent);
+  height: 300px;
 }
 body #estrutura .container .titulo {
+  z-index: 1;
   position: absolute;
   right: 10%;
   margin-top: 2rem;
@@ -1331,33 +1349,105 @@ body #estrutura .container .titulo {
   font-size: 1.5rem;
   line-height: 1.75rem;
 }
-body #estrutura .container .carousel {
-  z-index: -2;
+body #estrutura .container #e-slider {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
 }
-body #estrutura .container img {
-  width: 100%;
+body #estrutura .container #e-slider .keen-slider__slide {
+  resize: vertical;
+  display: flex;
+  flex-direction: column;
+  max-height: 812px;
+  min-width: fit-content;
 }
-body #estrutura .container .slider {
-  bottom: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  font-size: 5rem;
+body #estrutura .container #e-slider .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+  max-height: 812px;
+}
+body #estrutura .container #e-slider .content img {
+  max-height: 812px;
+  object-fit: cover;
+}
+body #estrutura .container .img-dots {
+  display: flex;
+  gap: 20px;
+  background-color: transparent;
+  justify-content: center;
+  margin-top: -120px;
+  z-index: 2;
+}
+body #estrutura .container .img-dots > span {
+  width: 19px;
+  height: 19px;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+  cursor: pointer;
+}
+body #estrutura .container .img-dots .img-dots-active {
+  background-color: #9B1982;
 }
 @media only screen and (max-width: 1024px) {
+  body #estrutura .container .gradient {
+    height: 120px;
+  }
   body #estrutura .container .titulo {
     font-size: 1.2rem;
+  }
+  body #estrutura .container .img-dots {
+    gap: 10px;
+    background-color: #9B1982;
+    justify-content: center;
+    margin-top: -10px;
+    align-items: center;
+    z-index: 2;
+    padding: 20px 0 20px 0;
+  }
+  body #estrutura .container .img-dots > span {
+    width: 16px;
+    height: 16px;
+  }
+  body #estrutura .container .img-dots .img-dots-active {
+    background-color: #FAE14B;
   }
 }
 @media only screen and (max-width: 768px) {
   body #estrutura .container {
-    background-color: #A56E73;
+    background-color: #9B1982;
     background-image: linear-gradient(to bottom, #A56E73, transparent);
-    padding-top: 130px;
+    padding-top: 150px;
+  }
+  body #estrutura .container .gradient {
+    height: 0px;
   }
   body #estrutura .container .titulo {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    top: 80px;
+    right: 10px;
+    z-index: 2;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body #estrutura .container {
+    background-color: #9B1982;
+    background-image: linear-gradient(to bottom, #A56E73, transparent);
+    padding-top: 150px;
+  }
+  body #estrutura .container .gradient {
+    display: none;
+  }
+  body #estrutura .container .titulo {
+    font-size: 1rem;
+    top: 75px;
     right: 10%;
+    z-index: 2;
+  }
+  body #estrutura .container #e-slider .content img {
+    min-height: 215px;
+    object-fit: cover;
   }
 }
 body footer #rodape {
@@ -1415,6 +1505,56 @@ body footer #rodape .container .bg .info .logo img {
 body footer #rodape .mapa {
   display: flex;
   flex: 1;
+  height: 100%;
+}
+@media only screen and (max-width: 768px) {
+  body footer #rodape {
+    height: 700px;
+  }
+  body footer #rodape .container {
+    height: 600px;
+  }
+  body footer #rodape .container .bg {
+    bottom: -400px;
+    clip-path: ellipse(804px 850px at 170px 1150px);
+    width: 800px;
+    height: 890px;
+  }
+  body footer #rodape .container .bg .info {
+    gap: 35px;
+    height: 100%;
+    padding-top: 350px;
+    padding-left: 50px;
+  }
+  body footer #rodape .container .bg .info > div {
+    font-weight: 400;
+    font-size: 1.625rem;
+    line-height: 1.938rem;
+    color: #696969;
+  }
+  body footer #rodape .container .bg .info .telefone,
+body footer #rodape .container .bg .info .instagram {
+    width: 250px;
+  }
+  body footer #rodape .container .bg .info .telefone > span,
+body footer #rodape .container .bg .info .telefone > img,
+body footer #rodape .container .bg .info .instagram > span,
+body footer #rodape .container .bg .info .instagram > img {
+    vertical-align: middle;
+  }
+  body footer #rodape .container .bg .info .icon {
+    line-height: 1.938rem;
+    width: 2rem;
+  }
+  body footer #rodape .container .bg .info .endereco {
+    width: 250px;
+    font-size: 1rem;
+    line-height: 1.188rem;
+  }
+  body footer #rodape .mapa {
+    display: flex;
+    flex: 1;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,13 +1,24 @@
 <div class="container">
-  <div>
-    <div class="gradient"></div>
-    <div class="titulo">
-      <h2>Conheça nossa estrutura:</h2>
-    </div>
-    <div class="" carousel>
-      <img alt="Foto frontal da recepção de clínica" src="/img/clinica-1.jpg"
-        onerror="this.onerror=null;this.src='/img/clinica-1.jpg'" loading="lazy">
-    </div>
-    <div class="slider">Slider</div>
+
+  <div class="gradient"></div>
+  <div class="titulo">
+    <h2>Conheça nossa estrutura</h2>
+  </div>
+
+  <div id="e-slider">
+    <% imagens.forEach(function(imagem) { %>
+      <div class="keen-slider__slide">
+        <div class="content">
+          <img alt="<%= imagem.alt %>" src="/img/<%= imagem.name %>" class="<%= imagem.class %>"
+            onerror="this.onerror=null;this.src='/img/<%= imagem.name %>'">
+        </div>
+      </div>
+      <% }); %>
+  </div>
+
+  <div id="imgDots" class="img-dots">
+    <% imagens.forEach(function(imagem) { %>
+      <span></span>
+      <% }); %>
   </div>
 </div>

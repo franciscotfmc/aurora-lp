@@ -92,10 +92,56 @@ function CommentsCarousel(slider) {
   }
 }
 
+function ImgCarousel(slider) {
+  this.document = window.document;
+
+  this.dots = this.document
+    .getElementById('imgDots');
+
+  this.setEvents = function () {
+
+    Array.from(this.dots.children)
+      .forEach(function (dot, idx) {
+        dot.addEventListener('click',
+          function () {
+            slider.moveToIdx(idx);
+          }
+        );
+      });
+
+    slider.on('created', () => {
+      this.updateClasses();
+    });
+
+    slider.on('optionsChanged', () => {
+      this.updateClasses();
+    });
+
+    slider.on('slideChanged', () => {
+      this.updateClasses();
+    });
+
+    this.updateClasses();
+  }
+
+  this.updateClasses = function () {
+    var slide = slider.track.details.rel;
+
+    Array.from(this.dots.children)
+      .forEach(function (dot, idx) {
+        idx === slide
+          ? dot.classList.add('img-dots-active')
+          : dot.classList.remove('img-dots-active');
+      });
+  }
+}
+
 (function () {
   ready(function () {
     randomizeComments();
-    var slider = new KeenSlider('#c-slider');
-    new CommentsCarousel(slider).setEvents();
+    var sliderComentarios = new KeenSlider('#c-slider');
+    new CommentsCarousel(sliderComentarios).setEvents();
+    var sliderEstrutura = new KeenSlider('#e-slider');
+    new ImgCarousel(sliderEstrutura).setEvents();
   });
 })();

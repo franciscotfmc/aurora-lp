@@ -4,11 +4,13 @@ const express = require('express');
 const livereload = require('livereload');
 const connectLivereload = require('connect-livereload');
 const comentarios = require('./comentarios');
+const imagens = require('./imagens');
 
 const indexData = {
   cssIndex: 'index.css',
   jsIndex: 'main.js',
-  comentarios: comentarios
+  comentarios: comentarios,
+  imagens: imagens
 };
 
 const port = 3000;

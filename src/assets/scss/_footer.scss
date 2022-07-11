@@ -10,7 +10,7 @@ footer {
       .bg {
         margin-top: -13vw;
         position: absolute;
-        background-color: #FFF5DC;
+        background-color: $amareloPastel;
         clip-path: ellipse(50vw 45vw at -20vw 42vw);
         width: 50vw;
         height: 50vw;
@@ -66,6 +66,73 @@ footer {
     .mapa {
       display: flex;
       flex: 1;
+      height: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    #rodape {
+      height: 700px;
+
+      .container {
+        height: 600px;
+
+        .bg {
+          bottom: -400px;
+          clip-path: ellipse(804px 850px at 170px 1150px);
+          // clip-path: ellipse(520px 710px at 100px 1130px);
+          width: 800px;
+          height: 890px;
+
+          .info {
+            gap: 35px;
+            height: 100%;
+            padding-top: 350px;
+            padding-left: 50px;
+
+            >div {
+              font-weight: 400;
+              font-size: 1.625rem;
+              line-height: 1.938rem;
+              color: $cinza;
+            }
+
+            .telefone,
+            .instagram {
+
+              width: 250px;
+
+              >span,
+              >img {
+                vertical-align: middle;
+              }
+            }
+
+            .icon {
+              line-height: 1.938rem;
+              width: 2rem;
+            }
+
+            .endereco {
+              width: 250px;
+              font-size: 1rem;
+              line-height: 1.188rem;
+            }
+
+            .logo {
+              img {
+                // max-width: 175px;
+              }
+            }
+          }
+        }
+      }
+
+      .mapa {
+        display: flex;
+        flex: 1;
+        // height: 100vw;
+      }
     }
   }
 }
