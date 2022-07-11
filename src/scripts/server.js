@@ -14,6 +14,7 @@ const indexData = {
 };
 
 const port = 3000;
+const distPath = `${__dirname}/../../dist`;
 const publicPath = `${__dirname}/../public`;
 const viewsPath = `${__dirname}/../views`;
 

@@ -1,18 +1,24 @@
 'use strict';
 
 const fs = require('fs').promises;
+const fsEx = require("fs-extra");
 const CleanCSS = require('clean-css');
 const ejs = require('ejs');
 const minify = require('html-minifier').minify;
 const terser = require("terser");
 
+const comentarios = require('./comentarios');
+const imagens = require('./imagens');
+
 const cssPath = `${__dirname}/../public/css`;
 const ejsPath = `${__dirname}/../views`;
 const jsPath = `${__dirname}/../public/js`;
+const imgPath = `${__dirname}/../public/img`;
 const distPath = `${__dirname}/../../dist`;
 const distCssPath = `${__dirname}/../../dist/css`;
 const distHtmlPath = `${__dirname}/../../dist`;
 const distJsPath = `${__dirname}/../../dist/js`;
+const distImgPath = `${__dirname}/../../dist/img`;
 
 class Build {
 
@@ -24,10 +30,13 @@ class Build {
     await fs.rm(distPath, { recursive: true, force: true });
     await fs.mkdir(distCssPath, { recursive: true });
     await fs.mkdir(distJsPath, { recursive: true });
+    await fs.mkdir(`${distJsPath}/lib`, { recursive: true });
     await this._minifyCss();
     const ejsOutput = await this._compileEjs();
     await this._minifyHtml(ejsOutput);
     await this._minifyJs();
+    await this._copyJsLibs();
+    await this._compressImgs();
   }
 
   async _minifyCss() {
@@ -40,7 +49,9 @@ class Build {
   async _compileEjs() {
     const data = {
       cssIndex: `index${this.timestamp}.css`,
-      jsIndex: `main${this.timestamp}.js`
+      jsIndex: `main${this.timestamp}.js`,
+      comentarios: comentarios,
+      imagens: imagens
     };
 
     const ejsIndex = `${ejsPath}/index.ejs`;
@@ -64,6 +75,18 @@ class Build {
     const output = await terser.minify(jsFile.toString(), options);
     const fileName = `${distJsPath}/main${this.timestamp}.js`;
     await fs.writeFile(fileName, output.code);
+  }
+
+  async _copyJsLibs() {
+    return fsEx.copy(
+      `${jsPath}/lib`,
+      `${distJsPath}/lib`
+    );
+  }
+
+  async _compressImgs() {
+    // not yet compressing
+    return fsEx.copy(imgPath, distImgPath);
   }
 };
 
