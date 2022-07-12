@@ -7,6 +7,7 @@
     flex-direction: column;
     background-image: linear-gradient(to bottom, $sombra, $sombra);
     border: 0;
+    height: 812px;
 
     .gradient {
       z-index: 1;
@@ -97,7 +98,6 @@
 
   @media only screen and (max-width: 1024px) {
     .container {
-
       .gradient {
         height: 120px;
       }

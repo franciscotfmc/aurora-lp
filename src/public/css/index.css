@@ -1395,6 +1395,7 @@ body #estrutura .container {
   flex-direction: column;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
   border: 0;
+  height: 812px;
 }
 body #estrutura .container .gradient {
   z-index: 1;
@@ -1514,107 +1515,108 @@ body #estrutura .container .img-dots .img-dots-active {
     object-fit: cover;
   }
 }
-body footer #rodape {
+body #rodape {
   display: flex;
-  background-color: #9B1982;
-  height: 37vw;
+  flex-direction: row;
+  height: 600px;
+  font-size: 0;
 }
-body footer #rodape .container {
-  filter: drop-shadow(10px 10px 50px rgba(0, 0, 0, 0.2));
-}
-body footer #rodape .container .bg {
-  margin-top: -13vw;
-  position: absolute;
-  background-color: #FFF5DC;
-  clip-path: ellipse(465px 410px at -90px 950px);
-  width: 1200px;
-  height: 1200px;
-  bottom: 0;
-}
-body footer #rodape .container .bg .info {
-  gap: 35px;
-  flex: 1;
-  align-items: flex-start;
+body #rodape .contatos .info {
   display: flex;
-  max-width: 35vw;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
-  padding-top: 700px;
-  padding-left: 40px;
+  gap: 35px;
+  filter: drop-shadow(10px 10px 50px rgba(0, 0, 0, 0.2));
+  height: 600px;
+  position: relative;
+  z-index: 1;
 }
-body footer #rodape .container .bg .info > div {
+body #rodape .contatos .info:before {
+  content: "";
+  clip-path: ellipse(600px 600px at -140px 590px);
+  background-color: #FFF5DC;
+  position: absolute;
+  width: 500px;
+  height: 700px;
+  bottom: 0;
+  z-index: -1;
+}
+body #rodape .contatos .info > div {
+  width: 350px;
   font-weight: 400;
   font-size: 1.625rem;
   line-height: 1.938rem;
   color: #696969;
+  padding-left: 50px;
 }
-body footer #rodape .container .bg .info .telefone a > span,
-body footer #rodape .container .bg .info .telefone a > img,
-body footer #rodape .container .bg .info .instagram a > span,
-body footer #rodape .container .bg .info .instagram a > img {
+body #rodape .contatos .info .telefone,
+body #rodape .contatos .info .instagram {
+  cursor: pointer;
+}
+body #rodape .contatos .info .telefone a > span,
+body #rodape .contatos .info .telefone a > img,
+body #rodape .contatos .info .instagram a > span,
+body #rodape .contatos .info .instagram a > img {
   vertical-align: middle;
 }
-body footer #rodape .container .bg .info .icon {
+body #rodape .contatos .info .icon {
   line-height: 1.938rem;
   width: 2rem;
 }
-body footer #rodape .container .bg .info .endereco {
-  max-width: 224px;
+body #rodape .contatos .info .endereco {
+  max-width: 280px;
   font-size: 1rem;
   line-height: 1.188rem;
 }
-body footer #rodape .container .bg .info .logo img {
+body #rodape .contatos .info .logo img {
   max-width: 10.938rem;
 }
-body footer #rodape .mapa {
-  display: flex;
-  flex: 1;
-  height: 100%;
+body #rodape .mapa {
+  width: 100%;
+  height: 600px;
+  border: 0;
+  padding: 0;
+  margin-left: -150px;
 }
 @media only screen and (max-width: 1024px) {
-  body footer #rodape {
-    height: 1000px;
+  body #rodape .contatos .info {
+    padding-top: 120px;
   }
-  body footer #rodape .container {
-    height: 600px;
+  body #rodape .contatos .info:before {
+    clip-path: ellipse(600px 600px at -100px 710px);
   }
-  body footer #rodape .container .bg {
-    bottom: -400px;
-    clip-path: ellipse(465px 410px at -90px 950px);
-    width: 800px;
-    height: 1200px;
+  body #rodape .mapa {
+    margin-left: -350px;
   }
-  body footer #rodape .container .bg .info {
-    gap: 35px;
-    height: 100%;
-    padding-top: 600px;
-    padding-left: 50px;
+}
+@media only screen and (max-width: 768px) {
+  body #rodape .contatos .info {
+    gap: 25px;
+    padding-top: 260px;
   }
-  body footer #rodape .container .bg .info > div {
-    font-weight: 400;
-    font-size: 1.625rem;
-    line-height: 1.938rem;
-    color: #696969;
+  body #rodape .contatos .info:before {
+    clip-path: ellipse(520px 470px at -80px 750px);
   }
-  body footer #rodape .container .bg .info .telefone,
-body footer #rodape .container .bg .info .instagram {
-    width: 250px;
+  body #rodape .contatos .info > div {
+    padding-left: 30px;
   }
-  body footer #rodape .container .bg .info .endereco {
-    width: 250px;
+  body #rodape .contatos .info .logo img {
+    max-width: 10rem;
   }
 }
 @media only screen and (max-width: 480px) {
-  body footer #rodape .container .bg {
-    clip-path: ellipse(465px 410px at -90px 950px);
-    width: 779px;
-    height: 1000px;
+  body #rodape .contatos .info {
+    gap: 30px;
+    padding-top: 210px;
   }
-  body footer #rodape .container .bg .info {
-    gap: 25px;
-    padding-top: 630px;
-    padding-left: 30px;
+  body #rodape .contatos .info:before {
+    clip-path: ellipse(520px 470px at 70px 770px);
+  }
+  body #rodape .contatos .info > div {
+    padding-left: 50px;
+  }
+  body #rodape .mapa {
+    height: 400px;
   }
 }
 

@@ -1,112 +1,117 @@
-footer {
-  #rodape {
-    display: flex;
-    background-color: $roxo;
-    height: 37vw;
+#rodape {
+  display: flex;
+  flex-direction: row;
+  height: 600px;
+  font-size: 0;
 
-    .container {
+  .contatos {
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 35px;
       filter: drop-shadow(10px 10px 50px rgba(0, 0, 0, 0.2));
 
-      .bg {
-        margin-top: -13vw;
-        position: absolute;
+      &:before {
+        content: '';
+        clip-path: ellipse(600px 600px at -140px 590px);
         background-color: $amareloPastel;
-        clip-path: ellipse(465px 410px at -90px 950px);
-        width: 1200px;
-        height: 1200px;
+        position: absolute;
+        width: 500px;
+        height: 700px;
         bottom: 0;
+        z-index: -1;
+      }
 
-        .info {
-          gap: 35px;
-          flex: 1;
-          align-items: flex-start;
-          display: flex;
-          max-width: 35vw;
-          flex-direction: column;
-          height: 100%;
-          justify-content: center;
-          padding-top: 700px;
-          padding-left: 40px;
+      height: 600px;
+      position: relative;
+      z-index: 1;
 
-          >div {
-            font-weight: 400;
-            font-size: 1.625rem;
-            line-height: 1.938rem;
-            color: $cinza;
-          }
+      >div {
+        width: 350px;
+        font-weight: 400;
+        font-size: 1.625rem;
+        line-height: 1.938rem;
+        color: $cinza;
+        padding-left: 50px;
+      }
 
-          .telefone,
-          .instagram {
-            a {
+      .telefone,
+      .instagram {
+        cursor: pointer;
 
-              >span,
-              >img {
-                vertical-align: middle;
-              }
-            }
-          }
+        a {
 
-          .icon {
-            line-height: 1.938rem;
-            width: 2rem;
-          }
-
-          .endereco {
-            max-width: 224px;
-            font-size: 1rem;
-            line-height: 1.188rem;
-          }
-
-          .logo {
-            img {
-              max-width: 10.938rem;
-            }
+          >span,
+          >img {
+            vertical-align: middle;
           }
         }
+      }
+
+      .icon {
+        line-height: 1.938rem;
+        width: 2rem;
+      }
+
+      .endereco {
+        max-width: 280px;
+        font-size: 1rem;
+        line-height: 1.188rem;
+      }
+
+      .logo {
+        img {
+          max-width: 10.938rem;
+        }
+      }
+    }
+  }
+
+  .mapa {
+    width: 100%;
+    height: 600px;
+    border: 0;
+    padding: 0;
+    margin-left: -150px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .contatos {
+      .info {
+        &:before {
+          clip-path: ellipse(600px 600px at -100px 710px);
+        }
+
+        padding-top: 120px;
       }
     }
 
     .mapa {
-      display: flex;
-      flex: 1;
-      height: 100%;
+      margin-left: -350px;
     }
   }
 
-  @media only screen and (max-width: 1024px) {
-    #rodape {
-      height: 1000px;
+  @media only screen and (max-width: 768px) {
 
-      .container {
-        height: 600px;
+    .contatos {
 
-        .bg {
-          bottom: -400px;
-          clip-path: ellipse(465px 410px at -90px 950px);
-          width: 800px;
-          height: 1200px;
+      .info {
+        gap: 25px;
 
-          .info {
-            gap: 35px;
-            height: 100%;
-            padding-top: 600px;
-            padding-left: 50px;
+        &:before {
+          clip-path: ellipse(520px 470px at -80px 750px);
+        }
 
-            >div {
-              font-weight: 400;
-              font-size: 1.625rem;
-              line-height: 1.938rem;
-              color: $cinza;
-            }
+        padding-top: 260px;
 
-            .telefone,
-            .instagram {
-              width: 250px;
-            }
+        >div {
+          padding-left: 30px;
+        }
 
-            .endereco {
-              width: 250px;
-            }
+        .logo {
+          img {
+            max-width: 10rem;
           }
         }
       }
@@ -114,20 +119,26 @@ footer {
   }
 
   @media only screen and (max-width: 480px) {
-    #rodape {
-      .container {
-        .bg {
-          clip-path: ellipse(465px 410px at -90px 950px);
-          width: 779px;
-          height: 1000px;
 
-          .info {
-            gap: 25px;
-            padding-top: 630px;
-            padding-left: 30px;
-          }
+    .contatos {
+
+      .info {
+        gap: 30px;
+
+        &:before {
+          clip-path: ellipse(520px 470px at 70px 770px);
+        }
+
+        padding-top: 210px;
+
+        >div {
+          padding-left: 50px;
         }
       }
+    }
+
+    .mapa {
+      height: 400px;
     }
   }
 }
