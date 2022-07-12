@@ -171,6 +171,13 @@
           }
         }
       }
+
+      .img-dots {
+        >span {
+          width: 12px;
+          height: 12px;
+        }
+      }
     }
   }
 }

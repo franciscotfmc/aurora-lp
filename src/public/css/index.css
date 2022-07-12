@@ -1535,6 +1535,10 @@ body #estrutura .container .img-dots .img-dots-active {
     min-height: 215px;
     object-fit: cover;
   }
+  body #estrutura .container .img-dots > span {
+    width: 12px;
+    height: 12px;
+  }
 }
 body #rodape {
   display: flex;
