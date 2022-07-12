@@ -1,9 +1,5 @@
 'use strict';
 
-const env = process.env.NODE_ENV;
-
-console.log('ENV: ', env);
-
 const fs = require('fs').promises;
 const fsEx = require('fs-extra');
 const CleanCSS = require('clean-css');
