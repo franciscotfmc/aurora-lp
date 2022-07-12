@@ -7,7 +7,7 @@
     flex-direction: column;
     background-image: linear-gradient(to bottom, $sombra, $sombra);
     border: 0;
-    height: 812px;
+    // height: 812px;
 
     .gradient {
       z-index: 1;
@@ -31,7 +31,7 @@
     #e-slider {
       display: flex;
       flex-direction: row;
-      height: 100%;
+      // height: 100%;
 
       .keen-slider__slide {
         resize: vertical;

@@ -77,59 +77,22 @@
   }
 
   @media only screen and (max-width: 1024px) {
-    .contatos {
-      .info {
-        &:before {
-          clip-path: ellipse(600px 600px at -100px 710px);
-        }
-
-        padding-top: 120px;
-      }
-    }
-
-    .mapa {
-      margin-left: -350px;
-    }
-  }
-
-  @media only screen and (max-width: 768px) {
-
-    .contatos {
-
-      .info {
-        gap: 25px;
-
-        &:before {
-          clip-path: ellipse(520px 470px at -80px 750px);
-        }
-
-        padding-top: 260px;
-
-        >div {
-          padding-left: 30px;
-        }
-
-        .logo {
-          img {
-            max-width: 10rem;
-          }
-        }
-      }
-    }
-  }
-
-  @media only screen and (max-width: 480px) {
+    flex-direction: column-reverse;
+    height: auto;
 
     .contatos {
 
       .info {
         gap: 30px;
+        margin-top: -348px;
+        height: auto;
+        padding-bottom: 20px;
 
         &:before {
-          clip-path: ellipse(520px 470px at 70px 770px);
+          clip-path: ellipse(430px 480px at 70px 770px);
         }
 
-        padding-top: 210px;
+        padding-top: 0;
 
         >div {
           padding-left: 50px;
@@ -138,7 +101,39 @@
     }
 
     .mapa {
-      height: 400px;
+      margin-left: 0;
+      height: 800px;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    flex-direction: column-reverse;
+    height: auto;
+
+    .contatos {
+
+      .info {
+        gap: 30px;
+        margin-top: -348px;
+        height: auto;
+        padding-bottom: 20px;
+
+        &:before {
+          clip-path: ellipse(430px 480px at 70px 770px);
+        }
+
+        padding-top: 0;
+
+        >div {
+          padding-left: 50px;
+        }
+      }
+    }
+
+    .mapa {
+      margin-top: 0px;
+      margin-left: 0;
+      height: 900px;
     }
   }
 }

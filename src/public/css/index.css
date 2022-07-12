@@ -1395,7 +1395,6 @@ body #estrutura .container {
   flex-direction: column;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
   border: 0;
-  height: 812px;
 }
 body #estrutura .container .gradient {
   z-index: 1;
@@ -1417,7 +1416,6 @@ body #estrutura .container .titulo {
 body #estrutura .container #e-slider {
   display: flex;
   flex-direction: row;
-  height: 100%;
 }
 body #estrutura .container #e-slider .keen-slider__slide {
   resize: vertical;
@@ -1579,44 +1577,50 @@ body #rodape .mapa {
   margin-left: -150px;
 }
 @media only screen and (max-width: 1024px) {
-  body #rodape .contatos .info {
-    padding-top: 120px;
+  body #rodape {
+    flex-direction: column-reverse;
+    height: auto;
   }
-  body #rodape .contatos .info:before {
-    clip-path: ellipse(600px 600px at -100px 710px);
-  }
-  body #rodape .mapa {
-    margin-left: -350px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  body #rodape .contatos .info {
-    gap: 25px;
-    padding-top: 260px;
-  }
-  body #rodape .contatos .info:before {
-    clip-path: ellipse(520px 470px at -80px 750px);
-  }
-  body #rodape .contatos .info > div {
-    padding-left: 30px;
-  }
-  body #rodape .contatos .info .logo img {
-    max-width: 10rem;
-  }
-}
-@media only screen and (max-width: 480px) {
   body #rodape .contatos .info {
     gap: 30px;
-    padding-top: 210px;
+    margin-top: -348px;
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 0;
   }
   body #rodape .contatos .info:before {
-    clip-path: ellipse(520px 470px at 70px 770px);
+    clip-path: ellipse(430px 480px at 70px 770px);
   }
   body #rodape .contatos .info > div {
     padding-left: 50px;
   }
   body #rodape .mapa {
-    height: 400px;
+    margin-left: 0;
+    height: 800px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  body #rodape {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  body #rodape .contatos .info {
+    gap: 30px;
+    margin-top: -348px;
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 0;
+  }
+  body #rodape .contatos .info:before {
+    clip-path: ellipse(430px 480px at 70px 770px);
+  }
+  body #rodape .contatos .info > div {
+    padding-left: 50px;
+  }
+  body #rodape .mapa {
+    margin-top: 0px;
+    margin-left: 0;
+    height: 900px;
   }
 }
 
