@@ -49,6 +49,7 @@
 
         img {
           max-height: 812px;
+          min-height: 750px;
           object-fit: cover;
         }
       }
@@ -84,6 +85,15 @@
 
       .titulo {
         font-size: 1.2rem;
+      }
+
+      #e-slider {
+        .content {
+          img {
+            min-height: 550px;
+            max-height: 550px;
+          }
+        }
       }
 
       .img-dots {
@@ -123,6 +133,15 @@
         right: 10px;
         z-index: 2;
       }
+
+      #e-slider {
+        .content {
+          img {
+            min-height: 350px;
+            max-height: 350px;
+          }
+        }
+      }
     }
   }
 
@@ -146,6 +165,7 @@
       #e-slider {
         .content {
           img {
+            max-height: 300px;
             min-height: 215px;
             object-fit: cover;
           }

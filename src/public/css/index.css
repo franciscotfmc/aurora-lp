@@ -1446,6 +1446,7 @@ body #estrutura .container #e-slider .content {
 }
 body #estrutura .container #e-slider .content img {
   max-height: 812px;
+  min-height: 750px;
   object-fit: cover;
 }
 body #estrutura .container .img-dots {
@@ -1472,6 +1473,10 @@ body #estrutura .container .img-dots .img-dots-active {
   }
   body #estrutura .container .titulo {
     font-size: 1.2rem;
+  }
+  body #estrutura .container #e-slider .content img {
+    min-height: 550px;
+    max-height: 550px;
   }
   body #estrutura .container .img-dots {
     gap: 10px;
@@ -1505,6 +1510,10 @@ body #estrutura .container .img-dots .img-dots-active {
     right: 10px;
     z-index: 2;
   }
+  body #estrutura .container #e-slider .content img {
+    min-height: 350px;
+    max-height: 350px;
+  }
 }
 @media only screen and (max-width: 480px) {
   body #estrutura .container {
@@ -1522,6 +1531,7 @@ body #estrutura .container .img-dots .img-dots-active {
     z-index: 2;
   }
   body #estrutura .container #e-slider .content img {
+    max-height: 300px;
     min-height: 215px;
     object-fit: cover;
   }
