@@ -512,7 +512,7 @@ body header .container .menu #menu {
   position: fixed;
   left: -100%;
   top: 0;
-  z-index: 9;
+  z-index: 11;
   transition: 0.5s;
 }
 body header .container .menu #menu .items {
@@ -527,6 +527,7 @@ body header .container .menu #menu .items {
   justify-content: space-between;
   flex-direction: column;
   font-size: 1.5em;
+  z-index: 12;
 }
 body header .container .menu #menu .items a {
   padding: 0 0 32px 0;
@@ -541,13 +542,25 @@ body header .container .menu #menuButton:checked ~ #menu {
 body header .container .menu #menuLabel {
   position: absolute;
   cursor: pointer;
-  width: 49px;
-  height: 2rem;
+  width: 45px;
+  height: 30px;
   left: 60px;
   top: 67px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  z-index: 99;
+}
+body header .container .menu #menuLabel:before {
+  content: "";
+  position: absolute;
+  top: -17px;
+  left: -13px;
+  width: 70px;
+  height: 64px;
+  background-color: #9B1982;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
 }
 body header .container .menu #menuLabel > div {
   height: 2px;
@@ -559,7 +572,7 @@ body header .container .menu #menuButton:checked ~ #menuLabel > div {
   background-color: #fff;
 }
 body header .container .menu #menuButton:checked ~ #menuLabel > div:nth-child(1) {
-  transform: translateY(15px) rotate(45deg);
+  transform: translateY(13px) rotate(45deg);
 }
 body header .container .menu #menuButton:checked ~ #menuLabel > div:nth-child(2) {
   opacity: 0;
