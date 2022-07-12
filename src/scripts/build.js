@@ -14,11 +14,13 @@ const cssPath = `${__dirname}/../public/css`;
 const ejsPath = `${__dirname}/../views`;
 const jsPath = `${__dirname}/../public/js`;
 const imgPath = `${__dirname}/../public/img`;
+const fontsPath = `${__dirname}/../public/fonts`;
 const distPath = `${__dirname}/../../dist`;
 const distCssPath = `${__dirname}/../../dist/css`;
 const distHtmlPath = `${__dirname}/../../dist`;
 const distJsPath = `${__dirname}/../../dist/js`;
 const distImgPath = `${__dirname}/../../dist/img`;
+const distFontsPath = `${__dirname}/../../dist/fonts`;
 
 class Build {
 
@@ -36,6 +38,7 @@ class Build {
     await this._minifyHtml(ejsOutput);
     await this._minifyJs();
     await this._copyJsLibs();
+    await this._copyFonts();
     await this._compressImgs();
   }
 
@@ -82,6 +85,10 @@ class Build {
       `${jsPath}/lib`,
       `${distJsPath}/lib`
     );
+  }
+
+  async _copyFonts() {
+    return fsEx.copy(fontsPath, distFontsPath);
   }
 
   async _compressImgs() {
