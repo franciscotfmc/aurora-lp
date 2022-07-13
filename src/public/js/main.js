@@ -146,7 +146,7 @@ function ImgCarousel(slider) {
     var images = [];
 
     for (var i = 1; i <= 12; i++) {
-      images.push('/img/clinica-' + i + '.png')
+      images.push('/img/clinica-' + i + '.jpg')
     }
 
     function loadImages(s) {

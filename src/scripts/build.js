@@ -5,7 +5,7 @@ const fsEx = require('fs-extra');
 const CleanCSS = require('clean-css');
 const ejs = require('ejs');
 const minify = require('html-minifier').minify;
-const terser = require("terser");
+const terser = require('terser');
 
 const comentarios = require('./comentarios');
 const imagens = require('./imagens');
@@ -39,7 +39,7 @@ class Build {
     await this._minifyJs();
     await this._copyJsLibs();
     await this._copyFonts();
-    await this._compressImgs();
+    await this._copyImgs();
   }
 
   async _minifyCss() {
@@ -91,8 +91,7 @@ class Build {
     return fsEx.copy(fontsPath, distFontsPath);
   }
 
-  async _compressImgs() {
-    // not yet compressing
+  async _copyImgs() {
     return fsEx.copy(imgPath, distImgPath);
   }
 };
