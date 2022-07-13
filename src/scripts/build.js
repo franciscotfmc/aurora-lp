@@ -56,7 +56,8 @@ class Build {
       cssIndex: `index${this.timestamp}.css`,
       jsIndex: `main${this.timestamp}.js`,
       comentarios: comentarios,
-      imagens: imagens
+      imagens: imagens,
+      title: 'Aurora Odontologia'
     };
 
     const ejsIndex = `${ejsPath}/index.ejs`;

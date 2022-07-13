@@ -10,7 +10,8 @@ const indexData = {
   cssIndex: 'index.css',
   jsIndex: 'main.js',
   comentarios: comentarios,
-  imagens: imagens
+  imagens: imagens,
+  title: 'Aurora [Desenvolvimento]'
 };
 
 const port = 3000;
