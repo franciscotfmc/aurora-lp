@@ -1406,7 +1406,6 @@ body #estrutura .container {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
   border: 0;
 }
 body #estrutura .container .gradient {
@@ -1431,11 +1430,14 @@ body #estrutura .container #e-slider {
   flex-direction: row;
 }
 body #estrutura .container #e-slider .keen-slider__slide {
-  resize: vertical;
   display: flex;
   flex-direction: column;
   max-height: 812px;
   min-width: fit-content;
+  background-color: #A56E73;
+  background-image: url("/img/loader.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 body #estrutura .container #e-slider .content {
   position: relative;

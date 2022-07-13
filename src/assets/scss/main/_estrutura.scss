@@ -1,13 +1,12 @@
 #estrutura {
   .container {
+
     background-color: $roxo;
     font-size: 0;
     position: relative;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to bottom, $sombra, $sombra);
     border: 0;
-    // height: 812px;
 
     .gradient {
       z-index: 1;
@@ -33,11 +32,15 @@
       flex-direction: row;
 
       .keen-slider__slide {
-        resize: vertical;
         display: flex;
         flex-direction: column;
         max-height: 812px;
         min-width: fit-content;
+
+        background-color: $cobreEscuro;
+        background-image: url('/img/loader.svg');
+        background-position: center;
+        background-repeat: no-repeat;
       }
 
       .content {

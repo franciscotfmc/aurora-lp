@@ -141,7 +141,33 @@ function ImgCarousel(slider) {
     randomizeComments();
     var sliderComentarios = new KeenSlider('#c-slider');
     new CommentsCarousel(sliderComentarios).setEvents();
-    var sliderEstrutura = new KeenSlider('#e-slider');
-    new ImgCarousel(sliderEstrutura).setEvents();
+
+    var loaded = [];
+    var images = [];
+
+    for (var i = 1; i <= 12; i++) {
+      images.push('/img/clinica-' + i + '.png')
+    }
+
+    function loadImages(s) {
+      var slideIdx = s.track.details.rel
+      loaded[slideIdx] = true
+
+      s.slides.forEach((element, idx) => {
+        if (loaded[idx])
+          element.querySelector('img')
+            .setAttribute('src', images[idx]);
+      });
+    }
+
+    var sliderEstrutura = new KeenSlider('#e-slider', {
+      animationEnded: loadImages,
+      created: loadImages,
+      loop: false,
+      initial: 0,
+    });
+
+    new ImgCarousel(sliderEstrutura)
+      .setEvents();
   });
 })();
