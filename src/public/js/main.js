@@ -21,7 +21,7 @@ function randomizeComments() {
   }
 
   var max = getArray('c-slider')
-    .length - 4;
+    .length - 6;
 
   for (var index = 0; index < max; index++) {
     var comments = getArray('c-slider');
