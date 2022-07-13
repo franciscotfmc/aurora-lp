@@ -10,6 +10,7 @@ const terser = require('terser');
 const comentarios = require('./comentarios');
 const imagens = require('./imagens');
 
+const publicPath = `${__dirname}/../public`;
 const cssPath = `${__dirname}/../public/css`;
 const ejsPath = `${__dirname}/../views`;
 const jsPath = `${__dirname}/../public/js`;
@@ -93,6 +94,7 @@ class Build {
   }
 
   async _copyImgs() {
+    await fs.copyFile(`${publicPath}/favicon.ico`, `${distPath}/favicon.ico`);
     return fsEx.copy(imgPath, distImgPath);
   }
 };
