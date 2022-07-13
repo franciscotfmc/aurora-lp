@@ -109,6 +109,13 @@
           gap: 40px;
 
           .foto {
+            width: 281px;
+            height: 281px;
+            background-color: $amareloPastel;
+            background-image: url('/img/loader.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+
             img {
               max-width: 281px;
             }

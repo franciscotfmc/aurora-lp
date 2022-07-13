@@ -1000,6 +1000,14 @@ body #depoimentos .container .carousel #c-slider .content {
   align-items: center;
   gap: 40px;
 }
+body #depoimentos .container .carousel #c-slider .content .foto {
+  width: 281px;
+  height: 281px;
+  background-color: #FFF5DC;
+  background-image: url("/img/loader.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
 body #depoimentos .container .carousel #c-slider .content .foto img {
   max-width: 281px;
 }
