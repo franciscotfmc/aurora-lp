@@ -64,10 +64,10 @@ header {
         &:before {
           content: '';
           position: absolute;
-          top: -19px;
+          top: -20px;
           left: -13px;
           width: 70px;
-          height: 68px;
+          height: 70px;
           background-color: $roxo;
           border-radius: 50%;
           box-shadow: 1px 1px 5px $sombra;
@@ -109,7 +109,7 @@ header {
       .menu {
         #menu {
           left: -100%;
-          top: -10px;
+          top: 0;
 
           .items {
             color: white;
@@ -117,7 +117,7 @@ header {
             cursor: pointer;
             width: 312px;
             left: 10%;
-            top: 15%;
+            top: 16%;
 
             a {
               padding: 0 0 32px 0;

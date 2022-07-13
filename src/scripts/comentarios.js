@@ -64,4 +64,12 @@ module.exports = [{
   img: 'p-tairine.png',
   name: 'Tairine Bertola',
   text: `Curabitur id vestibulum velit, vel lobortis odio. Nulla facilisi. Nulla pretium varius velit suscipit malesuada. Sed vel lobortis lorem, at tincidunt nisl. Pellentesque eleifend libero erat, vel vehicula tellus aliquam a.`
+}, {
+  img: 'p-tulio.png',
+  name: 'Tulio Spuri',
+  text: `Curabitur id vestibulum velit, vel lobortis odio. Nulla facilisi. Nulla pretium varius velit suscipit malesuada. Sed vel lobortis lorem, at tincidunt nisl. Pellentesque eleifend libero erat, vel vehicula tellus aliquam a.`
+}, {
+  img: 'p-cecilia.png',
+  name: 'Cecília Devêza',
+  text: `Curabitur id vestibulum velit, vel lobortis odio. Nulla facilisi. Nulla pretium varius velit suscipit malesuada. Sed vel lobortis lorem, at tincidunt nisl. Pellentesque eleifend libero erat, vel vehicula tellus aliquam a.`
 }];
