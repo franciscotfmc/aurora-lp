@@ -64,10 +64,10 @@ header {
         &:before {
           content: '';
           position: absolute;
-          top: -17px;
+          top: -19px;
           left: -13px;
           width: 70px;
-          height: 64px;
+          height: 68px;
           background-color: $roxo;
           border-radius: 50%;
           box-shadow: 1px 1px 5px $sombra;
@@ -126,8 +126,8 @@ header {
         }
 
         #menuLabel {
-          left: 7%;
-          top: 3%;
+          left: 30px;
+          top: 40px;
         }
       }
     }

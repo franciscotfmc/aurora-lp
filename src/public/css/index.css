@@ -560,10 +560,10 @@ body header .container .menu #menuLabel {
 body header .container .menu #menuLabel:before {
   content: "";
   position: absolute;
-  top: -17px;
+  top: -19px;
   left: -13px;
   width: 70px;
-  height: 64px;
+  height: 68px;
   background-color: #9B1982;
   border-radius: 50%;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
@@ -610,8 +610,8 @@ body header .container .menu #menuButton:checked ~ #menuLabel > span:nth-child(3
     padding: 0 0 32px 0;
   }
   body header .container .menu #menuLabel {
-    left: 7%;
-    top: 3%;
+    left: 30px;
+    top: 40px;
   }
 }
 body #conceito {
