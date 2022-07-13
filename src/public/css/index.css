@@ -562,22 +562,22 @@ body header .container .menu #menuLabel:before {
   border-radius: 50%;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
 }
-body header .container .menu #menuLabel > div {
+body header .container .menu #menuLabel > span {
   height: 2px;
   background-color: white;
   transition: 0.5s;
   z-index: 999;
 }
-body header .container .menu #menuButton:checked ~ #menuLabel > div {
+body header .container .menu #menuButton:checked ~ #menuLabel > span {
   background-color: #fff;
 }
-body header .container .menu #menuButton:checked ~ #menuLabel > div:nth-child(1) {
+body header .container .menu #menuButton:checked ~ #menuLabel > span:nth-child(1) {
   transform: translateY(13px) rotate(45deg);
 }
-body header .container .menu #menuButton:checked ~ #menuLabel > div:nth-child(2) {
+body header .container .menu #menuButton:checked ~ #menuLabel > span:nth-child(2) {
   opacity: 0;
 }
-body header .container .menu #menuButton:checked ~ #menuLabel > div:nth-child(3) {
+body header .container .menu #menuButton:checked ~ #menuLabel > span:nth-child(3) {
   transform: translateY(-15px) rotate(-45deg);
 }
 @media only screen and (max-width: 480px) {
@@ -1604,6 +1604,12 @@ body #rodape .mapa {
   border: 0;
   padding: 0;
   margin-left: -150px;
+}
+body #rodape .mapa iframe {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 @media only screen and (max-width: 1024px) {
   body #rodape {

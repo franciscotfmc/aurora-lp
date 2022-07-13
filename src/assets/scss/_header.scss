@@ -74,26 +74,26 @@ header {
         }
       }
 
-      #menuLabel>div {
+      #menuLabel>span {
         height: 2px;
         background-color: white;
         transition: 0.5s;
         z-index: 999;
       }
 
-      #menuButton:checked~#menuLabel>div {
+      #menuButton:checked~#menuLabel>span {
         background-color: #fff;
       }
 
-      #menuButton:checked~#menuLabel>div:nth-child(1) {
+      #menuButton:checked~#menuLabel>span:nth-child(1) {
         transform: translateY(13px) rotate(45deg);
       }
 
-      #menuButton:checked~#menuLabel>div:nth-child(2) {
+      #menuButton:checked~#menuLabel>span:nth-child(2) {
         opacity: 0;
       }
 
-      #menuButton:checked~#menuLabel>div:nth-child(3) {
+      #menuButton:checked~#menuLabel>span:nth-child(3) {
         transform: translateY(-15px) rotate(-45deg);
       }
     }
