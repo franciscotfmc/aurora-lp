@@ -6,8 +6,6 @@ const CleanCSS = require('clean-css');
 const ejs = require('ejs');
 const minify = require('html-minifier').minify;
 const terser = require('terser');
-const imagemin = require('imagemin');
-const imageminJpegtran = require('imagemin-jpegtran');
 
 const comentarios = require('./comentarios');
 const imagens = require('./imagens');
@@ -31,17 +29,18 @@ class Build {
   }
 
   async execute() {
+    console.info('Starting build...');
     await fs.rm(distPath, { recursive: true, force: true });
     await fs.mkdir(distCssPath, { recursive: true });
     await fs.mkdir(distJsPath, { recursive: true });
     await fs.mkdir(`${distJsPath}/lib`, { recursive: true });
-    // await this._minifyCss();
-    // const ejsOutput = await this._compileEjs();
-    // await this._minifyHtml(ejsOutput);
-    // await this._minifyJs();
-    // await this._copyJsLibs();
-    // await this._copyFonts();
-    await this._compressImgs();
+    await this._minifyCss();
+    const ejsOutput = await this._compileEjs();
+    await this._minifyHtml(ejsOutput);
+    await this._minifyJs();
+    await this._copyJsLibs();
+    await this._copyFonts();
+    await this._copyImgs();
   }
 
   async _minifyCss() {
@@ -93,23 +92,11 @@ class Build {
     return fsEx.copy(fontsPath, distFontsPath);
   }
 
-  async _compressImgs() {
-    // return fsEx.copy(imgPath, distImgPath);
-    const files = await imagemin([`${imgPath}/clinica-1.jpg`], {
-      destination: distImgPath,
-      plugins: [
-        imageminJpegtran({
-          speed: 1,
-          quality: [0.4, 0.5],
-          strip: true
-        })
-      ]
-    });
-
-    console.log(`${imgPath}/clinica-1.jpg`, files)
+  async _copyImgs() {
+    return fsEx.copy(imgPath, distImgPath);
   }
 };
 
 new Build().execute().then(() => {
-  console.log('Finished');
+  console.info('Build finished!');
 });

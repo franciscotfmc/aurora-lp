@@ -5,16 +5,12 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Aurora Odontologia" />
-  <meta name="twitter:description" content="Clínica Aurora Odontologia" />
-  <meta name="twitter:image" content="public/img/querymeta.png" />
   <meta property="og:title" content="Aurora Odontologia" />
   <meta property="og:site_name" content="auroraodontologia.com.br" />
-  <meta property="og:image" itemprop="image" content="/public/img/querymeta.png" />
+  <meta property="og:description" content="Site da clínica Aurora Odontologia" />
+  <meta property="image" content="/public/img/querymeta.png" />
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/css/<%= cssIndex %>">
-  <meta property="og:description" content="Aurora Odontologia" />
   <title>Aurora Odontologia</title>
 </head>
 
@@ -31,9 +27,9 @@
     <%- include('partials/footer'); %>
   </footer>
 
-</body>
+  <script src="/js/<%= jsIndex %>"></script>
+  <script src="/js/lib/keen-slider.min.js"></script>
 
-<script src="/js/<%= jsIndex %>"></script>
-<script src="/js/lib/keen-slider.min.js"></script>
+</body>
 
 </html>
