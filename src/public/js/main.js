@@ -146,17 +146,27 @@ function ImgCarousel(slider) {
     var images = [];
 
     for (var i = 1; i <= 12; i++) {
-      images.push('/img/clinica-' + i + '.jpg')
+      images.push({
+        webp: '/img/clinica-' + i + '.webp',
+        jpg: '/img/clinica-' + i + '.jpg',
+      })
     }
 
     function loadImages(s) {
-      var slideIdx = s.track.details.rel
-      loaded[slideIdx] = true
+      var slideIdx = s.track.details.rel;
+      loaded[slideIdx] = true;
 
       s.slides.forEach((element, idx) => {
-        if (loaded[idx])
+        if (loaded[idx]) {
+          var onError = 'this.onerror=null;this.src="' +
+            images[idx].jpg + '"';
+
           element.querySelector('img')
-            .setAttribute('src', images[idx]);
+            .setAttribute('onerror', onError);
+
+          element.querySelector('img')
+            .setAttribute('src', images[idx].webp);
+        }
       });
     }
 
