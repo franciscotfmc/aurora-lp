@@ -604,7 +604,7 @@ body header .container .menu #menuButton:checked ~ #menuLabel > span:nth-child(3
     cursor: pointer;
     width: 312px;
     left: 10%;
-    top: 12%;
+    top: 15%;
   }
   body header .container .menu #menu .items a {
     padding: 0 0 32px 0;
