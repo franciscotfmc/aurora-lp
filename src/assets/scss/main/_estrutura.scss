@@ -52,8 +52,25 @@
 
         img {
           max-height: 812px;
-          min-height: 750px;
-          object-fit: cover;
+          object-fit: contain;
+          position: relative;
+          // filter: drop-shadow(1px 1px 10px $sombra);
+        }
+      }
+
+      .blur {
+        position: relative;
+
+        &:before {
+          content: '';
+          filter: blur(30px);
+          background-image: var(--bg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          position: absolute;
+          width: 100%;
+          height: 100%;
         }
       }
     }

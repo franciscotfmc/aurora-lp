@@ -166,6 +166,15 @@ function ImgCarousel(slider) {
 
           element.querySelector('img')
             .setAttribute('src', images[idx].webp);
+
+          element.querySelector('div.content')
+            .classList.add('blur');
+
+          var src = element.querySelector('div.content>img').src;
+          var bg = "url('" + src + "')";
+
+          element.querySelector('div.content').style
+            .setProperty('--bg', bg);
         }
       });
     }
