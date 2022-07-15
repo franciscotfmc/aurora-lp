@@ -6,7 +6,7 @@
   </div>
 
   <div id="c-slider">
-    <% comentarios.forEach(function(comentario) { %>
+    <% comentarios.forEach(function(comentario) { if(comentario.visible) { %>
       <div class="keen-slider__slide">
         <div class="content">
           <div class="foto">
@@ -18,12 +18,12 @@
               <%= comentario.name %>
             </p>
             <p class="descricao">
-              <%= comentario.text %>
+              <%- comentario.text %>
             </p>
           </div>
         </div>
       </div>
-      <% }); %>
+      <% } }); %>
   </div>
 
   <div class="slide-right">
@@ -33,8 +33,8 @@
   </div>
 
   <div id="commentsDots" class="dots">
-    <% comentarios.forEach(function(comentario) { %>
+    <% comentarios.forEach(function(comentario) { if(comentario.visible) { %>
       <span></span>
-      <% }); %>
+      <% } }); %>
   </div>
 </div>

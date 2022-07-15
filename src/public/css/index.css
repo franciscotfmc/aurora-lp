@@ -448,6 +448,10 @@ body p {
   margin: 0;
   padding: 0;
 }
+body ::selection {
+  color: #FAE14B;
+  background: rgba(0, 0, 0, 0.25);
+}
 body .button, body .action-button-inverse, body .action-button {
   width: 310px;
   height: 68px;
@@ -992,6 +996,14 @@ body #depoimentos .container .carousel #c-slider .content .texto {
   color: #696969;
   line-height: 28px;
   max-width: 330px;
+}
+body #depoimentos .container .carousel #c-slider .content .texto a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #A56E73;
+}
+body #depoimentos .container .carousel #c-slider .content .texto a:hover {
+  color: #696969;
 }
 body #depoimentos .container .carousel #c-slider .content .texto .nome {
   font-weight: 700;

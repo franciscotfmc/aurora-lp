@@ -126,6 +126,16 @@
             line-height: 28px;
             max-width: 330px;
 
+            a {
+              text-decoration: underline;
+              cursor: pointer;
+              color: $cobreEscuro;
+
+              &:hover {
+                color: $cinza;
+              }
+            }
+
             .nome {
               font-weight: 700;
               font-size: 24px;

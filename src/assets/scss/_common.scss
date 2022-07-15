@@ -20,6 +20,11 @@ p {
   padding: 0;
 }
 
+::selection {
+  color: $amarelo;
+  background: $sombra;
+}
+
 .button {
   width: 310px;
   height: 68px;
