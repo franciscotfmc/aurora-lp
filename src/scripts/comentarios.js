@@ -1,11 +1,11 @@
 'use strict';
 
 module.exports = [{
-  visible: false,
+  visible: true,
   png: 'p-thais.png',
   webp: 'p-thais.webp',
   name: 'Thais de Paula',
-  text: 'Curabitur id vestibulum velit, vel lobortis odio. Nulla facilisi. Nulla pretium varius velit suscipit malesuada. Sed vel lobortis lorem, at tincidunt nisl. Pellentesque eleifend libero erat, vel vehicula tellus aliquam a.'
+  text: 'Estou muito satisfeita com meu sorriso Aurora, a clínica tem uma estrutura impecável, e o mais importante, profissionais qualificados e dedicados que se importam com seus pacientes. Principalmente Dra Luciana, sempre atenciosa e detalhista em todos os aspectos. Todo mundo merece ter esse tipo de tratamento. Só tenho a agradecer!'
 }, {
   visible: true,
   png: 'p-marina.png',
