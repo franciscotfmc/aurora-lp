@@ -1648,30 +1648,7 @@ body #rodape .mapa iframe {
   }
   body #rodape .contatos .info {
     gap: 30px;
-    margin-top: -348px;
-    height: auto;
-    padding-bottom: 20px;
-    padding-top: 0;
-  }
-  body #rodape .contatos .info:before {
-    clip-path: ellipse(430px 480px at 70px 770px);
-  }
-  body #rodape .contatos .info > div {
-    padding-left: 50px;
-  }
-  body #rodape .mapa {
-    margin-left: 0;
-    height: 800px;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  body #rodape {
-    flex-direction: column-reverse;
-    height: auto;
-  }
-  body #rodape .contatos .info {
-    gap: 30px;
-    margin-top: -348px;
+    margin-top: -342px;
     height: auto;
     padding-bottom: 20px;
     padding-top: 0;
