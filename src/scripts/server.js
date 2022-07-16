@@ -11,7 +11,8 @@ const indexData = {
   jsIndex: 'main.js',
   comentarios: comentarios,
   imagens: imagens,
-  title: 'Aurora [Desenvolvimento]'
+  title: 'Aurora [Desenvolvimento]',
+  GA: false
 };
 
 const port = 3000;
