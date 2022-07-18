@@ -645,7 +645,7 @@ body #conceito .container .circulos .foto img {
   max-height: 43.125rem;
   position: relative;
   object-fit: cover;
-  object-position: 50%;
+  object-position: 16px center;
   clip-path: circle(50%);
 }
 body #conceito .container .circulos .foto:after {
