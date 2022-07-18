@@ -6,18 +6,9 @@ function ready(fn) {
   }
 }
 
-function gtag_report_conversion(obj, event) {
-  var url = obj.getAttribute('data-link');
-
-  var callback = function () {
-    if (typeof (url) != 'undefined') {
-      window.open(url);
-    }
-  };
-
+function gtag_report_conversion(event) {
   gtag('event', 'conversion', {
-    'send_to': event,
-    'event_callback': callback
+    'send_to': event
   });
 
   return false;
