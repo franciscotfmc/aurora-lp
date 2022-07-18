@@ -6,6 +6,23 @@ function ready(fn) {
   }
 }
 
+function gtag_report_conversion(obj, event) {
+  var url = obj.getAttribute('data-link');
+
+  var callback = function () {
+    if (typeof (url) != 'undefined') {
+      window.open(url);
+    }
+  };
+
+  gtag('event', 'conversion', {
+    'send_to': event,
+    'event_callback': callback
+  });
+
+  return false;
+}
+
 function randomNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
