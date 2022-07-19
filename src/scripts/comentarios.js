@@ -13,7 +13,7 @@ module.exports = [{
   name: 'Marina Laport',
   text: 'Excelente atendimento!! Dra Luciana é muito atenciosa e ainda me deu um <a href="/img/kit-marina.jpeg" target="_blank">kit super fofo</a> 😍😍 clínica mais linda e charmosa de Ouro Preto.'
 }, {
-  visible: true,
+  visible: false,
   png: 'p-paulo.png',
   webp: 'p-paulo.webp',
   name: 'Paulo Silva',
@@ -23,7 +23,7 @@ module.exports = [{
   png: 'p-lydiane.png',
   webp: 'p-lydiane.webp',
   name: 'Lidyane Ribeiro',
-  text: 'Excelente profissional! Super atenciosa e dedicada em tudo que fala e faz! Ja estou ansiosa para a próxima consulta!'
+  text: 'Excelente profissional! Super atenciosa e dedicada em tudo que fala e faz! Já estou ansiosa para a próxima consulta!'
 }, {
   visible: true,
   png: 'p-ana.png',
@@ -49,7 +49,7 @@ module.exports = [{
   name: 'Filipe Santos',
   text: 'A melhor clínica odontológica de Ouro Preto. Excelente atendimento!'
 }, {
-  visible: true,
+  visible: false,
   png: 'p-amanda.png',
   webp: 'p-amanda.webp',
   name: 'Amanda Ovcearenco',
@@ -67,7 +67,7 @@ module.exports = [{
   name: 'Beth Carvalho',
   text: 'Me senti em casa, segura de ter feito uma ótima escolha em relação a minha saúde bucal. Acolhimento e trabalho de qualidade de primeira. Recomendo a todos!!'
 }, {
-  visible: true,
+  visible: false,
   png: 'p-gabriel.png',
   webp: 'p-gabriel.webp',
   name: 'Gabriel José',
@@ -79,19 +79,19 @@ module.exports = [{
   name: 'Maria Silveira',
   text: 'Clínica bem estruturada, atendimento humanizado, a melhor da região!  Fui muito bem recepcionada na clínica e recebi um atendimento maravilhoso!'
 }, {
-  visible: true,
+  visible: false,
   png: 'p-joao.png',
   webp: 'p-joao.webp',
   name: 'João Pedro',
   text: 'Excelente atendimento, equipe muito atenciosa e qualificada. Valores muito justos. Bastante satisfeito com o serviço!'
 }, {
-  visible: true,
+  visible: false,
   png: 'p-genilson.png',
   webp: 'p-genilson.webp',
   name: 'Genilson Israel',
   text: 'Profissionalismo e eficiência, recomendo muito!'
 }, {
-  visible: true,
+  visible: false,
   png: 'p-tairine.png',
   webp: 'p-tairine.webp',
   name: 'Tairine Bertola',
