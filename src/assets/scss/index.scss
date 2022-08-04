@@ -17,6 +17,7 @@ body {
 
 body {
   font-family: 'Raleway';
+  background-color: $roxo;
 
   @import "common";
   @import "header";
@@ -33,21 +34,31 @@ html {
 
 //grids
 .container-grid-12{
-  display: grid;  
+  --grid-margin:3.2rem;
+  display: grid;
+  margin: auto;
+  width: 100%;
   grid-template-columns: repeat(12, 1fr);
   gap: 1.6rem;
-  padding-left: 3.2rem;
-  padding-right: 3.2rem;
+  width: calc(100% - (2 * var(--grid-margin)));
+  
   @media only screen and (max-width: 767px) {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    --grid-margin:4rem;
+  }
+  @media only screen and (min-width: 1921px) {
+    --grid-margin: 5vw;    
   }
 }
 
 @for $i from 1 through 12{
   .g-#{$i}col{
-    grid-column: #{$i} span;
+    grid-column: span #{$i}/span #{$i} ;
+  }
+}
+@for $i from 1 through 12{
+  .g-#{$i}offset{
+    grid-column-start:#{$i+1};
   }
 }

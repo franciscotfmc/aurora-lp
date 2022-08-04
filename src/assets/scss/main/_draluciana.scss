@@ -1,7 +1,8 @@
 #draluciana {
   position: relative;
-  margin-top: 0;
+  margin-top: 9rem;
   min-height: 58vh;
+  padding-top: 6rem;
   background-color: $roxo;
 
   &:before {
@@ -11,39 +12,21 @@
     height: 100%;
     display: inline-block;
     position: absolute;
-    clip-path: ellipse(200rem 195rem at 54vw 201rem);
+    clip-path: ellipse(200rem 201rem at 54vw 201rem);
     margin-top: -15.5rem;
     z-index: 1;
   }
 
   .container {
     position: relative;
-    height: 100%;
-    display: flex;
-    align-items: start;
-    flex-flow: wrap-reverse;
     color: white;
     background-color: transparent;
     padding: 0 0 0 0;
     z-index: 2;
 
-
-
-    div {
-      flex-grow: 1;
-    }
-
     .sobre {
       z-index: 2;
-      text-align: justify;
-
-      >div {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        align-items: flex-end;
-        padding-left: 7%;
-      }
+      padding-right: 2rem;
 
       h2 {
         color: $amarelo;
@@ -52,7 +35,6 @@
       }
 
       p {
-        max-width: 51.2rem;
         margin-bottom: 2rem;
 
         q {
@@ -66,7 +48,6 @@
     }
 
     .imagem {
-      padding: 0 2.7rem;
       z-index: 2;
 
       .foto {
@@ -74,6 +55,8 @@
 
         img {
           object-fit: cover;
+          width: 100%;
+          height: auto;
         }
       }
     }

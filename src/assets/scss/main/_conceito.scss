@@ -22,7 +22,7 @@
         position: absolute;
         width: 69rem;
         height: 69rem;
-        top:-13rem;
+        top:-6rem;
         right: 14rem;
 
         &:before {
@@ -65,6 +65,7 @@
 
     .tagline {
       z-index: 4;
+      padding:0 4rem;
 
       h1 {
         width: 29.3rem;

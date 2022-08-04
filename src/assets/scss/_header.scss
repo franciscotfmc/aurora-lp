@@ -1,12 +1,13 @@
-header {
+header#mainHeader {
   .container {
     font-size: 1rem;
-    padding: 4.5rem 0 7rem 0;
+    padding: 5rem 0 7rem 0;
     background-color: $roxo;
     text-align: center;
 
-    img {
-      width: 16.2rem;
+    img#logoAuroraTopo {
+      width: auto;
+      height: 10rem;
     }
 
     .menu {

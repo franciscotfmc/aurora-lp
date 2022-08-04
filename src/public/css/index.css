@@ -429,6 +429,7 @@ body {
 
 body {
   font-family: "Raleway";
+  background-color: #9B1982;
 }
 body h1,
 body h2,
@@ -510,16 +511,17 @@ body .fw-800 {
 body .fw-900 {
   font-weight: 900;
 }
-body header .container {
+body header#mainHeader .container {
   font-size: 1rem;
-  padding: 4.5rem 0 7rem 0;
+  padding: 5rem 0 7rem 0;
   background-color: #9B1982;
   text-align: center;
 }
-body header .container img {
-  width: 16.2rem;
+body header#mainHeader .container img#logoAuroraTopo {
+  width: auto;
+  height: 10rem;
 }
-body header .container .menu #menu {
+body header#mainHeader .container .menu #menu {
   background: rgba(155, 25, 130, 0.85);
   width: 100%;
   height: 100vh;
@@ -529,7 +531,7 @@ body header .container .menu #menu {
   z-index: 11;
   transition: 0.5s;
 }
-body header .container .menu #menu .items {
+body header#mainHeader .container .menu #menu .items {
   color: white;
   position: absolute;
   cursor: pointer;
@@ -543,17 +545,17 @@ body header .container .menu #menu .items {
   font-size: 1.5em;
   z-index: 12;
 }
-body header .container .menu #menu .items a {
+body header#mainHeader .container .menu #menu .items a {
   padding: 0 0 3.2rem 0;
 }
-body header .container .menu #menuButton {
+body header#mainHeader .container .menu #menuButton {
   display: none;
 }
-body header .container .menu #menuButton:checked ~ #menu {
+body header#mainHeader .container .menu #menuButton:checked ~ #menu {
   transition-timing-function: cubic-bezier(10, 2, 3, 1);
   transform: translateX(100%);
 }
-body header .container .menu #menuLabel {
+body header#mainHeader .container .menu #menuLabel {
   position: absolute;
   cursor: pointer;
   width: 4.5rem;
@@ -565,7 +567,7 @@ body header .container .menu #menuLabel {
   flex-direction: column;
   z-index: 99;
 }
-body header .container .menu #menuLabel:before {
+body header#mainHeader .container .menu #menuLabel:before {
   content: "";
   position: absolute;
   top: -2rem;
@@ -576,37 +578,37 @@ body header .container .menu #menuLabel:before {
   border-radius: 50%;
   box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.25);
 }
-body header .container .menu #menuLabel > span {
+body header#mainHeader .container .menu #menuLabel > span {
   height: 0.2rem;
   background-color: white;
   transition: 0.5s;
   z-index: 999;
 }
-body header .container .menu #menuButton:checked ~ #menuLabel > span {
+body header#mainHeader .container .menu #menuButton:checked ~ #menuLabel > span {
   background-color: #fff;
 }
-body header .container .menu #menuButton:checked ~ #menuLabel > span:nth-child(1) {
+body header#mainHeader .container .menu #menuButton:checked ~ #menuLabel > span:nth-child(1) {
   transform: translateY(1.3rem) rotate(45deg);
 }
-body header .container .menu #menuButton:checked ~ #menuLabel > span:nth-child(2) {
+body header#mainHeader .container .menu #menuButton:checked ~ #menuLabel > span:nth-child(2) {
   opacity: 0;
 }
-body header .container .menu #menuButton:checked ~ #menuLabel > span:nth-child(3) {
+body header#mainHeader .container .menu #menuButton:checked ~ #menuLabel > span:nth-child(3) {
   transform: translateY(-1.5rem) rotate(-45deg);
 }
 @media only screen and (max-width: 480px) {
-  body header .container {
+  body header#mainHeader .container {
     padding: 2rem 3rem 2rem 0;
     text-align: right;
   }
-  body header .container img {
+  body header#mainHeader .container img {
     width: 13rem;
   }
-  body header .container .menu #menu {
+  body header#mainHeader .container .menu #menu {
     left: -100%;
     top: 0;
   }
-  body header .container .menu #menu .items {
+  body header#mainHeader .container .menu #menu .items {
     color: white;
     position: absolute;
     cursor: pointer;
@@ -614,10 +616,10 @@ body header .container .menu #menuButton:checked ~ #menuLabel > span:nth-child(3
     left: 10%;
     top: 16%;
   }
-  body header .container .menu #menu .items a {
+  body header#mainHeader .container .menu #menu .items a {
     padding: 0 0 3.2rem 0;
   }
-  body header .container .menu #menuLabel {
+  body header#mainHeader .container .menu #menuLabel {
     left: 3rem;
     top: 4rem;
   }
@@ -644,7 +646,7 @@ body #conceito .container .circulos .foto {
   position: absolute;
   width: 69rem;
   height: 69rem;
-  top: -13rem;
+  top: -6rem;
   right: 14rem;
 }
 body #conceito .container .circulos .foto:before {
@@ -682,6 +684,7 @@ body #conceito .container .circulos .foto:after {
 }
 body #conceito .container .tagline {
   z-index: 4;
+  padding: 0 4rem;
 }
 body #conceito .container .tagline h1 {
   width: 29.3rem;
@@ -769,8 +772,9 @@ body #conceito .mobile-action p {
 }
 body #draluciana {
   position: relative;
-  margin-top: 0;
+  margin-top: 9rem;
   min-height: 58vh;
+  padding-top: 6rem;
   background-color: #9B1982;
 }
 body #draluciana:before {
@@ -780,34 +784,20 @@ body #draluciana:before {
   height: 100%;
   display: inline-block;
   position: absolute;
-  clip-path: ellipse(200rem 195rem at 54vw 201rem);
+  clip-path: ellipse(200rem 201rem at 54vw 201rem);
   margin-top: -15.5rem;
   z-index: 1;
 }
 body #draluciana .container {
   position: relative;
-  height: 100%;
-  display: flex;
-  align-items: start;
-  flex-flow: wrap-reverse;
   color: white;
   background-color: transparent;
   padding: 0 0 0 0;
   z-index: 2;
 }
-body #draluciana .container div {
-  flex-grow: 1;
-}
 body #draluciana .container .sobre {
   z-index: 2;
-  text-align: justify;
-}
-body #draluciana .container .sobre > div {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-left: 7%;
+  padding-right: 2rem;
 }
 body #draluciana .container .sobre h2 {
   color: #FAE14B;
@@ -815,7 +805,6 @@ body #draluciana .container .sobre h2 {
   margin-bottom: 3.2rem;
 }
 body #draluciana .container .sobre p {
-  max-width: 51.2rem;
   margin-bottom: 2rem;
 }
 body #draluciana .container .sobre p q {
@@ -825,7 +814,6 @@ body #draluciana .container .sobre p:last-child {
   margin-bottom: 6.7rem;
 }
 body #draluciana .container .imagem {
-  padding: 0 2.7rem;
   z-index: 2;
 }
 body #draluciana .container .imagem .foto {
@@ -833,6 +821,8 @@ body #draluciana .container .imagem .foto {
 }
 body #draluciana .container .imagem .foto img {
   object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 body #draluciana .bg {
   background-color: #FFF5DC;
@@ -1688,67 +1678,121 @@ html {
 }
 
 .container-grid-12 {
+  --grid-margin:3.2rem;
   display: grid;
+  margin: auto;
+  width: 100%;
   grid-template-columns: repeat(12, 1fr);
   gap: 1.6rem;
-  padding-left: 3.2rem;
-  padding-right: 3.2rem;
+  width: calc(100% - 2 * var(--grid-margin));
 }
 @media only screen and (max-width: 767px) {
   .container-grid-12 {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    --grid-margin:4rem;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .container-grid-12 {
+    --grid-margin: 5vw;
   }
 }
 
 .g-1col {
-  grid-column: 1 span;
+  grid-column: span 1/span 1;
 }
 
 .g-2col {
-  grid-column: 2 span;
+  grid-column: span 2/span 2;
 }
 
 .g-3col {
-  grid-column: 3 span;
+  grid-column: span 3/span 3;
 }
 
 .g-4col {
-  grid-column: 4 span;
+  grid-column: span 4/span 4;
 }
 
 .g-5col {
-  grid-column: 5 span;
+  grid-column: span 5/span 5;
 }
 
 .g-6col {
-  grid-column: 6 span;
+  grid-column: span 6/span 6;
 }
 
 .g-7col {
-  grid-column: 7 span;
+  grid-column: span 7/span 7;
 }
 
 .g-8col {
-  grid-column: 8 span;
+  grid-column: span 8/span 8;
 }
 
 .g-9col {
-  grid-column: 9 span;
+  grid-column: span 9/span 9;
 }
 
 .g-10col {
-  grid-column: 10 span;
+  grid-column: span 10/span 10;
 }
 
 .g-11col {
-  grid-column: 11 span;
+  grid-column: span 11/span 11;
 }
 
 .g-12col {
-  grid-column: 12 span;
+  grid-column: span 12/span 12;
+}
+
+.g-1offset {
+  grid-column-start: 2;
+}
+
+.g-2offset {
+  grid-column-start: 3;
+}
+
+.g-3offset {
+  grid-column-start: 4;
+}
+
+.g-4offset {
+  grid-column-start: 5;
+}
+
+.g-5offset {
+  grid-column-start: 6;
+}
+
+.g-6offset {
+  grid-column-start: 7;
+}
+
+.g-7offset {
+  grid-column-start: 8;
+}
+
+.g-8offset {
+  grid-column-start: 9;
+}
+
+.g-9offset {
+  grid-column-start: 10;
+}
+
+.g-10offset {
+  grid-column-start: 11;
+}
+
+.g-11offset {
+  grid-column-start: 12;
+}
+
+.g-12offset {
+  grid-column-start: 13;
 }
 
 /*# sourceMappingURL=index.css.map */
