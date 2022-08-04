@@ -23,3 +23,31 @@ body {
   @import "main";
   @import "footer";
 }
+
+html {
+  font-size:10px;
+  @media only screen and (min-width: 1441px) {
+    font-size: calc(10px + 0.15vw);
+  }
+}
+
+//grids
+.container-grid-12{
+  display: grid;  
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.6rem;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+  @media only screen and (max-width: 767px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@for $i from 1 through 12{
+  .g-#{$i}col{
+    grid-column: #{$i} span;
+  }
+}

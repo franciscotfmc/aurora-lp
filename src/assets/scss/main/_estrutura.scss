@@ -13,7 +13,7 @@
       position: absolute;
       width: 100%;
       background-image: linear-gradient(to bottom, $cobreEscuro, transparent);
-      height: 300px;
+      height: 30rem;
     }
 
     .titulo {
@@ -34,7 +34,7 @@
       .keen-slider__slide {
         display: flex;
         flex-direction: column;
-        max-height: 812px;
+        max-height: 81.2rem;
         min-width: fit-content;
 
         background-color: $cobreEscuro;
@@ -48,13 +48,13 @@
         display: flex;
         flex-direction: column;
         z-index: -1;
-        max-height: 812px;
+        max-height: 81.2rem;
 
         img {
-          max-height: 812px;
+          max-height: 81.2rem;
           object-fit: contain;
           position: relative;
-          // filter: drop-shadow(1px 1px 10px $sombra);
+          // filter: drop-shadow(1px 1px 1rem $sombra);
         }
       }
 
@@ -63,7 +63,7 @@
 
         &:before {
           content: '';
-          filter: blur(30px);
+          filter: blur(3rem);
           background-image: var(--bg);
           background-size: cover;
           background-repeat: no-repeat;
@@ -77,15 +77,15 @@
 
     .img-dots {
       display: flex;
-      gap: 20px;
+      gap: 2rem;
       background-color: transparent;
       justify-content: center;
-      margin-top: -120px;
+      margin-top: -12rem;
       z-index: 2;
 
       >span {
-        width: 19px;
-        height: 19px;
+        width: 1.9rem;
+        height: 1.9rem;
         background-color: $cinzaClarissimo;
         border-radius: 50%;
         cursor: pointer;
@@ -100,7 +100,7 @@
   @media only screen and (max-width: 1024px) {
     .container {
       .gradient {
-        height: 120px;
+        height: 12rem;
       }
 
       .titulo {
@@ -110,24 +110,24 @@
       #e-slider {
         .content {
           img {
-            min-height: 550px;
-            max-height: 550px;
+            min-height: 55rem;
+            max-height: 55rem;
           }
         }
       }
 
       .img-dots {
-        gap: 10px;
+        gap: 1rem;
         background-color: $roxo;
         justify-content: center;
-        margin-top: -10px;
+        margin-top: -1rem;
         align-items: center;
         z-index: 2;
-        padding: 20px 0 20px 0;
+        padding: 2rem 0 2rem 0;
 
         >span {
-          width: 16px;
-          height: 16px;
+          width: 1.6rem;
+          height: 1.6rem;
         }
 
         .img-dots-active {
@@ -141,24 +141,24 @@
     .container {
       background-color: $roxo;
       background-image: linear-gradient(to bottom, $cobreEscuro, transparent);
-      padding-top: 150px;
+      padding-top: 15rem;
 
       .gradient {
-        height: 0px;
+        height: rem;
       }
 
       .titulo {
         font-size: 1rem;
-        top: 80px;
-        right: 10px;
+        top: 8rem;
+        right: 1rem;
         z-index: 2;
       }
 
       #e-slider {
         .content {
           img {
-            min-height: 350px;
-            max-height: 350px;
+            min-height: 35rem;
+            max-height: 35rem;
           }
         }
       }
@@ -169,7 +169,7 @@
     .container {
       background-color: $roxo;
       background-image: linear-gradient(to bottom, $cobreEscuro, transparent);
-      padding-top: 150px;
+      padding-top: 15rem;
 
       .gradient {
         display: none;
@@ -177,7 +177,7 @@
 
       .titulo {
         font-size: 1rem;
-        top: 75px;
+        top: 7.5rem;
         right: 10%;
         z-index: 2;
       }
@@ -185,8 +185,8 @@
       #e-slider {
         .content {
           img {
-            max-height: 300px;
-            min-height: 215px;
+            max-height: 30rem;
+            min-height: 21.5rem;
             object-fit: cover;
           }
         }
@@ -194,8 +194,8 @@
 
       .img-dots {
         >span {
-          width: 12px;
-          height: 12px;
+          width: 1.2rem;
+          height: 1.2rem;
         }
       }
     }

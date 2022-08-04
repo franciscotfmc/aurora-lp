@@ -1,12 +1,12 @@
 header {
   .container {
     font-size: 1rem;
-    padding: 45px 0 70px 0;
+    padding: 4.5rem 0 7rem 0;
     background-color: $roxo;
     text-align: center;
 
     img {
-      width: 162.21px;
+      width: 16.2rem;
     }
 
     .menu {
@@ -24,9 +24,9 @@ header {
           color: white;
           position: absolute;
           cursor: pointer;
-          width: 312px;
-          left: 140px;
-          top: 107px;
+          width: 31.2rem;
+          left: 14rem;
+          top: 10.7rem;
           display: flex;
           text-align: left;
           justify-content: space-between;
@@ -35,7 +35,7 @@ header {
           z-index: 12;
 
           a {
-            padding: 0 0 32px 0;
+            padding: 0 0 3.2rem 0;
           }
         }
       }
@@ -52,10 +52,10 @@ header {
       #menuLabel {
         position: absolute;
         cursor: pointer;
-        width: 45px;
-        height: 30px;
-        left: 60px;
-        top: 67px;
+        width: 4.5rem;
+        height: 3rem;
+        left: 6rem;
+        top: 6.7rem;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -64,18 +64,18 @@ header {
         &:before {
           content: '';
           position: absolute;
-          top: -20px;
-          left: -13px;
-          width: 70px;
-          height: 70px;
+          top: -2rem;
+          left: -1.3rem;
+          width: 7rem;
+          height: 7rem;
           background-color: $roxo;
           border-radius: 50%;
-          box-shadow: 1px 1px 5px $sombra;
+          box-shadow: 0.1rem 0.1rem 0.5rem $sombra;
         }
       }
 
       #menuLabel>span {
-        height: 2px;
+        height: 0.2rem;
         background-color: white;
         transition: 0.5s;
         z-index: 999;
@@ -86,7 +86,7 @@ header {
       }
 
       #menuButton:checked~#menuLabel>span:nth-child(1) {
-        transform: translateY(13px) rotate(45deg);
+        transform: translateY(1.3rem) rotate(45deg);
       }
 
       #menuButton:checked~#menuLabel>span:nth-child(2) {
@@ -94,16 +94,16 @@ header {
       }
 
       #menuButton:checked~#menuLabel>span:nth-child(3) {
-        transform: translateY(-15px) rotate(-45deg);
+        transform: translateY(-1.5rem) rotate(-45deg);
       }
     }
 
     @media only screen and (max-width: 480px) {
-      padding: 20px 30px 20px 0;
+      padding: 2rem 3rem 2rem 0;
       text-align: right;
 
       img {
-        width: 130px;
+        width: 13rem;
       }
 
       .menu {
@@ -115,19 +115,19 @@ header {
             color: white;
             position: absolute;
             cursor: pointer;
-            width: 312px;
+            width: 31.2rem;
             left: 10%;
             top: 16%;
 
             a {
-              padding: 0 0 32px 0;
+              padding: 0 0 3.2rem 0;
             }
           }
         }
 
         #menuLabel {
-          left: 30px;
-          top: 40px;
+          left: 3rem;
+          top: 4rem;
         }
       }
     }

@@ -13,8 +13,8 @@
       margin-bottom: 4.063rem;
       display: flex;
       justify-content: center;
-      margin-left: 40px;
-      margin-right: 40px;
+      margin-left: 4rem;
+      margin-right: 4rem;
     }
 
     .carousel {
@@ -32,13 +32,13 @@
       }
 
       .slide-left {
-        top: 143px;
-        right: 400px;
+        top: 14.3rem;
+        right: 40rem;
       }
 
       .slide-right {
-        bottom: 143px;
-        left: 400px;
+        bottom: 14.3rem;
+        left: 40rem;
       }
 
       .arrows {
@@ -51,11 +51,11 @@
           width: 4vmin;
           height: 4vmin;
           background: transparent;
-          border-top: 4px solid $cobreEscuro;
-          border-right: 4px solid $cobreEscuro;
+          border-top: 0.4rem solid $cobreEscuro;
+          border-right: 0.4rem solid $cobreEscuro;
           box-shadow: 0 0 0 $sombra;
           transition: all 200ms ease;
-          border-radius: 1px;
+          border-radius: 0.1rem;
 
           &.left {
             left: 50%;
@@ -69,7 +69,7 @@
 
           &:hover {
             border-color: $roxo;
-            box-shadow: 4px -0.5vmin 0 $cobreClaro;
+            box-shadow: 0.4rem -0.5vmin 0 $cobreClaro;
           }
 
           &:before {
@@ -106,25 +106,25 @@
           width: 100%;
           justify-content: center;
           align-items: center;
-          gap: 40px;
+          gap: 4rem;
 
           .foto {
-            width: 281px;
-            height: 281px;
+            width: 28.1rem;
+            height: 28.1rem;
             background-color: $amareloPastel;
             background-image: url('/img/loader.svg');
             background-position: center;
             background-repeat: no-repeat;
 
             img {
-              max-width: 281px;
+              max-width: 28.1rem;
             }
           }
 
           .texto {
             color: $cinza;
-            line-height: 28px;
-            max-width: 330px;
+            line-height: 2.8em;
+            max-width: 33rem;
 
             a {
               text-decoration: underline;
@@ -138,13 +138,13 @@
 
             .nome {
               font-weight: 700;
-              font-size: 24px;
-              margin-bottom: 18px;
+              font-size: 2.4rem;
+              margin-bottom: 1.8rem;
             }
 
             .descricao {
               font-weight: 400;
-              font-size: 18px;
+              font-size: 1.8rem;
             }
           }
         }
@@ -152,14 +152,14 @@
 
       .dots {
         display: flex;
-        gap: 40px;
-        margin: 50px 10px 60px 10px;
+        gap: 4rem;
+        margin: 5rem 1rem 6rem 1rem;
         align-items: center;
 
         >span {
           appearance: none;
-          width: 19px;
-          height: 19px;
+          width: 1.9rem;
+          height: 1.9rem;
           background-color: $cinzaClaro;
           border-radius: 50%;
           cursor: pointer;
@@ -177,8 +177,8 @@
       justify-content: center;
       flex-wrap: wrap-reverse;
       align-items: center;
-      gap: 36px;
-      margin: 0px 40px 0 40px;
+      gap: 3.6rem;
+      margin: 0 4rem 0 4rem;
     }
   }
 
@@ -198,12 +198,12 @@
         }
 
         .slide-left {
-          top: 70px;
+          top: 7rem;
           left: 10vw;
         }
 
         .slide-right {
-          top: 70px;
+          top: 7rem;
           right: 10vw;
         }
 
@@ -211,14 +211,14 @@
           .content {
             flex-flow: column;
             justify-content: flex-start;
-            gap: 20px;
+            gap: 2rem;
 
             .foto {
-              width: 141px;
-              height: 141px;
+              width: 14.1rem;
+              height: 14.1rem;
 
               img {
-                max-width: 141px;
+                max-width: 14.1rem;
               }
             }
 
@@ -238,12 +238,12 @@
         }
 
         .slide-left {
-          top: 70px;
+          top: 7rem;
           left: 10vw;
         }
 
         .slide-right {
-          top: 70px;
+          top: 7rem;
           left: 90vw;
         }
 
@@ -251,26 +251,26 @@
         #c-slider {
           .content {
             .texto {
-              margin-left: 40px;
-              margin-right: 20px;
+              margin-left: 4rem;
+              margin-right: 2rem;
             }
           }
         }
 
         .dots {
-          gap: 20px;
-          margin: 50px 10px 60px 10px;
+          gap: 2rem;
+          margin: 5rem 1rem 6rem 1rem;
           align-items: center;
 
           >span {
-            width: 16px;
-            height: 16px;
+            width: 1.6rem;
+            height: 1.6rem;
           }
         }
       }
 
       .actions {
-        margin: 0px 0px 0px 0px;
+        margin: 0;
       }
     }
   }

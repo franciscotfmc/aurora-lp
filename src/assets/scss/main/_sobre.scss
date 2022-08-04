@@ -30,13 +30,13 @@
 
       .row-2-1 {
         display: flex;
-        gap: 50px;
+        gap: 5rem;
         flex-wrap: wrap;
 
         .box-1,
         .box-2 {
           max-width: 33rem;
-          min-width: 280px;
+          min-width: 28rem;
         }
       }
 
@@ -44,21 +44,21 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap-reverse;
-        gap: 40px;
+        gap: 4rem;
 
         .box-3 {
           .imagem {
-            margin-bottom: -120px;
+            margin-bottom: -12rem;
 
             .foto {
               display: flex;
-              max-width: 500px;
+              max-width: 50rem;
 
               img {
                 width: 100vw;
                 height: 100vw;
-                max-width: 500px;
-                max-height: 500px;
+                max-width: 50rem;
+                max-height: 50rem;
                 position: relative;
                 object-fit: cover;
                 object-position: 50%;
@@ -84,7 +84,7 @@
         }
 
         .box-4 {
-          max-width: 680px;
+          max-width: 68rem;
 
           a {
             margin: 4rem 0;
@@ -94,7 +94,7 @@
     }
 
     background-color: $roxo;
-    clip-path: ellipse(3408px 3211px at 508px 3218px);
+    clip-path: ellipse(340.8rem 321.1rem at 50.8rem 321.8rem);
     padding-top: 8.063rem;
     margin-top: 3.438rem;
 
@@ -130,7 +130,7 @@
 
           .box-3 {
             .imagem {
-              margin-left: -30px;
+              margin-left: -3rem;
             }
           }
 
@@ -160,7 +160,7 @@
         .row-2-2 {
           .box-3 {
             .imagem {
-              margin-left: -180px;
+              margin-left: -18rem;
             }
           }
 
@@ -180,13 +180,13 @@
         .row-2-2 {
           .box-3 {
             .imagem {
-              margin-left: -180px;
-              margin-bottom: -120px;
+              margin-left: -18rem;
+              margin-bottom: -12rem;
 
               .foto {
                 img {
-                  max-width: 440px;
-                  max-height: 440px;
+                  max-width: 44rem;
+                  max-height: 44rem;
                   object-position: 20%;
                 }
               }
@@ -209,15 +209,15 @@
         .row-2-2 {
           .box-3 {
             .imagem {
-              margin-bottom: -80px;
-              margin-left: -100px;
+              margin-bottom: -8rem;
+              margin-left: -10rem;
 
               .foto {
                 display: flex;
 
                 img {
-                  max-width: 340px;
-                  max-height: 340px;
+                  max-width: 34rem;
+                  max-height: 34rem;
                   object-position: 25%;
                 }
               }

@@ -26,15 +26,15 @@ p {
 }
 
 .button {
-  width: 310px;
-  height: 68px;
-  line-height: 68px;
+  width: 31rem;
+  height: 6.8rem;
+  line-height: 6.8rem;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.8rem;
   color: $cinza;
   font-weight: 700;
   display: inline-block;
-  box-shadow: 5px 5px 0px $sombra;
+  box-shadow: 0.5rem 0.5rem 0 $sombra;
 
   &:hover {
     color: $preto;
@@ -42,8 +42,8 @@ p {
   }
 
   @media only screen and (max-width: 480px) {
-    width: 283px;
-    font-size: 16px;
+    width: 28.3rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -57,3 +57,36 @@ p {
   background-color: $amareloPastel;
   border: 1px solid $amarelo;
 }
+
+// Font-sizes
+.title-fs-h1{
+  font-size: 4.8rem;
+  line-height: 1.16em;
+}
+.p-fs-20{
+  font-size: 2rem;
+  line-height: 1.25em;
+}
+.p-fs-18{
+  font-size: 1.8rem;
+  line-height: 1.55em;
+}
+// Font-weights
+.fw-400{
+  font-weight: 400;
+}
+.fw-500{
+  font-weight: 500;
+}
+.fw-600{
+  font-weight: 600;
+}
+.fw-700{
+  font-weight: 700;
+}
+.fw-800{
+  font-weight: 800;
+}
+.fw-900{
+  font-weight: 900;
+} 

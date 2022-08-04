@@ -14,7 +14,7 @@
     display: inline-block;
     background-color: $branco;
     width: 100%;
-    clip-path: ellipse(3408px 3211px at 508px 3218px);
+    clip-path: ellipse(340.8rem 321.1rem at 50.8rem 321.8rem);
 
     .flex-row-principais {
       display: flex;
@@ -64,13 +64,13 @@
 
       .esp-1 {
         .ilustracao {
-          margin-top: 55px;
+          margin-top: 5.5rem;
 
           .circulo-1 {
             margin: 0 auto;
             position: relative;
-            width: 96px;
-            height: 96px;
+            width: 9.6rem;
+            height: 9.6rem;
             border-radius: 50%;
             background-color: $amareloPastel;
             background-image: url("/img/odontopediatria-icon.svg");
@@ -106,7 +106,7 @@
             width: 5.25rem;
             height: 5.25rem;
             background-color: white;
-            border: 2px solid $cobreClaro;
+            border: 0.2rem solid $cobreClaro;
             top: 0.975rem;
             right: 2.662rem;
           }
@@ -142,7 +142,7 @@
       grid-column: 1 / -1;
 
       p {
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
       }
     }
 

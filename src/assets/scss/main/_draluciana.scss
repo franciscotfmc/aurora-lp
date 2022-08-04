@@ -1,28 +1,33 @@
 #draluciana {
-  margin-top: -16rem;
+  position: relative;
+  margin-top: 0;
+  min-height: 58vh;
   background-color: $roxo;
+
+  &:before {
+    content: "";
+    background-color: $cobreEscuro;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    clip-path: ellipse(200rem 195rem at 54vw 201rem);
+    margin-top: -15.5rem;
+    z-index: 1;
+  }
 
   .container {
     position: relative;
+    height: 100%;
     display: flex;
     align-items: start;
     flex-flow: wrap-reverse;
     color: white;
     background-color: transparent;
-    padding: 15rem 0 0 0;
+    padding: 0 0 0 0;
     z-index: 2;
 
-    &:before {
-      content: "";
-      background-color: $cobreEscuro;
-      width: 100%;
-      height: 100%;
-      display: inline-block;
-      position: absolute;
-      clip-path: ellipse(2000px 2000px at 1000px 2010px);
-      margin-top: -15.5rem;
-      z-index: 1;
-    }
+
 
     div {
       flex-grow: 1;
@@ -41,33 +46,27 @@
       }
 
       h2 {
-        font-weight: 700;
-        font-size: 3rem;
-        line-height: 3.5rem;
         color: $amarelo;
-        margin-top: 40px;
-        margin-bottom: 32px;
+        margin-top: 4rem;
+        margin-bottom: 3.2rem;
       }
 
       p {
-        max-width: 512px;
-        font-weight: 400;
-        font-size: 1.125rem;
-        line-height: 1.75rem;
-        margin-bottom: 20px;
+        max-width: 51.2rem;
+        margin-bottom: 2rem;
 
         q {
           font-style: italic;
         }
 
         &:last-child {
-          margin-bottom: 67px;
+          margin-bottom: 6.7rem;
         }
       }
     }
 
     .imagem {
-      padding: 0 27px;
+      padding: 0 2.7rem;
       z-index: 2;
 
       .foto {
@@ -85,36 +84,36 @@
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: -1px;
-    height: 100px;
+    bottom: -0.1rem;
+    height: 10rem;
     z-index: 1;
   }
 
   @media only screen and (max-width: 1132px) {
     margin-top: 0;
-    padding-top: 100px;
+    padding-top: 10rem;
 
     .container {
-      margin-top: 200px;
+      margin-top: 20rem;
 
       .sobre {
         >div {
           align-items: center;
           padding: 0;
-          margin-top: -20px;
+          margin-top: -2rem;
         }
 
         padding: 0 10%;
       }
 
       .imagem {
-        margin-top: -400px;
+        margin-top: -40rem;
         text-align: center;
 
         .foto {
           img {
             max-width: 80%;
-            min-width: 327px;
+            min-width: 32.7rem;
           }
         }
       }
@@ -127,19 +126,19 @@
 
   @media only screen and (max-width: 480px) {
     .container {
-      margin-top: 50px;
+      margin-top: 5rem;
 
       &:before {
-        clip-path: ellipse(2000px 2000px at 1000px 2010px);
+        clip-path: ellipse(200rem 200rem at 100rem 201rem);
         margin-top: -25.5rem;
-        // height: 900px;
+        // height: 90rem;
       }
 
       .sobre {
         background-color: $cobreEscuro;
 
         >div {
-          margin-top: -180px;
+          margin-top: -18rem;
         }
 
         h2 {
@@ -149,11 +148,11 @@
       }
 
       .imagem {
-        padding: 0 0 150px 0;
+        padding: 0 0 15rem 0;
 
         .foto {
           img {
-            min-width: 290px;
+            min-width: 29rem;
           }
         }
       }
