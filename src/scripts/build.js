@@ -48,7 +48,7 @@ class Build {
     await this._minifyCss(cssPath, distCssPath, this.timestamp);
 
     const ejsOutput = await this._compileEjs(
-      this.timestamp, 'Aurora Odontologia', ejsPath
+      this.timestamp, 'Aurora Odontologia', ejsPath, ''
     );
 
     await this._minifyHtml(ejsOutput, distHtmlPath);
@@ -72,7 +72,8 @@ class Build {
       );
 
       const ejsOutputBlog = await this._compileEjs(
-        this.timestampBlog, null, ejsBlogFolderPath
+        this.timestampBlog, null, ejsBlogFolderPath,
+        `blog/${a.name}/`
       );
 
       await this._minifyHtml(ejsOutputBlog, htmlFolder);
@@ -86,9 +87,9 @@ class Build {
     return await fs.writeFile(fileName, output.styles);
   }
 
-  async _compileEjs(timestamp, title, path) {
+  async _compileEjs(timestamp, title, path, cssFolder) {
     const data = {
-      cssIndex: `index${timestamp}.css`,
+      cssIndex: `${cssFolder}index${timestamp}.css`,
       jsIndex: `main${timestamp}.js`,
       comentarios: comentarios,
       imagens: imagens,
