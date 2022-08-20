@@ -7,6 +7,11 @@ const comentarios = require('./comentarios');
 const imagens = require('./imagens');
 
 const indexData = {
+  blog: {
+    dentistaEmOuroPreto: {
+      cssIndex: '/blog/dentista-em-ouro-preto-mg/index.css',
+    }
+  },
   cssIndex: 'index.css',
   jsIndex: 'main.js',
   comentarios: comentarios,
@@ -31,6 +36,10 @@ app.use(express.static(publicPath));
 
 app.get('/', function (req, res) {
   res.render('index', indexData);
+});
+
+app.get('/blog/dentista-em-ouro-preto-mg/', function (req, res) {
+  res.render('blog/dentista-em-ouro-preto-mg/index', indexData);
 });
 
 app.listen(port, '0.0.0.0', () => {
