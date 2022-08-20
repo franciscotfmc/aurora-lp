@@ -9,69 +9,104 @@ const terser = require('terser');
 
 const comentarios = require('./comentarios');
 const imagens = require('./imagens');
+const artigos = require('./artigos');
 
 const publicPath = `${__dirname}/../public`;
+const publicBlogPath = `${__dirname}/../public/blog`;
 const cssPath = `${__dirname}/../public/css`;
+const cssBlogPath = `${__dirname}/../public/css/blog`;
 const ejsPath = `${__dirname}/../views`;
+const ejsBlogPath = `${__dirname}/../views/blog`;
 const jsPath = `${__dirname}/../public/js`;
 const imgPath = `${__dirname}/../public/img`;
 const fontsPath = `${__dirname}/../public/fonts`;
 const distPath = `${__dirname}/../../dist`;
+const distBlogPath = `${__dirname}/../../dist/blog`;
 const distCssPath = `${__dirname}/../../dist/css`;
+const distCssBlogPath = `${__dirname}/../../dist/css/blog`;
 const distHtmlPath = `${__dirname}/../../dist`;
+const distHtmlBlogPath = `${__dirname}/../../dist/blog`;
 const distJsPath = `${__dirname}/../../dist/js`;
 const distImgPath = `${__dirname}/../../dist/img`;
+const distImgBlogPath = `${__dirname}/../../dist/img`;
 const distFontsPath = `${__dirname}/../../dist/fonts`;
 
 class Build {
 
   constructor() {
     this.timestamp = new Date().getTime();
+    this.timestampBlog = this.timestamp + 1;
   }
 
   async execute() {
     console.info('Starting build...');
     await fs.rm(distPath, { recursive: true, force: true });
-    await fs.mkdir(distCssPath, { recursive: true });
-    await fs.mkdir(distJsPath, { recursive: true });
+    await fs.mkdir(distBlogPath, { recursive: true });
+    await fs.mkdir(distCssBlogPath, { recursive: true });
     await fs.mkdir(`${distJsPath}/lib`, { recursive: true });
-    await this._minifyCss();
-    const ejsOutput = await this._compileEjs();
-    await this._minifyHtml(ejsOutput);
+
+    await this._minifyCss(cssPath, distCssPath, this.timestamp);
+
+    const ejsOutput = await this._compileEjs(
+      this.timestamp, 'Aurora Odontologia', ejsPath
+    );
+
+    await this._minifyHtml(ejsOutput, distHtmlPath);
     await this._minifyJs();
     await this._copyJsLibs();
     await this._copyFonts();
     await this._copyImgs();
+
+    for (let a of artigos) {
+      const cssFolder = `${distCssBlogPath}/${a.name}`;
+      const htmlFolder = `${distBlogPath}/${a.name}`;
+      const ejsBlogFolderPath = `${ejsBlogPath}/${a.name}`;
+
+      await fs.mkdir(htmlFolder, { recursive: true });
+      await fs.mkdir(cssFolder, { recursive: true });
+
+      await this._minifyCss(
+        `${cssBlogPath}/${a.name}`,
+        cssFolder,
+        this.timestampBlog
+      );
+
+      const ejsOutputBlog = await this._compileEjs(
+        this.timestampBlog, null, ejsBlogFolderPath
+      );
+
+      await this._minifyHtml(ejsOutputBlog, htmlFolder);
+    }
   }
 
-  async _minifyCss() {
-    const cssFile = await fs.readFile(`${cssPath}/index.css`);
+  async _minifyCss(path, distPath, timestamp) {
+    const cssFile = await fs.readFile(`${path}/index.css`);
     const output = new CleanCSS().minify(cssFile);
-    const fileName = `${distCssPath}/index${this.timestamp}.css`;
-    await fs.writeFile(fileName, output.styles);
+    const fileName = `${distPath}/index${timestamp}.css`;
+    return await fs.writeFile(fileName, output.styles);
   }
 
-  async _compileEjs() {
+  async _compileEjs(timestamp, title, path) {
     const data = {
-      cssIndex: `index${this.timestamp}.css`,
-      jsIndex: `main${this.timestamp}.js`,
+      cssIndex: `index${timestamp}.css`,
+      jsIndex: `main${timestamp}.js`,
       comentarios: comentarios,
       imagens: imagens,
-      title: 'Aurora Odontologia',
+      title: title,
       GA: true
     };
 
-    const ejsIndex = `${ejsPath}/index.ejs`;
+    const ejsIndex = `${path}/index.ejs`;
     return ejs.renderFile(ejsIndex, data);
   }
 
-  async _minifyHtml(htmlData) {
+  async _minifyHtml(htmlData, path) {
     const options = {
       removeComments: true,
       collapseWhitespace: true
     };
 
-    const fileName = `${distHtmlPath}/index.html`
+    const fileName = `${path}/index.html`
     const minifiedData = minify(htmlData, options);
     await fs.writeFile(fileName, minifiedData);
   }

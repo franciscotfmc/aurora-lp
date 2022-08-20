@@ -39,7 +39,13 @@ app.get('/', function (req, res) {
 });
 
 app.get('/blog/dentista-em-ouro-preto-mg/', function (req, res) {
-  res.render('blog/dentista-em-ouro-preto-mg/index', indexData);
+
+  let data = {
+    cssIndex: '/blog/dentista-em-ouro-preto-mg/index.css',
+    GA: false
+  };
+
+  res.render('blog/dentista-em-ouro-preto-mg/index', data);
 });
 
 app.listen(port, '0.0.0.0', () => {
