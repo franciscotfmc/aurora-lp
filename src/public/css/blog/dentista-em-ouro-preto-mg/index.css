@@ -812,43 +812,78 @@ body main .social-media img {
 }
 body footer {
   display: flex;
+  flex-direction: column;
   background-color: #9B1982;
   justify-content: center;
   align-items: center;
   border-top: 8px solid #D2B4AF;
+}
+body footer .cta {
   padding: 0 2rem;
 }
-body footer .title {
+body footer .cta .title {
   font-size: 1.8rem;
   font-weight: 500;
   margin: 4rem 0 2rem 0;
   color: #FAE14B;
 }
-body footer .text {
+body footer .cta .text {
   margin-bottom: 1rem;
 }
-body footer p {
+body footer .cta p {
   font-size: 1.25rem;
   line-height: 1.9rem;
   color: #FFFFFF;
   max-width: 57rem;
 }
-body footer div {
+body footer .cta div {
   max-width: 1440px;
 }
-body footer #instagram {
+body footer .cta .marca {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: 2rem;
   margin-bottom: 4rem;
+  gap: 2rem;
 }
-body footer #instagram img {
+body footer .cta .marca .logo {
+  margin-right: 4rem;
+}
+@media only screen and (max-width: 640px) {
+  body footer .cta .marca {
+    flex-direction: column;
+  }
+  body footer .cta .marca .logo {
+    margin: 2rem 0 0 0;
+    text-align: right;
+  }
+}
+body footer .cta #instagram img {
   width: 2.5rem;
   vertical-align: middle;
   margin-right: 0.5rem;
 }
-body footer #instagram span {
+body footer .cta #instagram span {
   font-size: 1.8rem;
   color: white;
   vertical-align: middle;
+}
+body footer .cta #instagram .endereco {
+  margin-top: 2rem;
+  max-width: 14rem;
+  font-size: 1rem;
+}
+body footer .elipse {
+  width: 100%;
+  background-color: #696969;
+  clip-path: ellipse(3408px 3211px at 508px 3218px);
+  height: 150px;
+}
+body footer .elipse p {
+  font-size: 2rem;
+  color: white;
 }
 
 /*# sourceMappingURL=index.css.map */
