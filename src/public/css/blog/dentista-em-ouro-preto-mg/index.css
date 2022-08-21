@@ -816,6 +816,7 @@ body footer {
   justify-content: center;
   align-items: center;
   border-top: 8px solid #D2B4AF;
+  padding: 0 2rem;
 }
 body footer .title {
   font-size: 1.8rem;
