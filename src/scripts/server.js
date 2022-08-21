@@ -5,13 +5,9 @@ const livereload = require('livereload');
 const connectLivereload = require('connect-livereload');
 const comentarios = require('./comentarios');
 const imagens = require('./imagens');
+const artigos = require('./artigos');
 
 const indexData = {
-  blog: {
-    dentistaEmOuroPreto: {
-      cssIndex: '/blog/dentista-em-ouro-preto-mg/index.css',
-    }
-  },
   cssIndex: 'index.css',
   jsIndex: 'main.js',
   comentarios: comentarios,
@@ -36,6 +32,17 @@ app.use(express.static(publicPath));
 
 app.get('/', function (req, res) {
   res.render('index', indexData);
+});
+
+app.get('/blog', function (req, res) {
+
+  let data = {
+    artigos: artigos,
+    cssIndex: '/blog/index.css',
+    GA: false
+  };
+
+  res.render('blog', data);
 });
 
 app.get('/blog/dentista-em-ouro-preto-mg/', function (req, res) {

@@ -606,7 +606,6 @@ body header .container .menu #menuButton:checked ~ #menuLabel > span:nth-child(3
   }
 }
 body main {
-  padding-top: 4rem;
   display: flex;
   justify-content: center;
   background-color: #FFF5DC;
@@ -616,6 +615,69 @@ body main article {
   flex-direction: column;
   max-width: 1440px;
   padding: 0 4rem;
+}
+body main article #introducao {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+body main article #introducao .h1 {
+  margin-top: 4rem;
+}
+@media only screen and (max-width: 943px) {
+  body main article #introducao .social-media {
+    margin-bottom: 0;
+  }
+}
+body main article #artigos {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #D9D9D9;
+}
+body main article #artigos .artigo-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+body main article #artigos .artigo-row .artigo {
+  color: #696969;
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+  max-width: 22rem;
+  margin-bottom: 4rem;
+}
+body main article #artigos .artigo-row .artigo .artigo-img img {
+  border-radius: 50% 50% 50% 0%;
+  box-shadow: 10px 5px 2px #D2B4AF;
+  margin-bottom: 1rem;
+}
+body main article #artigos .artigo-row .artigo .time {
+  color: #A56E73;
+  font-weight: 600;
+}
+body main article #artigos .artigo-row .artigo .titulo {
+  color: #000000;
+  margin: 1rem 0;
+}
+body main article #artigos .artigo-row .artigo .descricao {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+body main article #artigos .artigo-row .artigo .ler .action-button-inverse {
+  width: 12rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+body main article #artigos .artigo-row .artigo .ler .action-button-inverse span {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+  color: #000000;
 }
 body main article h1,
 body main article h2,
@@ -627,6 +689,9 @@ body main article h3 {
 }
 body main article h1 {
   font-size: 2.5rem;
+  margin-bottom: 0;
+  color: #A56E73;
+  margin-right: 2rem;
 }
 body main article h2 {
   font-size: 1.8rem;
@@ -636,69 +701,63 @@ body main article h3 {
   font-size: 1.5rem;
   color: #9B1982;
 }
-body main article img {
-  max-width: 32rem;
+body main article .blog-info p {
+  color: #696969;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 21px;
+  margin-top: 1rem;
 }
-body main article .imagem-1 {
+body main article img {
+  width: 16rem;
+}
+body main article .animation {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+body main article .animation .imagem-1 {
   margin-top: 80px;
   margin-bottom: 80px;
   position: relative;
 }
-body main article .imagem-1 img {
+body main article .animation .imagem-1 img {
   z-index: 2;
   position: relative;
   clip-path: circle(50%);
   animation: nudge-small 5s linear infinite alternate;
 }
-body main article .imagem-1:before {
+body main article .animation .imagem-1:before {
   content: "";
-  width: 32rem;
-  height: 32rem;
+  width: 16rem;
+  height: 16rem;
   background-color: transparent;
   border: 3px solid #A56E73;
   position: absolute;
   border-radius: 50%;
-  left: 6rem;
+  left: 3rem;
   top: -2rem;
   animation: nudge 8s linear infinite alternate;
 }
-body main article .imagem-1:after {
+body main article .animation .imagem-1:after {
   content: "";
-  width: 23rem;
-  height: 23rem;
+  width: 8rem;
+  height: 8rem;
   background-color: #D2B4AF;
   position: absolute;
   clip-path: circle(50%);
-  left: 12rem;
+  left: 10rem;
   bottom: -2rem;
   animation: nudge-inverse 8s linear infinite alternate;
 }
-body main article p,
-body main article blockquote,
-body main article address,
-body main article span,
-body main article ul {
+body main article p {
   max-width: 57rem;
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 1.9rem;
   margin-bottom: 2rem;
 }
-body main article ul {
-  padding-left: 4rem;
-  list-style-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Ccircle id='Elipse_80' data-name='Elipse 80' cx='6' cy='6' r='6' fill='%239b1982'/%3E%3C/svg%3E%0A");
-}
-body main article ul li {
-  line-height: 2.1rem;
-}
-body main article .author address {
-  color: #A56E73;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-}
-body main article .img-clinica,
-body main article .img-comentario,
 body main article .img-draluciana {
   display: flex;
   flex-direction: column;
@@ -706,39 +765,8 @@ body main article .img-draluciana {
   gap: 2rem;
   margin-bottom: 2rem;
 }
-body main article .img-clinica img,
-body main article .img-comentario img,
 body main article .img-draluciana img {
   border-radius: 20px;
-}
-body main article .img-draluciana {
-  font-style: italic;
-  color: #696969;
-}
-body main article .img-draluciana img {
-  margin-bottom: 0;
-}
-body main article .img-draluciana blockquote {
-  max-width: 32rem;
-  margin-bottom: 0;
-}
-body main article a {
-  cursor: pointer;
-  color: #9B1982;
-}
-body main article a:hover {
-  color: rgba(155, 25, 130, 0.95);
-  text-decoration: underline;
-}
-body main article .agendar-blog-dentista-op {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-}
-body main article .agendar-blog-dentista-op a:hover {
-  text-decoration: none;
 }
 @keyframes nudge-small {
   0%, 100% {
@@ -756,10 +784,10 @@ body main article .agendar-blog-dentista-op a:hover {
     transform: translate(0, 0);
   }
   50% {
-    transform: translate(10px, 0);
+    transform: translate(0, 10px);
   }
   80% {
-    transform: translate(-10px, 0);
+    transform: translate(0px, -10px);
   }
 }
 @keyframes nudge-inverse {
@@ -767,10 +795,10 @@ body main article .agendar-blog-dentista-op a:hover {
     transform: translate(0, 0);
   }
   50% {
-    transform: translate(-10px, 0);
+    transform: translate(0, -10px);
   }
   80% {
-    transform: translate(10px, 0);
+    transform: translate(0, 10px);
   }
 }
 @media only screen and (max-width: 640px) {
@@ -805,7 +833,7 @@ body main .social-media {
   gap: 1rem;
   margin-top: 0.5rem;
   margin-bottom: 4rem;
-  justify-content: center;
+  justify-content: start;
 }
 body main .social-media img {
   width: 2.5rem;

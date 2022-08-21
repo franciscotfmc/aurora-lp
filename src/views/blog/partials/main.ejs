@@ -1,0 +1,75 @@
+<article>
+  <header id="introducao">
+    <div class="h1">
+      <h1>Blog da Aurora Odontologia</h1>
+
+      <div class="blog-info">
+        <p>Promova a melhor versão do seu sorriso!</p>
+      </div>
+
+      <div class="social-media">
+        <div id="facebook">
+          <a href="https://www.facebook.com/aurora.odonto" target="_blank">
+            <img class="icon" src="../../img/facebook.svg" alt="facebook" />
+          </a>
+        </div>
+
+        <div id="instagram">
+          <a href="https://www.instagram.com/aurora.odonto/" target="_blank">
+            <img class="icon" src="../../img/instagram-3.svg" alt="instagram" />
+          </a>
+        </div>
+
+        <div id="whatsapp">
+          <a href="https://api.whatsapp.com/send?phone=553135002591&amp;text=" target="_blank">
+            <img class="icon" src="../../img/whatsapp-2.svg" alt="whatsapp" />
+          </a>
+        </div>
+
+        <div id="coracao">
+          <a href="/" target="_blank">
+            <img class="icon" src="../../img/coracao-aurora.svg" alt="coracao-aurora" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="animation">
+      <div class="imagem-1">
+        <img src="/img/blog/blog.webp" onerror="this.onerror=null;this.src='/img/blog/blog.jpg'"
+          alt="Mãos da Dra. Luciana escrevendo em um papel com caneta">
+      </div>
+    </div>
+  </header>
+
+  <section id="artigos">
+    <div class="artigo-row">
+      <% artigos.forEach(function(a, idx) { %>
+        <div class="artigo">
+          <div class="artigo-img">
+            <img src="<%- a.image %>.webp" onerror="this.onerror=null;this.src='<%- a.image %>.jpg'"
+              alt="<%- a.imageDescription %>">
+          </div>
+
+          <div class="time">
+            <%- a.time %>
+          </div>
+          <div class="titulo">
+            <%- a.title %>
+          </div>
+          <div class="descricao">
+            <%- a.description %>
+          </div>
+
+          <div class="ler">
+            <a class="action-button-inverse" target="_blank" href="<%- a.href %>">
+              <span>Continuar lendo</span>
+            </a>
+          </div>
+        </div>
+        <% }); %>
+    </div>
+  </section>
+
+</article>
