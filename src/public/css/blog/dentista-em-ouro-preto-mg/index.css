@@ -502,7 +502,7 @@ body header .container .tagline {
   padding-right: 4rem;
 }
 body header .container .menu #menu {
-  background: rgba(155, 25, 130, 0.85);
+  background: rgba(155, 25, 130, 0.95);
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -727,7 +727,7 @@ body main article a {
   color: #9B1982;
 }
 body main article a:hover {
-  color: rgba(155, 25, 130, 0.85);
+  color: rgba(155, 25, 130, 0.95);
   text-decoration: underline;
 }
 body main article .agendar-blog-dentista-op {
@@ -798,6 +798,16 @@ body main article .agendar-blog-dentista-op a:hover {
     left: 7rem;
     bottom: -2rem;
   }
+}
+body main .social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  justify-content: center;
+}
+body main .social-media img {
+  width: 2.5rem;
 }
 
 /*# sourceMappingURL=index.css.map */

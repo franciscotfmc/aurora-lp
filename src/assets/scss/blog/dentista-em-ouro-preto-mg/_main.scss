@@ -242,6 +242,17 @@ main {
       }
 
     }
+  }
 
+  .social-media {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    justify-content: center;
+
+    img {
+      width: 2.5rem;
+    }
   }
 }
