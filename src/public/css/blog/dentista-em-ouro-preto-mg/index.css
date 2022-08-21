@@ -803,11 +803,51 @@ body main .social-media {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 4rem;
   justify-content: center;
 }
 body main .social-media img {
   width: 2.5rem;
+}
+body footer {
+  display: flex;
+  background-color: #9B1982;
+  justify-content: center;
+  align-items: center;
+  border-top: 8px solid #D2B4AF;
+}
+body footer .title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 4rem 0 2rem 0;
+  color: #FAE14B;
+}
+body footer .text {
+  margin-bottom: 1rem;
+}
+body footer p {
+  font-size: 1.25rem;
+  line-height: 1.9rem;
+  color: #FFFFFF;
+  max-width: 57rem;
+}
+body footer div {
+  max-width: 1440px;
+}
+body footer #instagram {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+body footer #instagram img {
+  width: 2.5rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+body footer #instagram span {
+  font-size: 1.8rem;
+  color: white;
+  vertical-align: middle;
 }
 
 /*# sourceMappingURL=index.css.map */

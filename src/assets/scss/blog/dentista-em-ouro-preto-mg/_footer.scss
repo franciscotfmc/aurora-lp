@@ -1,0 +1,49 @@
+footer {
+
+  display: flex;
+  background-color: $roxo;
+  justify-content: center;
+  align-items: center;
+  border-top: 8px solid $cobreClaro;
+
+  .title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 4rem 0 2rem 0;
+    color: $amarelo;
+  }
+
+  .text {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.9rem;
+    color: $branco;
+    max-width: 57rem;
+  }
+
+  div {
+    max-width: 1440px;
+  }
+
+  #instagram {
+
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    img {
+      width: 2.5rem;
+      vertical-align: middle;
+      margin-right: 0.5rem;
+    }
+
+    span {
+      font-size: 1.8rem;
+      color: white;
+      vertical-align: middle;
+    }
+  }
+
+}
