@@ -57,6 +57,18 @@ class Build {
     await this._copyFonts();
     await this._copyImgs();
 
+    await this._minifyCss(
+      cssBlogPath,
+      distCssBlogPath,
+      this.timestampBlog
+    );
+
+    const ejsOutputBlogIndex = await this._compileEjs(
+      this.timestampBlog, null, ejsBlogPath, 'blog/'
+    );
+
+    await this._minifyHtml(ejsOutputBlogIndex, distHtmlBlogPath);
+
     for (let a of artigos) {
       const cssFolder = `${distCssBlogPath}/${a.name}`;
       const htmlFolder = `${distBlogPath}/${a.name}`;
@@ -89,6 +101,7 @@ class Build {
 
   async _compileEjs(timestamp, title, path, cssFolder) {
     const data = {
+      artigos: artigos,
       cssIndex: `${cssFolder}index${timestamp}.css`,
       jsIndex: `main${timestamp}.js`,
       comentarios: comentarios,
