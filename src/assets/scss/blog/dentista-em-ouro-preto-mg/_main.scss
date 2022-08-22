@@ -114,7 +114,8 @@ main {
       gap: 2rem;
 
       img {
-        border-radius: 20px;
+        border-radius: 5% 5% 5% 0;
+        box-shadow: 2px 2px 1px $sombra;
       }
 
       margin-bottom: 2rem;
