@@ -750,9 +750,6 @@ body main article a:hover {
   }
 }
 @media only screen and (max-width: 640px) {
-  body main article {
-    padding: 0 1rem;
-  }
   body main article h2 {
     line-height: 2.2rem;
   }
@@ -776,6 +773,9 @@ body main article a:hover {
     height: 12rem;
     left: 7rem;
     bottom: -2rem;
+  }
+  body main article .img-tratamentos img {
+    max-width: 16rem;
   }
 }
 body main .social-media {
