@@ -653,7 +653,7 @@ body main article #artigos .artigo-row .artigo {
 }
 body main article #artigos .artigo-row .artigo .artigo-img img {
   border-radius: 50% 50% 50% 0%;
-  box-shadow: 10px 5px 2px #D2B4AF;
+  box-shadow: 6px 5px 1px #D2B4AF;
   margin-bottom: 1rem;
 }
 body main article #artigos .artigo-row .artigo .time {
