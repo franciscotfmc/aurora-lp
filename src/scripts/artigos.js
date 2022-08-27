@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/odontopediatra-op/odontopediatria-ouro-preto-aurora-odontologia',
+  imageDescription: 'Odontopediatra em Ouro Preto: Dra Luciana com uma criança no colo',
+  name: 'odontopediatra-em-ouro-preto-mg',
+  time: '27/08/2022',
+  title: 'O que é odontopediatria? O que devo saber antes de buscar um odontopediatra em Ouro Preto?',
+  description: 'Se você está em busca de um odontopediatra em Ouro Preto, certamente deve ter algumas dúvidas sobre esse dentista para crianças. "Existe uma idade limite?...',
+  href: '/blog/odontopediatra-em-ouro-preto-mg/'
+}, {
   image: '/img/blog/ortodontista-op/adolescente-sorrindo-aparelho',
   imageDescription: 'Ortodontista em Ouro Preto: adolescente, menina, sorrindo de aparelho fixo e óculos, com os olhos fechados.',
   name: 'ortodontista-em-ouro-preto-mg',
