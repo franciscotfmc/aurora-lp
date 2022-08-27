@@ -697,31 +697,16 @@ body main article .author address {
   font-size: 18px;
   line-height: 21px;
 }
-body main article .img-clinica,
-body main article .img-comentario,
-body main article .img-draluciana {
+body main article .img-tratamentos {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
   margin-bottom: 2rem;
 }
-body main article .img-clinica img,
-body main article .img-comentario img,
-body main article .img-draluciana img {
+body main article .img-tratamentos img {
   border-radius: 5% 5% 5% 0;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
-}
-body main article .img-draluciana {
-  font-style: italic;
-  color: #696969;
-}
-body main article .img-draluciana img {
-  margin-bottom: 0;
-}
-body main article .img-draluciana blockquote {
-  max-width: 32rem;
-  margin-bottom: 0;
 }
 body main article a {
   cursor: pointer;
@@ -730,16 +715,6 @@ body main article a {
 body main article a:hover {
   color: rgba(155, 25, 130, 0.95);
   text-decoration: underline;
-}
-body main article .agendar-blog-dentista-op {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-}
-body main article .agendar-blog-dentista-op a:hover {
-  text-decoration: none;
 }
 @keyframes nudge-small {
   0%, 100% {
@@ -775,6 +750,9 @@ body main article .agendar-blog-dentista-op a:hover {
   }
 }
 @media only screen and (max-width: 640px) {
+  body main article {
+    padding: 0 1rem;
+  }
   body main article h2 {
     line-height: 2.2rem;
   }

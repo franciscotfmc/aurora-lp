@@ -55,6 +55,16 @@ app.get('/blog/dentista-em-ouro-preto-mg/', function (req, res) {
   res.render('blog/dentista-em-ouro-preto-mg/index', data);
 });
 
+app.get('/blog/ortodontista-em-ouro-preto-mg/', function (req, res) {
+
+  let data = {
+    cssIndex: '/blog/ortodontista-em-ouro-preto-mg/index.css',
+    GA: false
+  };
+
+  res.render('blog/ortodontista-em-ouro-preto-mg/index', data);
+});
+
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`)
 });
