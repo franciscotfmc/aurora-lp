@@ -75,6 +75,16 @@ app.get('/blog/odontopediatra-em-ouro-preto-mg/', function (req, res) {
   res.render('blog/odontopediatra-em-ouro-preto-mg/index', data);
 });
 
+app.get('/blog/clareamento-dental/', function (req, res) {
+
+  let data = {
+    cssIndex: '/blog/clareamento-dental/index.css',
+    GA: false
+  };
+
+  res.render('blog/clareamento-dental/index', data);
+});
+
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`)
 });
