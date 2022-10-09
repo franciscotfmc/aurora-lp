@@ -417,7 +417,6 @@ figure {
 html,
 body {
   max-width: 100%;
-  overflow-x: hidden;
   height: 100%;
 }
 
@@ -479,6 +478,9 @@ body .action-button {
 body .action-button-inverse {
   background-color: #FFF5DC;
   border: 1px solid #FAE14B;
+}
+body main {
+  overflow: hidden;
 }
 body header .container {
   font-size: 1rem;
@@ -594,6 +596,8 @@ body header .container .menu #menuButton:checked ~ #menuLabel > span:nth-child(3
 }
 body #conceito {
   font-size: 1rem;
+  background-color: #9B1982;
+  padding-top: 4rem;
 }
 body #conceito .container {
   display: flex;
@@ -1645,6 +1649,7 @@ body #rodape .mapa iframe {
   body #rodape {
     flex-direction: column-reverse;
     height: auto;
+    overflow: hidden;
   }
   body #rodape .contatos .info {
     gap: 30px;
