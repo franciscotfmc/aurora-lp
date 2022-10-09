@@ -26,11 +26,16 @@ main {
 
     h1,
     h2,
-    h3 {
+    h3,
+    h4 {
       font-weight: 600;
       line-height: 2.9rem;
       max-width: 57rem;
       margin-bottom: 1.5rem;
+    }
+
+    .center {
+      text-align: center;
     }
 
     h1 {
@@ -42,16 +47,28 @@ main {
       color: $cinza;
     }
 
-    h3 {
+    h3,
+    h4 {
       font-size: 1.5rem;
       color: $roxo;
+    }
+
+    h4 {
+      font-size: 1.3rem;
     }
 
     img {
       max-width: 32rem;
     }
 
+    .slider-clareamento-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
     .slider-clareamento {
+      position: relative;
       font-size: 0;
       border-radius: 5px;
       box-shadow: 2px 2px 5px $sombra;
@@ -67,6 +84,10 @@ main {
 
       .antes {
         position: relative;
+      }
+
+      #imgAntes {
+        opacity: 0.8;
       }
 
       .depois {
@@ -89,7 +110,6 @@ main {
         -webkit-appearance: none;
         appearance: none;
         width: 100%;
-        height: 100%;
         background: transparent;
         outline: none;
         margin: 0;
@@ -99,28 +119,29 @@ main {
         &::-webkit-slider-thumb {
           -webkit-appearance: none;
           appearance: none;
-          width: 6px;
+          width: 2px;
           height: 211px;
-          background: $amareloPastel;
+          background: transparent;
           cursor: pointer;
         }
 
         &::-moz-range-thumb {
-          width: 6px;
+          width: 2px;
           height: 211px;
-          background: $amareloPastel;
+          background: transparent;
           cursor: pointer;
         }
       }
 
       .slider-button {
         $size: 30px;
+        z-index: 9;
         pointer-events: none;
         position: absolute;
         width: $size;
         height: $size;
         border-radius: 50%;
-        background-color: $cobreClaro;
+        background-color: $roxo;
         animation: pulse-animation 2s infinite;
         left: calc(50% - 18px);
         top: calc(50% - 18px);
@@ -130,18 +151,30 @@ main {
           content: '';
           padding: 3px;
           display: inline-block;
-          border: solid $preto;
+          border: solid $amarelo;
           border-width: 0 2px 2px 0;
+          z-index: 2;
         }
 
         &:after {
           @include arrow-helper();
           transform: rotate(-45deg);
+          z-index: 2;
         }
 
         &:before {
           @include arrow-helper();
           transform: rotate(135deg);
+          z-index: 2;
+        }
+
+        #sliderLine {
+          z-index: -1;
+          position: absolute;
+          background-color: $roxo;
+          width: 10px;
+          height: 70px;
+          border-radius: 10px;
         }
       }
 
@@ -180,6 +213,15 @@ main {
       li {
         line-height: 2.1rem;
       }
+    }
+
+    .bold {
+      font-weight: 600;
+    }
+
+    .italico {
+      font-style: italic;
+      color: $cinza;
     }
 
     .author {
@@ -281,6 +323,8 @@ main {
     }
 
     @media only screen and (max-width: 640px) {
+      padding: 0 1.5rem;
+
       h1 {
         font-size: 2.2rem;
         line-height: 2.55rem;
@@ -300,28 +344,6 @@ main {
 
       img {
         max-width: 100%;
-      }
-
-      .imagem-1 {
-        &:before {
-          width: 16rem;
-          height: 16rem;
-          left: 2rem;
-          top: -2rem;
-        }
-
-        &:after {
-          width: 12rem;
-          height: 12rem;
-          left: 7rem;
-          bottom: -2rem;
-        }
-      }
-
-      .img-pacientes {
-        img {
-          max-width: 16rem;
-        }
       }
     }
   }

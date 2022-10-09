@@ -619,11 +619,15 @@ body main article {
 }
 body main article h1,
 body main article h2,
-body main article h3 {
+body main article h3,
+body main article h4 {
   font-weight: 600;
   line-height: 2.9rem;
   max-width: 57rem;
   margin-bottom: 1.5rem;
+}
+body main article .center {
+  text-align: center;
 }
 body main article h1 {
   font-size: 2.5rem;
@@ -632,14 +636,24 @@ body main article h2 {
   font-size: 1.8rem;
   color: #696969;
 }
-body main article h3 {
+body main article h3,
+body main article h4 {
   font-size: 1.5rem;
   color: #9B1982;
+}
+body main article h4 {
+  font-size: 1.3rem;
 }
 body main article img {
   max-width: 32rem;
 }
+body main article .slider-clareamento-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
 body main article .slider-clareamento {
+  position: relative;
   font-size: 0;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
@@ -654,6 +668,9 @@ body main article .slider-clareamento .depois img {
 }
 body main article .slider-clareamento .antes {
   position: relative;
+}
+body main article .slider-clareamento #imgAntes {
+  opacity: 0.8;
 }
 body main article .slider-clareamento .depois {
   top: 0;
@@ -673,7 +690,6 @@ body main article .slider-clareamento .slider {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
-  height: 100%;
   background: transparent;
   outline: none;
   margin: 0;
@@ -685,24 +701,25 @@ body main article .slider-clareamento .slider {
 body main article .slider-clareamento .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 6px;
+  width: 2px;
   height: 211px;
-  background: #FFF5DC;
+  background: transparent;
   cursor: pointer;
 }
 body main article .slider-clareamento .slider::-moz-range-thumb {
-  width: 6px;
+  width: 2px;
   height: 211px;
-  background: #FFF5DC;
+  background: transparent;
   cursor: pointer;
 }
 body main article .slider-clareamento .slider-button {
+  z-index: 9;
   pointer-events: none;
   position: absolute;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #D2B4AF;
+  background-color: #9B1982;
   animation: pulse-animation 2s infinite;
   left: calc(50% - 18px);
   top: calc(50% - 18px);
@@ -714,17 +731,29 @@ body main article .slider-clareamento .slider-button:after {
   content: "";
   padding: 3px;
   display: inline-block;
-  border: solid #000000;
+  border: solid #FAE14B;
   border-width: 0 2px 2px 0;
+  z-index: 2;
   transform: rotate(-45deg);
+  z-index: 2;
 }
 body main article .slider-clareamento .slider-button:before {
   content: "";
   padding: 3px;
   display: inline-block;
-  border: solid #000000;
+  border: solid #FAE14B;
   border-width: 0 2px 2px 0;
+  z-index: 2;
   transform: rotate(135deg);
+  z-index: 2;
+}
+body main article .slider-clareamento .slider-button #sliderLine {
+  z-index: -1;
+  position: absolute;
+  background-color: #9B1982;
+  width: 10px;
+  height: 70px;
+  border-radius: 10px;
 }
 @keyframes pulse-animation {
   0% {
@@ -755,6 +784,13 @@ body main article ul {
 }
 body main article ul li {
   line-height: 2.1rem;
+}
+body main article .bold {
+  font-weight: 600;
+}
+body main article .italico {
+  font-style: italic;
+  color: #696969;
 }
 body main article .author address {
   color: #A56E73;
@@ -830,6 +866,9 @@ body main article a:hover {
   }
 }
 @media only screen and (max-width: 640px) {
+  body main article {
+    padding: 0 1.5rem;
+  }
   body main article h1 {
     font-size: 2.2rem;
     line-height: 2.55rem;
@@ -845,21 +884,6 @@ body main article a:hover {
   }
   body main article img {
     max-width: 100%;
-  }
-  body main article .imagem-1:before {
-    width: 16rem;
-    height: 16rem;
-    left: 2rem;
-    top: -2rem;
-  }
-  body main article .imagem-1:after {
-    width: 12rem;
-    height: 12rem;
-    left: 7rem;
-    bottom: -2rem;
-  }
-  body main article .img-pacientes img {
-    max-width: 16rem;
   }
 }
 body main .social-media {
