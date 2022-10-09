@@ -417,7 +417,6 @@ figure {
 html,
 body {
   max-width: 100%;
-  overflow-x: hidden;
   height: 100%;
 }
 
@@ -603,6 +602,7 @@ body #conceito .container {
   flex-flow: wrap-reverse;
   position: relative;
   padding: 5%;
+  overflow: hidden;
 }
 body #conceito .container div {
   flex: 1;
