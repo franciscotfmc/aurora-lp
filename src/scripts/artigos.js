@@ -3,7 +3,7 @@
 module.exports = [{
   image: '/img/blog/clareamento-dental/sorriso-pos-clareamento',
   imageDescription: 'Sorriso com dentes brancos, após procedimento de clareamento dental',
-  name: 'dentista-clinico-geral-ouro-preto',
+  name: 'clareamento-dental-ouro-preto',
   time: '09/10/2022',
   title: 'Clareamento Dental em Ouro Preto: onde fazer, quanto custa e mais',
   description: 'Quer saber qual o melhor especialista em clareamento dental em Ouro Preto? Antes de mais nada, vamos te explicar também sobre os valores, onde fazer e outras perguntas que, com certeza, você deve ter!',
