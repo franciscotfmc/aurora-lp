@@ -105,7 +105,7 @@ main {
       }
 
       .slider {
-        top: 0;
+        top: calc(50% - 40px);
         position: absolute;
         -webkit-appearance: none;
         appearance: none;
@@ -119,16 +119,18 @@ main {
         &::-webkit-slider-thumb {
           -webkit-appearance: none;
           appearance: none;
-          width: 2px;
-          height: 211px;
-          background: transparent;
+          width: 3px;
+          height: 80px;
+          background: $roxoTransparente;
+          border-radius: 20px;
           cursor: pointer;
         }
 
         &::-moz-range-thumb {
           width: 2px;
-          height: 211px;
-          background: transparent;
+          height: 80px;
+          border-radius: 20px;
+          background: $roxoTransparente;
           cursor: pointer;
         }
       }
@@ -141,10 +143,9 @@ main {
         width: $size;
         height: $size;
         border-radius: 50%;
-        background-color: $roxo;
-        animation: pulse-animation 2s infinite;
+        background-color: $roxoTransparente;
         left: calc(50% - 18px);
-        top: calc(50% - 18px);
+        top: calc(50% - 15px);
         @include center;
 
         @mixin arrow-helper() {
@@ -160,31 +161,42 @@ main {
           @include arrow-helper();
           transform: rotate(-45deg);
           z-index: 2;
+          animation: bounce-right 2s infinite;
         }
 
         &:before {
-          @include arrow-helper();
-          transform: rotate(135deg);
-          z-index: 2;
-        }
-
-        #sliderLine {
-          z-index: -1;
-          position: absolute;
-          background-color: $roxo;
-          width: 10px;
-          height: 70px;
-          border-radius: 10px;
+          // @include arrow-helper();
+          // transform: rotate(135deg);
+          // z-index: 2;
+          // animation: bounce-left 2s infinite;
         }
       }
 
-      @keyframes pulse-animation {
+      @keyframes bounce-left {
         0% {
-          box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+          transform: (translateX(0) rotate(135deg));
+        }
+
+        50% {
+          transform: (translateX(1px) rotate(135deg));
         }
 
         100% {
-          box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+          transform: (translateX(0) rotate(135deg));
+        }
+      }
+
+      @keyframes bounce-right {
+        0% {
+          transform: (translateX(0) rotate(-45deg));
+        }
+
+        50% {
+          transform: (translateX(3px) rotate(-45deg));
+        }
+
+        100% {
+          transform: (translateX(0) rotate(-45deg));
         }
       }
     }

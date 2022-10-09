@@ -685,7 +685,7 @@ body main article .slider-clareamento .depois img {
   object-fit: cover;
 }
 body main article .slider-clareamento .slider {
-  top: 0;
+  top: calc(50% - 40px);
   position: absolute;
   -webkit-appearance: none;
   appearance: none;
@@ -701,15 +701,17 @@ body main article .slider-clareamento .slider {
 body main article .slider-clareamento .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 2px;
-  height: 211px;
-  background: transparent;
+  width: 3px;
+  height: 80px;
+  background: rgba(155, 25, 130, 0.95);
+  border-radius: 20px;
   cursor: pointer;
 }
 body main article .slider-clareamento .slider::-moz-range-thumb {
   width: 2px;
-  height: 211px;
-  background: transparent;
+  height: 80px;
+  border-radius: 20px;
+  background: rgba(155, 25, 130, 0.95);
   cursor: pointer;
 }
 body main article .slider-clareamento .slider-button {
@@ -719,10 +721,9 @@ body main article .slider-clareamento .slider-button {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #9B1982;
-  animation: pulse-animation 2s infinite;
+  background-color: rgba(155, 25, 130, 0.95);
   left: calc(50% - 18px);
-  top: calc(50% - 18px);
+  top: calc(50% - 15px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -736,31 +737,28 @@ body main article .slider-clareamento .slider-button:after {
   z-index: 2;
   transform: rotate(-45deg);
   z-index: 2;
+  animation: bounce-right 2s infinite;
 }
-body main article .slider-clareamento .slider-button:before {
-  content: "";
-  padding: 3px;
-  display: inline-block;
-  border: solid #FAE14B;
-  border-width: 0 2px 2px 0;
-  z-index: 2;
-  transform: rotate(135deg);
-  z-index: 2;
-}
-body main article .slider-clareamento .slider-button #sliderLine {
-  z-index: -1;
-  position: absolute;
-  background-color: #9B1982;
-  width: 10px;
-  height: 70px;
-  border-radius: 10px;
-}
-@keyframes pulse-animation {
+@keyframes bounce-left {
   0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    transform: translateX(0) rotate(135deg);
+  }
+  50% {
+    transform: translateX(1px) rotate(135deg);
   }
   100% {
-    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    transform: translateX(0) rotate(135deg);
+  }
+}
+@keyframes bounce-right {
+  0% {
+    transform: translateX(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateX(3px) rotate(-45deg);
+  }
+  100% {
+    transform: translateX(0) rotate(-45deg);
   }
 }
 body main article p,
