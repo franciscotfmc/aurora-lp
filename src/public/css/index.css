@@ -670,15 +670,26 @@ body #conceito .container .tagline {
   z-index: 4;
 }
 body #conceito .container .tagline h1 {
-  font-size: 3em;
-  line-height: 56px;
-  width: 293px;
+  font-size: 2.9em;
+  line-height: 54px;
+  width: 320px;
   margin: 0 0 40px 0;
 }
 body #conceito .container .tagline p {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   max-width: 512px;
   margin: 0 0 40px 0;
+  line-height: 25px;
+}
+body #conceito .container .tagline p span:nth-child(1) {
+  color: #FAE14B;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+body #conceito .container .tagline p span:nth-child(2) {
+  color: #FFF5DC;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 body #conceito .container .tagline a {
   margin-bottom: 10.6888rem;
@@ -739,6 +750,16 @@ body #conceito .mobile-action p {
   font-size: 1.125rem;
   max-width: 17.688rem;
   margin: 0 0 40px 0;
+}
+body #conceito .mobile-action p span:nth-child(1) {
+  color: #FAE14B;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+body #conceito .mobile-action p span:nth-child(2) {
+  color: #FFF5DC;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 @media only screen and (min-width: 481px) {
   body #conceito .mobile-action {

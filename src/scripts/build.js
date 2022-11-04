@@ -48,7 +48,7 @@ class Build {
     await this._minifyCss(cssPath, distCssPath, this.timestamp);
 
     const ejsOutput = await this._compileEjs(
-      this.timestamp, 'Aurora Odontologia', ejsPath, ''
+      this.timestamp, 'Aurora Odontologia - Clínica Odontológica em Ouro Preto MG', ejsPath, ''
     );
 
     await this._minifyHtml(ejsOutput, distHtmlPath);
