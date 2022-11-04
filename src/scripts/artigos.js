@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/clinica-ouro-preto/clinica-ouro-preto',
+  imageDescription: 'Vista de uma clínica odontológica em Ouro Preto',
+  name: 'clinica-odontologica-ouro-preto',
+  time: '04/11/2022',
+  title: 'Como escolher uma clínica odontológica em Ouro Preto?',
+  description: 'Uma clínica odontológica é o ambiente em que vários tipos de tratamentos odontológicos podem ser realizados. Normalmente, há uma equipe especializada em diferentes áreas. Inclusive, você pode obter...',
+  href: '/blog/clinica-odontologica-ouro-preto/'
+}, {
   image: '/img/blog/clareamento-dental/sorriso-pos-clareamento',
   imageDescription: 'Sorriso com dentes brancos, após procedimento de clareamento dental',
   name: 'clareamento-dental-ouro-preto',
