@@ -114,6 +114,8 @@
     @media only screen and (max-width: 480px) {
       .circulos {
         .foto {
+          top: 3rem;
+
           &:before {
             top: -80px;
             left: 50px;

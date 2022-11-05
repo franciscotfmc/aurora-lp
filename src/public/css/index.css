@@ -695,6 +695,9 @@ body #conceito .container .tagline a {
   margin-bottom: 10.6888rem;
 }
 @media only screen and (max-width: 480px) {
+  body #conceito .container .circulos .foto {
+    top: 3rem;
+  }
   body #conceito .container .circulos .foto:before {
     top: -80px;
     left: 50px;
