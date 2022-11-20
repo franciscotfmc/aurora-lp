@@ -66,7 +66,10 @@ class Build {
     );
 
     // Build blog pagination
-    for (let index = 1; index <= (artigos.length / pageSize); index++) {
+    const length = (artigos.length / pageSize) +
+      (artigos.length % pageSize);
+
+    for (let index = 1; index <= length; index++) {
       if (index === 1) {
         this._buildBlogIndex(
           distHtmlBlogPath,
