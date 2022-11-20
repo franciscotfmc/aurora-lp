@@ -706,7 +706,7 @@ body main article .blog-info p {
   color: #696969;
   font-weight: 400;
   font-size: 1.5rem;
-  line-height: 21px;
+  line-height: 32px;
   margin-top: 1rem;
 }
 body main article img {
@@ -826,6 +826,61 @@ body main article .img-draluciana img {
     height: 12rem;
     left: 7rem;
     bottom: -2rem;
+  }
+}
+body main article #pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  height: 100px;
+  margin-bottom: 30px;
+}
+body main article #pagination span {
+  font-size: 1.2rem;
+}
+body main article #pagination .page {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #A56E73;
+  color: #FFF5DC;
+  text-align: center;
+  line-height: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+body main article #pagination .p-circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #D2B4AF;
+  color: #FFF5DC;
+  text-align: center;
+  line-height: 1.8rem;
+}
+body main article #pagination .before,
+body main article #pagination .next {
+  line-height: 1.2rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 30px;
+  border: 1px solid #D2B4AF;
+  color: #A56E73;
+  cursor: pointer;
+  font-weight: 500;
+}
+body main article #pagination .before:hover,
+body main article #pagination .next:hover {
+  background-color: #D2B4AF;
+}
+@media only screen and (max-width: 380px) {
+  body main article #pagination {
+    gap: 0.5rem;
+  }
+  body main article #pagination .p-circle {
+    width: 0.5rem;
+    height: 0.5rem;
   }
 }
 body main .social-media {

@@ -20,6 +20,7 @@ const port = 3000;
 const distPath = `${__dirname}/../../dist`;
 const publicPath = `${__dirname}/../public`;
 const viewsPath = `${__dirname}/../views`;
+const pageSize = 3;
 
 const app = express();
 
@@ -34,10 +35,37 @@ app.get('/', function (req, res) {
   res.render('index', indexData);
 });
 
-app.get('/blog', function (req, res) {
+app.get('/blog/page/:page', function (req, res) {
+
+  const page = req.params.page;
+  const start = (page * pageSize) - pageSize;
+  const end = start + pageSize;
+  const total = artigos.length;
 
   let data = {
-    artigos: artigos,
+    artigos: artigos.slice(start, end),
+    page: parseInt(page),
+    pageSize: pageSize,
+    total: total,
+    cssIndex: '/blog/index.css',
+    GA: false
+  };
+
+  res.render('blog', data);
+});
+
+app.get('/blog', function (req, res) {
+
+  const page = 1;
+  const start = (page * pageSize) - pageSize;
+  const end = start + pageSize;
+  const total = artigos.length;
+
+  let data = {
+    artigos: artigos.slice(start, end),
+    page: parseInt(page),
+    pageSize: pageSize,
+    total: total,
     cssIndex: '/blog/index.css',
     GA: false
   };

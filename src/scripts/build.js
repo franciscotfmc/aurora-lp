@@ -10,6 +10,7 @@ const terser = require('terser');
 const comentarios = require('./comentarios');
 const imagens = require('./imagens');
 const artigos = require('./artigos');
+const pageSize = 1;
 
 const publicPath = `${__dirname}/../public`;
 const publicBlogPath = `${__dirname}/../public/blog`;
@@ -40,6 +41,7 @@ class Build {
 
   async execute() {
     console.info('Starting build...');
+
     await fs.rm(distPath, { recursive: true, force: true });
     await fs.mkdir(distBlogPath, { recursive: true });
     await fs.mkdir(distCssBlogPath, { recursive: true });
@@ -63,12 +65,29 @@ class Build {
       this.timestampBlog
     );
 
-    const ejsOutputBlogIndex = await this._compileEjs(
-      this.timestampBlog, null, ejsBlogPath, 'blog/'
-    );
+    // Build blog pagination
+    for (let index = 1; index <= (artigos.length / pageSize); index++) {
+      if (index === 1) {
+        this._buildBlogIndex(
+          distHtmlBlogPath,
+          { pageSize: pageSize, page: 1 }
+        );
+      }
 
-    await this._minifyHtml(ejsOutputBlogIndex, distHtmlBlogPath);
+      if (index > 1) {
 
+        await fs.mkdir(
+          `${distHtmlBlogPath}/page/${index}`, { recursive: true }
+        );
+
+        this._buildBlogIndex(
+          `${distHtmlBlogPath}/page/${index}`,
+          { pageSize: pageSize, page: index }
+        );
+      }
+    }
+
+    // Build blog articles
     for (let a of artigos) {
       const cssFolder = `${distCssBlogPath}/${a.name}`;
       const htmlFolder = `${distBlogPath}/${a.name}`;
@@ -97,6 +116,42 @@ class Build {
     const output = new CleanCSS().minify(cssFile);
     const fileName = `${distPath}/index${timestamp}.css`;
     return await fs.writeFile(fileName, output.styles);
+  }
+
+  async _buildBlogIndex(distPath, pageData) {
+    const ejsOutputBlogIndex = await this
+      ._compileBlogEjs(
+        this.timestampBlog, null,
+        ejsBlogPath, 'blog/', pageData
+      );
+
+    await this._minifyHtml(
+      ejsOutputBlogIndex,
+      distPath
+    );
+  }
+
+  async _compileBlogEjs(timestamp, title, path, cssFolder, pageData) {
+
+    const page = pageData.page;
+    const start = (pageData.page * pageData.pageSize) - pageData.pageSize;
+    const end = start + pageData.pageSize;
+    const total = artigos.length;
+
+    const data = {
+      artigos: artigos.slice(start, end),
+      page: page,
+      pageSize: pageSize,
+      total: total,
+      cssIndex: `${cssFolder}index${timestamp}.css`,
+      jsIndex: `main${timestamp}.js`,
+      imagens: imagens,
+      title: title,
+      GA: true
+    };
+
+    const ejsIndex = `${path}/index.ejs`;
+    return ejs.renderFile(ejsIndex, data);
   }
 
   async _compileEjs(timestamp, title, path, cssFolder) {

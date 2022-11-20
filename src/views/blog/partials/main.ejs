@@ -4,31 +4,34 @@
       <h1>Blog da Aurora Odontologia</h1>
 
       <div class="blog-info">
-        <p>Promova a melhor versão do seu sorriso!</p>
+        <p>
+          Conteúdos completos sobre odontologia, cuidados com a saúde bucal,
+          estética, ortodontia, implantes, próteses, invisalign e muito mais!
+        </p>
       </div>
 
       <div class="social-media">
         <div id="facebook">
           <a href="https://www.facebook.com/aurora.odonto" target="_blank">
-            <img class="icon" src="../../img/facebook.svg" alt="facebook" />
+            <img class="icon" src="../../../img/facebook.svg" alt="facebook" />
           </a>
         </div>
 
         <div id="instagram">
           <a href="https://www.instagram.com/aurora.odonto/" target="_blank">
-            <img class="icon" src="../../img/instagram-3.svg" alt="instagram" />
+            <img class="icon" src="../../../img/instagram-3.svg" alt="instagram" />
           </a>
         </div>
 
         <div id="whatsapp">
           <a href="https://api.whatsapp.com/send?phone=553135002591&amp;text=" target="_blank">
-            <img class="icon" src="../../img/whatsapp-2.svg" alt="whatsapp" />
+            <img class="icon" src="../../../img/whatsapp-2.svg" alt="whatsapp" />
           </a>
         </div>
 
         <div id="coracao">
           <a href="/" target="_blank">
-            <img class="icon" src="../../img/coracao-aurora.svg" alt="coracao-aurora" />
+            <img class="icon" src="../../../img/coracao-aurora.svg" alt="coracao-aurora" />
           </a>
         </div>
       </div>
@@ -70,6 +73,33 @@
         </div>
         <% }); %>
     </div>
+  </section>
+
+  <section id="pagination">
+
+    <% if(page> 1) { %>
+      <% if(page===2) { %>
+        <span class="before">
+          <a href="/blog">Anterior</a>
+        </span>
+        <% } else { %>
+          <span class="before">
+            <a href="/blog/page/<%- page - 1 %>">Anterior</a>
+          </span>
+          <% } %>
+            <% } %>
+
+              <span class="p-circle"></span>
+              <span class="page">
+                <%- page %>
+              </span>
+              <span class="p-circle"></span>
+
+              <% if((page * pageSize) < total) { %>
+                <span class="next">
+                  <a href="/blog/page/<%- page + 1 %>">Próxima</a>
+                </span>
+                <% } %>
   </section>
 
 </article>
