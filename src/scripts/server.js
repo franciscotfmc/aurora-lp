@@ -133,6 +133,16 @@ app.get('/blog/clinica-odontologica-ouro-preto/', function (req, res) {
   res.render('blog/clinica-odontologica-ouro-preto/index', data);
 });
 
+app.get('/blog/dra-luciana-dangelo-dentista-ouro-preto/', function (req, res) {
+
+  let data = {
+    cssIndex: '/blog/dra-luciana-dangelo-dentista-ouro-preto/index.css',
+    GA: false
+  };
+
+  res.render('blog/dra-luciana-dangelo-dentista-ouro-preto/index', data);
+});
+
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`)
 });

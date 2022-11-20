@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/dra-luciana/dra-luciana-sorrindo',
+  imageDescription: 'Dra Luciana D’Angelo, à mesa do consultório na Aurora Odontologia, sorrindo, de máscara.',
+  name: 'dra-luciana-dangelo-dentista-ouro-preto',
+  time: '20/11/2022',
+  title: 'Conheça a Dra Luciana D\'Angelo, da Aurora Odontologia',
+  description: 'Eu acredito muito na importância de se construir um bom relacionamento com o paciente com base em uma ótima experiência com o dentista. E não é só da experiência dentro do consultório que estou fal...',
+  href: '/blog/dra-luciana-dangelo-dentista-ouro-preto/'
+}, {
   image: '/img/blog/clinica-ouro-preto/clinica-ouro-preto',
   imageDescription: 'Vista de uma clínica odontológica em Ouro Preto',
   name: 'clinica-odontologica-ouro-preto',

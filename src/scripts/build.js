@@ -10,7 +10,7 @@ const terser = require('terser');
 const comentarios = require('./comentarios');
 const imagens = require('./imagens');
 const artigos = require('./artigos');
-const pageSize = 1;
+const pageSize = 3;
 
 const publicPath = `${__dirname}/../public`;
 const publicBlogPath = `${__dirname}/../public/blog`;
