@@ -1515,6 +1515,7 @@ body #estrutura .container .img-dots {
   background-color: transparent;
   justify-content: center;
   margin-top: -120px;
+  margin-bottom: 20px;
   z-index: 2;
 }
 body #estrutura .container .img-dots > span {
