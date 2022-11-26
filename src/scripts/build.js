@@ -58,6 +58,7 @@ class Build {
     await this._copyJsLibs();
     await this._copyFonts();
     await this._copyImgs();
+    await this._copyRobots();
 
     await this._minifyCss(
       cssBlogPath,
@@ -205,6 +206,10 @@ class Build {
   async _copyImgs() {
     await fs.copyFile(`${publicPath}/favicon.ico`, `${distPath}/favicon.ico`);
     return fsEx.copy(imgPath, distImgPath);
+  }
+
+  async _copyRobots() {
+    return await fs.copyFile(`${publicPath}/robots.txt`, `${distPath}/robots.txt`);
   }
 };
 
