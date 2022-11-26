@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+sitemap: https://auroraodontologia.com.br/sitemap.txt

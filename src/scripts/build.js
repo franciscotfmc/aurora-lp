@@ -58,7 +58,7 @@ class Build {
     await this._copyJsLibs();
     await this._copyFonts();
     await this._copyImgs();
-    await this._copyRobots();
+    await this._copyRobotsAndSitemap();
 
     await this._minifyCss(
       cssBlogPath,
@@ -208,8 +208,9 @@ class Build {
     return fsEx.copy(imgPath, distImgPath);
   }
 
-  async _copyRobots() {
-    return await fs.copyFile(`${publicPath}/robots.txt`, `${distPath}/robots.txt`);
+  async _copyRobotsAndSitemap() {
+    await fs.copyFile(`${publicPath}/robots.txt`, `${distPath}/robots.txt`);
+    await fs.copyFile(`${publicPath}/sitemap.txt`, `${distPath}/sitemap.txt`);
   }
 };
 
