@@ -31,13 +31,13 @@ p {
   line-height: 68px;
   text-align: center;
   font-size: 18px;
-  color: $cinza;
+  color: $preto;
   font-weight: 700;
   display: inline-block;
   box-shadow: 5px 5px 0px $sombra;
 
   &:hover {
-    color: $preto;
+    color: $cinza;
     cursor: pointer;
   }
 
