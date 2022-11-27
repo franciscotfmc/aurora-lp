@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/melhorar-saude-bucal/mulher-branca-sorrindo',
+  imageDescription: 'Como melhorar a saúde bucal. Mulher branca, usando airpods, de cabelos escuros e sorrindo, mostrando bem os dentes.',
+  name: 'melhorar-saude-bucal',
+  time: '27/11/2022',
+  title: '6 hábitos essenciais para melhorar sua saúde bucal',
+  description: 'Ter a saúde do corpo em dia é importante para ter uma boa qualidade de vida e prevenir doenças. Neste artigo, vamos mostrar algumas dicas para melhorar a sua saúde bucal e te ajudar a tomar hábitos...',
+  href: '/blog/melhorar-saude-bucal/'
+}, {
   image: '/img/blog/dra-luciana/dra-luciana-sorrindo',
   imageDescription: 'Dra Luciana D’Angelo, à mesa do consultório na Aurora Odontologia, sorrindo, de máscara.',
   name: 'dra-luciana-dangelo-dentista-ouro-preto',

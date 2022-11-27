@@ -143,6 +143,16 @@ app.get('/blog/dra-luciana-dangelo-dentista-ouro-preto/', function (req, res) {
   res.render('blog/dra-luciana-dangelo-dentista-ouro-preto/index', data);
 });
 
+app.get('/blog/melhorar-saude-bucal/', function (req, res) {
+
+  let data = {
+    cssIndex: '/blog/melhorar-saude-bucal/index.css',
+    GA: false
+  };
+
+  res.render('blog/melhorar-saude-bucal/index', data);
+});
+
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`)
 });
