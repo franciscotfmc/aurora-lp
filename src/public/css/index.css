@@ -1689,7 +1689,7 @@ body #blog .container .resumo .lista .artigo {
 }
 body #blog .container .resumo .lista .artigo img {
   border-radius: 50%;
-  box-shadow: 3px 3px 1px #FAE14B;
+  box-shadow: 3px 3px 1px #FFF5DC;
 }
 body #blog .container .resumo .lista .artigo p {
   color: #696969;
@@ -1788,6 +1788,9 @@ body #blog .container .resumo .lista .cta a:hover {
   body #blog .container .titulo h2 {
     font-size: 2.25rem;
     line-height: 2.625rem;
+  }
+  body #blog .container .titulo p {
+    font-size: 1.2rem;
   }
   body #blog .container .resumo {
     align-items: center;
