@@ -1785,6 +1785,10 @@ body #blog .container .resumo .lista .cta a:hover {
   }
 }
 @media only screen and (max-width: 480px) {
+  body #blog .container .titulo h2 {
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+  }
   body #blog .container .resumo {
     align-items: center;
     flex-direction: column-reverse;

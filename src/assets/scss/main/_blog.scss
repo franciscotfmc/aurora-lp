@@ -220,6 +220,17 @@
     }
 
     @media only screen and (max-width: 480px) {
+      .titulo {
+        h2 {
+          font-size: 2.25rem;
+          line-height: 2.625rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+      }
+
       .resumo {
         align-items: center;
         flex-direction: column-reverse;
