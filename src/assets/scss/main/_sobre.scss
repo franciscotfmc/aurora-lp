@@ -182,8 +182,11 @@
             .imagem {
               margin-left: -180px;
               margin-bottom: -120px;
+              font-size: 0;
 
               .foto {
+                border-top: 1px solid $roxo;
+
                 img {
                   max-width: 440px;
                   max-height: 440px;

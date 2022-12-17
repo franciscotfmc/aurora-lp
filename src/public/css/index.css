@@ -1417,6 +1417,10 @@ body #sobre .container p {
   body #sobre .container .row-2 .row-2-2 .box-3 .imagem {
     margin-left: -180px;
     margin-bottom: -120px;
+    font-size: 0;
+  }
+  body #sobre .container .row-2 .row-2-2 .box-3 .imagem .foto {
+    border-top: 1px solid #9B1982;
   }
   body #sobre .container .row-2 .row-2-2 .box-3 .imagem .foto img {
     max-width: 440px;
