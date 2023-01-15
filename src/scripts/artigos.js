@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/sorriso-bonito-verao/familia-piscina-sorrindo',
+  imageDescription: 'Família composta por mãe, pai e 2 crianças, filho e filha, sorrindo, fora da piscina, acenando com 2 dedos para a foto.',
+  name: 'sorriso-bonito-verao',
+  time: '15/01/2023',
+  title: 'Sorriso bonito: 3 dicas que vão além do clareamento dental',
+  description: 'Cá entre nós: a verdade é que é importante ter dentes bonitos e saudáveis em qualquer estação! Pequenas atitudes, inclusive, podem te ajudar a conquistar um sorriso mais belo no verão – a estação...',
+  href: '/blog/sorriso-bonito-verao/'
+}, {
   image: '/img/blog/melhorar-saude-bucal/mulher-branca-sorrindo',
   imageDescription: 'Como melhorar a saúde bucal. Mulher branca, usando airpods, de cabelos escuros e sorrindo, mostrando bem os dentes.',
   name: 'melhorar-saude-bucal',

@@ -153,6 +153,16 @@ app.get('/blog/melhorar-saude-bucal/', function (req, res) {
   res.render('blog/melhorar-saude-bucal/index', data);
 });
 
+app.get('/blog/sorriso-bonito-verao/', function (req, res) {
+
+  let data = {
+    cssIndex: '/blog/sorriso-bonito-verao/index.css',
+    GA: false
+  };
+
+  res.render('blog/sorriso-bonito-verao/index', data);
+});
+
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`)
 });
