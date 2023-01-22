@@ -163,6 +163,16 @@ app.get('/blog/sorriso-bonito-verao/', function (req, res) {
   res.render('blog/sorriso-bonito-verao/index', data);
 });
 
+app.get('/blog/protese-implante-ouro-preto/', function (req, res) {
+
+  let data = {
+    cssIndex: '/blog/protese-implante-ouro-preto/index.css',
+    GA: false
+  };
+
+  res.render('blog/protese-implante-ouro-preto/index', data);
+});
+
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`)
 });

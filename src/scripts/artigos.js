@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/protese-implante-ouro-preto/exemplo-protese-dentaria',
+  imageDescription: 'Família composta por mãe, pai e 2 crianças, filho e filha, sorrindo, fora da piscina, acenando com 2 dedos para a foto.',
+  name: 'protese-implante-ouro-preto',
+  time: '22/01/2023',
+  title: '10 coisas que você precisa saber sobre prótese e implantodontia',
+  description: 'Os tratamentos com prótese ou com implante têm o mesmo objetivo: restabelecer a sua saúde bucal e recuperar um dente perdido ou que está comprometido. No entanto, eles agem de jeitos diferentes...',
+  href: '/blog/protese-implante-ouro-preto/'
+}, {
   image: '/img/blog/sorriso-bonito-verao/familia-piscina-sorrindo',
   imageDescription: 'Família composta por mãe, pai e 2 crianças, filho e filha, sorrindo, fora da piscina, acenando com 2 dedos para a foto.',
   name: 'sorriso-bonito-verao',
