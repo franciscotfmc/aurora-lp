@@ -645,6 +645,7 @@ body main article .imagem-1 {
   position: relative;
 }
 body main article .imagem-1 img {
+  max-width: 22rem;
   z-index: 2;
   position: relative;
   clip-path: circle(50%);
@@ -652,8 +653,8 @@ body main article .imagem-1 img {
 }
 body main article .imagem-1:before {
   content: "";
-  width: 32rem;
-  height: 32rem;
+  width: 22rem;
+  height: 22rem;
   background-color: transparent;
   border: 3px solid #A56E73;
   position: absolute;
@@ -664,8 +665,8 @@ body main article .imagem-1:before {
 }
 body main article .imagem-1:after {
   content: "";
-  width: 23rem;
-  height: 23rem;
+  width: 13rem;
+  height: 13rem;
   background-color: #D2B4AF;
   position: absolute;
   clip-path: circle(50%);

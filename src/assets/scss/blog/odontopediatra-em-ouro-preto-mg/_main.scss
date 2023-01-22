@@ -43,6 +43,7 @@ main {
       position: relative;
 
       img {
+        max-width: 22rem;
         z-index: 2;
         position: relative;
         clip-path: circle(50%);
@@ -51,8 +52,8 @@ main {
 
       &:before {
         content: "";
-        width: 32rem;
-        height: 32rem;
+        width: 22rem;
+        height: 22rem;
         background-color: transparent;
         border: 3px solid $cobreEscuro;
         position: absolute;
@@ -64,8 +65,8 @@ main {
 
       &:after {
         content: "";
-        width: 23rem;
-        height: 23rem;
+        width: 13rem;
+        height: 13rem;
         background-color: $cobreClaro;
         position: absolute;
         clip-path: circle(50%);
