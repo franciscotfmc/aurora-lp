@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/botox-ouro-preto/exemplo-resultado-botox',
+  imageDescription: 'Antes e depois de o paciente realizar botox',
+  name: 'botox-ouro-preto',
+  time: '03/02/2023',
+  title: 'Botox: onde encontrar especialista em Ouro Preto, como é o procedimento e benefícios!',
+  description: 'Quando falamos de botox, estamos falando da toxina botulínica. Hoje, o nome botox também é uma marca registrada dessa substância. Para resumir, trata-se de uma toxina extraída...',
+  href: '/blog/botox-ouro-preto/'
+}, {
   image: '/img/blog/protese-implante-ouro-preto/exemplo-protese-dentaria',
   imageDescription: 'Família composta por mãe, pai e 2 crianças, filho e filha, sorrindo, fora da piscina, acenando com 2 dedos para a foto.',
   name: 'protese-implante-ouro-preto',
