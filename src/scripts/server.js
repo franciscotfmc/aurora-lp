@@ -183,6 +183,17 @@ app.get('/blog/botox-ouro-preto/', function (req, res) {
   res.render('blog/botox-ouro-preto/index', data);
 });
 
+app.get('/blog/endodontista-ouro-preto-mg/', function (req, res) {
+
+  let data = {
+    cssIndex: '/blog/endodontista-ouro-preto-mg/index.css',
+    GA: false
+  };
+
+  res.render('blog/endodontista-ouro-preto-mg/index', data);
+});
+
+
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`)
 });

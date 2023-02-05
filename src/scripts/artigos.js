@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/endodontista-ouro-preto-mg/endo',
+  imageDescription: 'Mão de uma dentista selecionando broca para execução de canal',
+  name: 'endodontista-ouro-preto-mg',
+  time: '05/02/2023',
+  title: '5 razões para visitar um endodontista',
+  description: 'Se você ainda está em dúvida se precisa visitar um endodontista, a gente te ajuda mostrando alguns sinais importantes para fazer uma consulta com esse profissional. Mas vale sempre destacar: não espere muito tempo para buscar ajuda odontológica...',
+  href: '/blog/endodontista-ouro-preto-mg/'
+}, {
   image: '/img/blog/botox-ouro-preto/exemplo-resultado-botox',
   imageDescription: 'Antes e depois de o paciente realizar botox',
   name: 'botox-ouro-preto',
