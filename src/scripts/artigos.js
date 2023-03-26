@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/camera-intraoral-odontologica/camera-intraoral',
+  imageDescription: 'Paciente sendo escaneada por uma câmera intraoral',
+  name: 'camera-intraoral-odontologica',
+  time: '26/03/2023',
+  title: 'O que é câmera intraoral na odontologia?',
+  description: 'A odontologia está em constante evolução e cada vez mais moderna - um exemplo disso é o uso de um equipamento de captura de imagens chamado câmera intraoral. Essa tecnologia é uma das principais aliadas...',
+  href: '/blog/camera-intraoral-odontologica/'
+}, {
   image: '/img/blog/endodontista-ouro-preto-mg/endo',
   imageDescription: 'Mão de uma dentista selecionando broca para execução de canal',
   name: 'endodontista-ouro-preto-mg',
