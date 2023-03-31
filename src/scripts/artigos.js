@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/laserterapia-ouro-preto-mg/paciente-mulher-no-dentista',
+  imageDescription: 'Paciente mulher no dentista recebendo tratamento com laser',
+  name: 'paciente-mulher-no-dentista',
+  time: '31/03/2023',
+  title: 'Laserterapia na odontologia: o que é e onde fazer em Ouro Preto?',
+  description: 'Laserterapia: já ouviu falar? Basicamente, é um procedimento em que o laser é aplicado diretamente em uma parte do corpo que necessita de tratamento - alívio de dor ou cicatrização, por exemplo. Tudo vai...',
+  href: '/blog/laserterapia-ouro-preto-mg/'
+}, {
   image: '/img/blog/camera-intraoral-odontologica/camera-intraoral',
   imageDescription: 'Paciente sendo escaneada por uma câmera intraoral',
   name: 'camera-intraoral-odontologica',

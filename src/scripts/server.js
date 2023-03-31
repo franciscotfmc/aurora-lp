@@ -203,6 +203,16 @@ app.get('/blog/camera-intraoral-odontologica/', function (req, res) {
   res.render('blog/camera-intraoral-odontologica/index', data);
 });
 
+app.get('/blog/laserterapia-ouro-preto-mg/', function (req, res) {
+
+  let data = {
+    cssIndex: '/blog/laserterapia-ouro-preto-mg/index.css',
+    GA: false
+  };
+
+  res.render('blog/laserterapia-ouro-preto-mg/index', data);
+});
+
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`)
 });
