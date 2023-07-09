@@ -213,6 +213,16 @@ app.get('/blog/laserterapia-ouro-preto-mg/', function (req, res) {
   res.render('blog/laserterapia-ouro-preto-mg/index', data);
 });
 
+app.get('/blog/odontopediatra-para-bebe-ouro-preto/', function (req, res) {
+
+  let data = {
+    cssIndex: '/blog/odontopediatra-para-bebe-ouro-preto/index.css',
+    GA: false
+  };
+
+  res.render('blog/odontopediatra-para-bebe-ouro-preto/index', data);
+});
+
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`)
 });

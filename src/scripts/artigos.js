@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/odontopediatra-para-bebe-ouro-preto/pai-segurando-bebe-sorrindo',
+  imageDescription: 'Pai segurando filho bebê, que está sorrindo',
+  name: 'odontopediatra-para-bebe-ouro-preto',
+  time: '09/07/2023',
+  title: 'Pais de primeira viagem e odontopediatra para bebês: quando começar a ir?',
+  description: 'Em torno dos 6 meses de idade, os primeiros dentinhos de leite costumam aparecer. Importante: cada criança tem seu próprio ritmo de desenvolvimento dentário e pode haver...',
+  href: '/blog/odontopediatra-para-bebe-ouro-preto/'
+}, {
   image: '/img/blog/laserterapia-ouro-preto-mg/paciente-mulher-no-dentista',
   imageDescription: 'Paciente mulher no dentista recebendo tratamento com laser',
   name: 'laserterapia-ouro-preto-mg',
