@@ -16,6 +16,15 @@ function gtag_report_conversion(event) {
     'value': '10.50'
   });
 
+  var transaction = this.event.target.parentElement.id +
+    '-' + new Date().getTime()
+
+  gtag('event', 'purchase', {
+    transaction_id: transaction,
+  });
+
+  console.log(transaction)
+
   return false;
 }
 
