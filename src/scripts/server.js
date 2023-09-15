@@ -13,7 +13,7 @@ const indexData = {
   comentarios: comentarios,
   imagens: imagens,
   title: 'Aurora [Desenvolvimento]',
-  GA: false
+  GA: true
 };
 
 const port = 3000;

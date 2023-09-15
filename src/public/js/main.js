@@ -11,6 +11,11 @@ function gtag_report_conversion(event) {
     'send_to': event
   });
 
+  gtag('event', 'generate_lead', {
+    'currency': 'BRL',
+    'value': '10.50'
+  });
+
   return false;
 }
 
