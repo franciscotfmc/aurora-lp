@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/dor-dentes-sensiveis-tratamento-ouro-preto/sensibilidade',
+  imageDescription: 'Mulher sente os dentes sensíveis ao tomar um copo de água com gelo',
+  name: 'dor-dentes-sensiveis-tratamento-ouro-preto',
+  time: '18/11/2023',
+  title: 'Como aliviar a dor dos dentes sensíveis e da retração gengival?',
+  description: 'Essa dor está incomodando a sua rotina? Antes de mais nada, fique tranquilo. Existem algumas dicas que podem te dar um alívio instantâneo para a sensibilidade nos dentes. Mas a gente lembra que o melhor caminho é...',
+  href: '/blog/dor-dentes-sensiveis-tratamento-ouro-preto/'
+}, {
   image: '/img/blog/odontopediatra-para-bebe-ouro-preto/pai-segurando-bebe-sorrindo',
   imageDescription: 'Pai segurando filho bebê, que está sorrindo',
   name: 'odontopediatra-para-bebe-ouro-preto',
