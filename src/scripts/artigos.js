@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/odontopediatra-canal-em-criancas-ouro-preto/crianca-dor-dente',
+  imageDescription: 'Criança com dor de dente, levando uma das mãos à bochecha',
+  name: 'odontopediatra-canal-em-criancas-ouro-preto',
+  time: '18/11/2023',
+  title: 'Tratamento de canal em crianças: com quantos anos pode fazer + outras dúvidas',
+  description: 'Você já ouviu falar sobre os benefícios dos tratamentos de canal em crianças? Pois é, não é só coisa de adulto não. Eles são, em muitos casos, a opção certa para salvar um dente...',
+  href: '/blog/odontopediatra-canal-em-criancas-ouro-preto/'
+}, {
   image: '/img/blog/dor-dentes-sensiveis-tratamento-ouro-preto/sensibilidade',
   imageDescription: 'Mulher sente os dentes sensíveis ao tomar um copo de água com gelo',
   name: 'dor-dentes-sensiveis-tratamento-ouro-preto',
