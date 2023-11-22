@@ -212,3 +212,31 @@ function ImgCarousel(slider) {
       .setEvents();
   });
 })();
+
+function handlePhoneInput(e) {
+  e.target.value = phoneMask(e.target.value)
+}
+
+function phoneMask(phone) {
+  return phone.replace(/\D/g, '')
+    .replace(/^(\d)/, '($1')
+    .replace(/^(\(\d{2})(\d)/, '$1) $2')
+    .replace(/(\d{4})(\d{1,5})/, '$1-$2')
+    .replace(/(-\d{5})\d+?$/, '$1');
+}
+
+function postLead(id) {
+  let data = {
+    nome: document.getElementById('nome' + id).value,
+    email: document.getElementById('email' + id).value,
+    telefone: document.getElementById('telefone' + id).value
+  };
+
+  fetch('/leads', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).then(res => {
+    console.log("Request complete! response:", res);
+  });
+}

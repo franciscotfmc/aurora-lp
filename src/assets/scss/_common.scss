@@ -34,6 +34,7 @@ p {
   color: $preto;
   font-weight: 700;
   display: inline-block;
+  border: 0;
   box-shadow: 5px 5px 0px $sombra;
 
   &:hover {
@@ -56,6 +57,17 @@ p {
   @extend .button;
   background-color: $amareloPastel;
   border: 1px solid $amarelo;
+}
+
+.action-button-form {
+  @extend .button;
+  background-color: $amarelo;
+  width: 110px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 1rem;
 }
 
 main {

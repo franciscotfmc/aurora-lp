@@ -1,0 +1,21 @@
+<div class="formulario-contato">
+  <button class="action-button" onclick="window['<%= buttonId %>'].showModal();">
+    Fale com a gente!
+  </button>
+
+  <dialog id="<%= buttonId %>">
+    <button onclick="window['<%= buttonId %>'].close();" aria-label="close" class="x">❌</button>
+
+    <h2>
+      Converse agora com alguém da nossa equipe e tire suas dúvidas!
+    </h2>
+
+    <div class="form">
+      <input id="nome<%= buttonId %>" type="text" name="nome" placeholder="Nome completo" required>
+      <input id="email<%= buttonId %>" type="text" name="email" placeholder="E-mail" required>
+      <input id="telefone<%= buttonId %>" type="text" name="telefone" placeholder="(99) 9 9999-9999"
+        oninput="handlePhoneInput(event)" required>
+      <button type="button" class="action-button-form" onclick="postLead('<%= buttonId %>')">Enviar</button>
+    </div>
+  </dialog>
+</div>

@@ -451,7 +451,7 @@ body ::selection {
   color: #FAE14B;
   background: rgba(0, 0, 0, 0.25);
 }
-body .button, body .action-button-inverse, body .action-button {
+body .button, body .action-button-form, body .action-button-inverse, body .action-button {
   width: 310px;
   height: 68px;
   line-height: 68px;
@@ -460,14 +460,15 @@ body .button, body .action-button-inverse, body .action-button {
   color: #000000;
   font-weight: 700;
   display: inline-block;
+  border: 0;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
 }
-body .button:hover, body .action-button-inverse:hover, body .action-button:hover {
+body .button:hover, body .action-button-form:hover, body .action-button-inverse:hover, body .action-button:hover {
   color: #696969;
   cursor: pointer;
 }
 @media only screen and (max-width: 480px) {
-  body .button, body .action-button-inverse, body .action-button {
+  body .button, body .action-button-form, body .action-button-inverse, body .action-button {
     width: 283px;
     font-size: 16px;
   }
@@ -478,6 +479,15 @@ body .action-button {
 body .action-button-inverse {
   background-color: #FFF5DC;
   border: 1px solid #FAE14B;
+}
+body .action-button-form {
+  background-color: #FAE14B;
+  width: 110px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 1rem;
 }
 body main {
   overflow: hidden;
@@ -1815,6 +1825,76 @@ body #blog .container .resumo .lista .cta a:hover {
   }
   body #blog .container .resumo .imagem-blog {
     margin-right: -12rem;
+  }
+}
+body .formulario-contato dialog {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 3rem;
+  background: #FFF5DC;
+  border-radius: 2px;
+  border: 0;
+  box-shadow: 0 5px 30px 0 rgba(155, 25, 130, 0.85);
+  animation: fadeIn 1s ease both;
+}
+body .formulario-contato dialog::backdrop {
+  animation: fadeIn 1s ease both;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 2;
+  backdrop-filter: blur(20px);
+}
+body .formulario-contato dialog .x {
+  filter: grayscale(1);
+  border: none;
+  background: none;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  transition: ease filter, transform 0.3s;
+  cursor: pointer;
+  transform-origin: center;
+}
+body .formulario-contato dialog .x:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+body .formulario-contato dialog h2 {
+  z-index: 1;
+  margin-top: 2rem;
+  color: #000000;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.75rem;
+  max-width: 400px;
+}
+body .formulario-contato dialog .form {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+body .formulario-contato dialog input {
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.2rem;
+  border: none;
+  border-bottom: 5px solid #D2B4AF;
+  background: #FFF5DC;
+  min-width: 250px;
+  padding-left: 5px;
+  outline: none;
+  color: #000000;
+}
+body .formulario-contato dialog input:focus {
+  border-bottom: 5px solid #000000;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 body #rodape {

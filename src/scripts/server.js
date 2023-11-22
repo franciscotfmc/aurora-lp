@@ -13,7 +13,8 @@ const indexData = {
   comentarios: comentarios,
   imagens: imagens,
   title: 'Aurora [Desenvolvimento]',
-  GA: true
+  GA: true,
+  buttonId: 'dialog1'
 };
 
 const port = 3000;
