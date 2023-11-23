@@ -1,11 +1,14 @@
 <div class="actions">
-  <a id="agendar-comentarios" class="action-button" target="_blank"
+
+  <!-- <a id="agendar-comentarios" class="action-button" target="_blank"
     onclick="gtag_report_conversion('AW-10877445993/nu9eCO6is84DEOnO4sIo')"
     href="https://api.whatsapp.com/send?phone=553135002591&amp;text=">
     <span>Agende sua consulta</span>
-  </a>
+  </a> -->
 
-  <a id="comentar" class="action-button-inverse" target="_blank" href="https://g.page/r/CcYml5fJsmmeEB0/review">
-    <span>Deixe seu comentário</span>
-  </a>
+  <%- include('../contato', { buttonId: 'dialog2' }); %>
+
+    <a id="comentar" class="action-button-inverse" target="_blank" href="https://g.page/r/CcYml5fJsmmeEB0/review">
+      <span>Deixe seu comentário</span>
+    </a>
 </div>

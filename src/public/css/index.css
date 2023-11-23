@@ -1873,13 +1873,14 @@ body .formulario-contato .d-container dialog .x:hover {
 }
 body .formulario-contato .d-container dialog h2 {
   z-index: 1;
+  margin-left: 0 !important;
   margin-top: 2rem;
-  color: #000000;
-  font-weight: 600;
-  font-size: 1.4rem;
-  line-height: 1.75rem;
-  max-width: 400px;
-  margin-bottom: 1.5rem;
+  color: #000000 !important;
+  font-weight: 600 !important;
+  font-size: 1.4rem !important;
+  line-height: 1.75rem !important;
+  max-width: 400px !important;
+  margin-bottom: 1.5rem !important;
 }
 body .formulario-contato .d-container dialog .form button {
   margin-bottom: 2rem;
