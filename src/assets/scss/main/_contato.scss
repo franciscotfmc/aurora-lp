@@ -1,81 +1,137 @@
 .formulario-contato {
-  dialog {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 1rem 3rem;
-    background: $amareloPastel;
-    border-radius: 2px;
-    border: 0;
-    box-shadow: 0 5px 30px 0 $roxoTransparente;
-    animation: fadeIn 1s ease both;
-
-    &::backdrop {
-      animation: fadeIn 1s ease both;
-      background: rgb(255 255 255 / 40%);
-      z-index: 2;
-      backdrop-filter: blur(20px);
-    }
-
-    .x {
-      filter: grayscale(1);
-      border: none;
-      background: none;
-      position: absolute;
-      top: 15px;
-      right: 10px;
-      transition: ease filter, transform 0.3s;
-      cursor: pointer;
-      transform-origin: center;
-
-      &:hover {
-        filter: grayscale(0);
-        transform: scale(1.1);
-      }
-    }
-
-    h2 {
-      z-index: 1;
-      margin-top: 2rem;
-      color: $preto;
-      font-weight: 600;
-      font-size: 1.4rem;
-      line-height: 1.75rem;
-      max-width: 400px;
-    }
-
-    .form {
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    input {
-      display: block;
-      width: 100%;
-      font-size: 1.2rem;
-      line-height: 1.2rem * 2;
-      margin-bottom: 1.2rem;
-      border: none;
-      border-bottom: 5px solid $cobreClaro;
+  .d-container {
+    dialog {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 1rem 1rem;
       background: $amareloPastel;
-      min-width: 250px;
-      padding-left: 5px;
-      outline: none;
-      color: $preto;
+      border-radius: 2px;
+      border: 0;
+      box-shadow: 0 5px 30px 0 $roxoTransparente;
+      animation: fadeIn 1s ease both;
+      max-height: 500px;
 
-      &:focus {
-        border-bottom: 5px solid $preto;
+      &::backdrop {
+        animation: fadeIn 1s ease both;
+        background: rgb(255 255 255 / 40%);
+        z-index: 2;
+        backdrop-filter: blur(20px);
+      }
+
+      .x {
+        filter: grayscale(1);
+        border: none;
+        background: none;
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        transition: ease filter, transform 0.3s;
+        cursor: pointer;
+        transform-origin: center;
+
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
+
+      h2 {
+        z-index: 1;
+        margin-top: 2rem;
+        color: $preto;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 1.75rem;
+        max-width: 400px;
+        margin-bottom: 1.5rem;
+      }
+
+      .form {
+        button {
+          margin-bottom: 2rem;
+        }
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        line-height: 1.2rem * 2;
+        margin-bottom: 1.2rem;
+        border: none;
+        border-bottom: 5px solid $cobreClaro;
+        background: $amareloPastel;
+        min-width: 250px;
+        padding-left: 5px;
+        outline: none;
+        color: $preto;
+
+        &:focus {
+          border-bottom: 5px solid $preto;
+        }
       }
     }
-  }
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
+    .loader {
+      position: relative;
+      height: 18px;
+      width: 18px;
+      display: inline-block;
+      animation: around 5.4s infinite;
     }
 
-    to {
-      opacity: 1;
+    @keyframes around {
+      0% {
+        transform: rotate(0deg)
+      }
+
+      100% {
+        transform: rotate(360deg)
+      }
+    }
+
+    .loader::before {
+      content: "";
+      background: transparent;
+      position: absolute;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border-width: 2px;
+      border-color: $cinza $cinza transparent transparent;
+      border-style: solid;
+      border-radius: 20px;
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      animation: around 0.7s ease-in-out infinite;
+    }
+
+    .loader::before {
+      animation: around 0.7s ease-in-out 0.1s infinite;
+      background: transparent;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .feedback {
+      display: none;
+
+      h2 {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .action-button-whatsapp-modal {
+      margin-bottom: 2rem !important;
     }
   }
 }

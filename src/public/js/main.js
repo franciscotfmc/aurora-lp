@@ -218,25 +218,61 @@ function handlePhoneInput(e) {
 }
 
 function phoneMask(phone) {
-  return phone.replace(/\D/g, '')
-    .replace(/^(\d)/, '($1')
-    .replace(/^(\(\d{2})(\d)/, '$1) $2')
-    .replace(/(\d{4})(\d{1,5})/, '$1-$2')
-    .replace(/(-\d{5})\d+?$/, '$1');
+  if (phone.length >= 5 && phone[5] === '9') {
+    return phone.replace(/\D/g, '')
+      .replace(/^(\d)/, '($1')
+      .replace(/^(\(\d{2})(\d)/, '$1) $2')
+      .replace(/(\d{5})(\d{1,4})/, '$1-$2')
+      .replace(/(-\d{5})\d+?$/, '$1');
+  } else {
+    return phone.replace(/\D/g, '')
+      .replace(/^(\d)/, '($1')
+      .replace(/^(\(\d{2})(\d)/, '$1) $2')
+      .replace(/(\d{4})(\d{1,5})/, '$1-$2')
+      .replace(/(-\d{5})\d+?$/, '$1');
+  }
 }
 
-function postLead(id) {
-  let data = {
-    nome: document.getElementById('nome' + id).value,
-    email: document.getElementById('email' + id).value,
-    telefone: document.getElementById('telefone' + id).value
-  };
+function closeModal(id) {
+  window[id].close();
+  let form = document.getElementById('form' + id);
+  let feedback = document.getElementById('feedback' + id);
+  form.style.display = 'inline';
+  feedback.style.display = 'none';
+}
 
-  fetch('/leads', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
-  }).then(res => {
-    console.log("Request complete! response:", res);
-  });
+function postLead(id, event) {
+  let form = document.getElementById('form' + id);
+
+  if (form.checkValidity()) {
+
+    event.preventDefault();
+
+    let data = {
+      nome: document.getElementById('nome' + id).value,
+      email: document.getElementById('email' + id).value,
+      telefone: document.getElementById('telefone' + id).value
+    };
+
+    let button = document.getElementById('action' + id);
+    let loading = document.getElementById('loading' + id);
+    let feedback = document.getElementById('feedback' + id);
+
+    button.style.display = 'none';
+    loading.classList.add('loader');
+
+    fetch('/leads', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(res => {
+      setTimeout(() => {
+        button.style.display = 'inline';
+        loading.classList.remove('loader');
+        form.style.display = 'none';
+        feedback.style.display = 'inline-block'
+        form.reset();
+      }, 500)
+    });
+  }
 }

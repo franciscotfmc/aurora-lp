@@ -451,7 +451,7 @@ body ::selection {
   color: #FAE14B;
   background: rgba(0, 0, 0, 0.25);
 }
-body .button, body .action-button-form, body .action-button-inverse, body .action-button {
+body .button, body .action-button-form, body .action-button-inverse, body .action-button-whatsapp-modal, body .action-button {
   width: 310px;
   height: 68px;
   line-height: 68px;
@@ -463,18 +463,27 @@ body .button, body .action-button-form, body .action-button-inverse, body .actio
   border: 0;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
 }
-body .button:hover, body .action-button-form:hover, body .action-button-inverse:hover, body .action-button:hover {
+body .button:hover, body .action-button-form:hover, body .action-button-inverse:hover, body .action-button-whatsapp-modal:hover, body .action-button:hover {
   color: #696969;
   cursor: pointer;
 }
 @media only screen and (max-width: 480px) {
-  body .button, body .action-button-form, body .action-button-inverse, body .action-button {
+  body .button, body .action-button-form, body .action-button-inverse, body .action-button-whatsapp-modal, body .action-button {
     width: 283px;
     font-size: 16px;
   }
 }
 body .action-button {
   background-color: #FAE14B;
+}
+body .action-button-whatsapp-modal {
+  background-color: #FAE14B;
+}
+@media only screen and (max-width: 480px) {
+  body .action-button-whatsapp-modal {
+    width: 240px;
+    font-size: 16px;
+  }
 }
 body .action-button-inverse {
   background-color: #FFF5DC;
@@ -1376,6 +1385,9 @@ body #sobre .container .row-2 .row-2-2 .box-3 .imagem .foto:after {
 body #sobre .container .row-2 .row-2-2 .box-4 {
   max-width: 680px;
 }
+body #sobre .container .row-2 .row-2-2 .box-4 p {
+  margin-bottom: 2rem;
+}
 body #sobre .container .row-2 .row-2-2 .box-4 a {
   margin: 4rem 0;
 }
@@ -1827,24 +1839,25 @@ body #blog .container .resumo .lista .cta a:hover {
     margin-right: -12rem;
   }
 }
-body .formulario-contato dialog {
+body .formulario-contato .d-container dialog {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 1rem 3rem;
+  padding: 1rem 1rem;
   background: #FFF5DC;
   border-radius: 2px;
   border: 0;
   box-shadow: 0 5px 30px 0 rgba(155, 25, 130, 0.85);
   animation: fadeIn 1s ease both;
+  max-height: 500px;
 }
-body .formulario-contato dialog::backdrop {
+body .formulario-contato .d-container dialog::backdrop {
   animation: fadeIn 1s ease both;
   background: rgba(255, 255, 255, 0.4);
   z-index: 2;
   backdrop-filter: blur(20px);
 }
-body .formulario-contato dialog .x {
+body .formulario-contato .d-container dialog .x {
   filter: grayscale(1);
   border: none;
   background: none;
@@ -1855,11 +1868,10 @@ body .formulario-contato dialog .x {
   cursor: pointer;
   transform-origin: center;
 }
-body .formulario-contato dialog .x:hover {
+body .formulario-contato .d-container dialog .x:hover {
   filter: grayscale(0);
-  transform: scale(1.1);
 }
-body .formulario-contato dialog h2 {
+body .formulario-contato .d-container dialog h2 {
   z-index: 1;
   margin-top: 2rem;
   color: #000000;
@@ -1867,12 +1879,12 @@ body .formulario-contato dialog h2 {
   font-size: 1.4rem;
   line-height: 1.75rem;
   max-width: 400px;
+  margin-bottom: 1.5rem;
 }
-body .formulario-contato dialog .form {
-  margin-top: 1rem;
+body .formulario-contato .d-container dialog .form button {
   margin-bottom: 2rem;
 }
-body .formulario-contato dialog input {
+body .formulario-contato .d-container dialog input {
   display: block;
   width: 100%;
   font-size: 1.2rem;
@@ -1886,8 +1898,43 @@ body .formulario-contato dialog input {
   outline: none;
   color: #000000;
 }
-body .formulario-contato dialog input:focus {
+body .formulario-contato .d-container dialog input:focus {
   border-bottom: 5px solid #000000;
+}
+body .formulario-contato .d-container .loader {
+  position: relative;
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+  animation: around 5.4s infinite;
+}
+@keyframes around {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body .formulario-contato .d-container .loader::before {
+  content: "";
+  background: transparent;
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-width: 2px;
+  border-color: #696969 #696969 transparent transparent;
+  border-style: solid;
+  border-radius: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  animation: around 0.7s ease-in-out infinite;
+}
+body .formulario-contato .d-container .loader::before {
+  animation: around 0.7s ease-in-out 0.1s infinite;
+  background: transparent;
 }
 @keyframes fadeIn {
   from {
@@ -1896,6 +1943,15 @@ body .formulario-contato dialog input:focus {
   to {
     opacity: 1;
   }
+}
+body .formulario-contato .d-container .feedback {
+  display: none;
+}
+body .formulario-contato .d-container .feedback h2 {
+  margin-bottom: 1.5rem;
+}
+body .formulario-contato .d-container .action-button-whatsapp-modal {
+  margin-bottom: 2rem !important;
 }
 body #rodape {
   display: flex;
