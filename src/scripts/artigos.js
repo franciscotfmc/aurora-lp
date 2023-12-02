@@ -5,7 +5,7 @@ module.exports = [{
   imageDescription: 'Mulher sorrindo e mostrando os dentes',
   name: 'gengivoplastia-ouro-preto',
   time: '02/12/2023',
-  title: 'Como é feita a gengivoplastia? A recuperação doi? Saiba onde fazer em Ouro Preto!',
+  title: 'Como é feita a gengivoplastia? A recuperação dói? Saiba onde fazer em Ouro Preto!',
   description: 'A gengivoplastia é uma solução simples e rápida para remodelar a gengiva, que pode ser feita em consultório com anestesia local. Muitas pessoas podem pensar que...',
   href: '/blog/gengivoplastia-ouro-preto/'
 }, {
