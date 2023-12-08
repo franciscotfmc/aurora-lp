@@ -254,6 +254,16 @@ app.get('/blog/gengivoplastia-ouro-preto/', function (req, res) {
   res.render('blog/gengivoplastia-ouro-preto/index', data);
 });
 
+app.get('/blog/parestesia-o-que-e/', function (req, res) {
+
+  let data = {
+    cssIndex: '/blog/parestesia-o-que-e/index.css',
+    GA: false
+  };
+
+  res.render('blog/parestesia-o-que-e/index', data);
+});
+
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`)
 });
