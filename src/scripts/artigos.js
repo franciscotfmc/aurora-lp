@@ -9,6 +9,14 @@ module.exports = [{
   description: 'Basicamente, esse tratamento consiste em remodelar os dentes com o uso de restaurações ou por meio de uma broca ou de uma lixa, removendo pequenas quantidades de esmalte dental. Com ele, o objetivo é...',
   href: '/blog/recontorno-estetico-dental-contorno-dentes/'
 }, {
+  image: '/img/blog/parestesia-o-que-e/mulher-maos-boca',
+  imageDescription: 'Mulher preocupada com as mãos tampando a boca',
+  name: 'parestesia-o-que-e',
+  time: '07/12/2023',
+  title: 'Parestesia bucal: o que é, causas e tratamentos',
+  description: 'A parestesia bucal se manifesta pela presença de sensações anormais na boca, como formigamento, dormência, queimação ou uma sensação de agulhadas. Esses sintomas podem aparecer em várias partes da boca...',
+  href: '/blog/parestesia-o-que-e/'
+}, {
   image: '/img/blog/gengivoplastia-ouro-preto/mulher-sorrindo-mostrando-dentes',
   imageDescription: 'Mulher sorrindo e mostrando os dentes',
   name: 'gengivoplastia-ouro-preto',
