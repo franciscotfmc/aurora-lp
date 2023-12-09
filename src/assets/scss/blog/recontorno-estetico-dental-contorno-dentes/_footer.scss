@@ -1,0 +1,92 @@
+footer {
+
+  display: flex;
+  flex-direction: column;
+  background-color: $roxo;
+  justify-content: center;
+  align-items: center;
+  border-top: 8px solid $cobreClaro;
+
+  .cta {
+    padding: 0 2rem;
+
+    .title {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin: 4rem 0 2rem 0;
+      color: $amarelo;
+    }
+
+    .text {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.9rem;
+      color: $branco;
+      max-width: 57rem;
+    }
+
+    div {
+      max-width: 1440px;
+    }
+
+    .marca {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+      gap: 2rem;
+
+      .logo {
+        margin-right: 4rem;
+      }
+
+      @media only screen and (max-width: 640px) {
+        flex-direction: column;
+
+        .logo {
+          margin: 2rem 0 0 0;
+          text-align: right;
+        }
+      }
+    }
+
+    #instagram {
+      img {
+        width: 2.5rem;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+
+      span {
+        font-size: 1.8rem;
+        color: white;
+        vertical-align: middle;
+        cursor: pointer;
+      }
+
+      .endereco {
+        margin-top: 2rem;
+        max-width: 14rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .elipse {
+    width: 100%;
+    background-color: $cobreClaro;
+    clip-path: ellipse(3408px 3211px at 508px 3218px);
+    height: 150px;
+
+    p {
+      font-size: 2rem;
+      color: white;
+    }
+  }
+}
