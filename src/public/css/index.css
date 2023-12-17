@@ -1602,6 +1602,7 @@ body #estrutura .container .titulo {
 body #estrutura .container #e-slider {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 body #estrutura .container #e-slider .keen-slider__slide {
   display: flex;
@@ -1678,6 +1679,7 @@ body #estrutura .container .img-dots .img-dots-active {
     align-items: center;
     z-index: 2;
     padding: 20px 0 20px 0;
+    margin-bottom: 0;
   }
   body #estrutura .container .img-dots > span {
     width: 16px;
@@ -1726,6 +1728,9 @@ body #estrutura .container .img-dots .img-dots-active {
     max-height: 300px;
     min-height: 215px;
     object-fit: cover;
+  }
+  body #estrutura .container .img-dots {
+    margin-bottom: 0;
   }
   body #estrutura .container .img-dots > span {
     width: 12px;

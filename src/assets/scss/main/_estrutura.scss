@@ -30,6 +30,7 @@
     #e-slider {
       display: flex;
       flex-direction: row;
+      align-items: center;
 
       .keen-slider__slide {
         display: flex;
@@ -124,6 +125,7 @@
         align-items: center;
         z-index: 2;
         padding: 20px 0 20px 0;
+        margin-bottom: 0;
 
         >span {
           width: 16px;
@@ -193,6 +195,8 @@
       }
 
       .img-dots {
+        margin-bottom: 0;
+
         >span {
           width: 12px;
           height: 12px;
