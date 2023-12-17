@@ -931,6 +931,110 @@ body #draluciana .bg {
     min-width: 290px;
   }
 }
+body #invisalign {
+  background-color: transparent;
+}
+body #invisalign .container {
+  position: relative;
+}
+body #invisalign .container .arco-1 {
+  padding-top: 10rem;
+  margin-top: 3.438rem;
+  display: inline-block;
+  background-color: #313131;
+  width: 100%;
+  clip-path: ellipse(82% 66% at 30% -6%);
+  position: relative;
+  z-index: -2;
+}
+body #invisalign .container .arco-2 {
+  padding-top: 13rem;
+  display: inline-block;
+  background-image: linear-gradient(to bottom, #313131, #D9D9D9);
+  width: 100%;
+  clip-path: ellipse(74% 58% at 47% -3%);
+  position: absolute;
+  top: 84px;
+  left: 0;
+  z-index: -3;
+}
+body #invisalign .container .conteudo {
+  padding-top: 12rem;
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body #invisalign .container .conteudo img {
+  width: 50%;
+}
+body #invisalign .container .conteudo .cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body #invisalign .container .conteudo .cta p {
+  font-size: 2.9rem;
+  line-height: 54px;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  color: #696969;
+}
+@media only screen and (max-width: 1216px) {
+  body #invisalign .container .arco-1 {
+    margin-top: -1rem;
+  }
+  body #invisalign .container .arco-2 {
+    margin-top: -4rem;
+  }
+}
+@media only screen and (max-width: 980px) {
+  body #invisalign .container .conteudo {
+    padding-top: 5rem;
+    flex-direction: column-reverse;
+  }
+  body #invisalign .container .conteudo img {
+    width: 90%;
+  }
+  body #invisalign .container .conteudo .cta {
+    margin-top: 5rem;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  body #invisalign .container .conteudo img {
+    width: 90%;
+  }
+  body #invisalign .container .conteudo .cta p {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  body #invisalign .container .arco-1 {
+    margin-top: -2.5rem;
+    clip-path: ellipse(77% 66% at 30% -6%);
+  }
+  body #invisalign .container .arco-2 {
+    margin-top: -6.5rem;
+    clip-path: ellipse(74% 58% at 47% -3%);
+  }
+}
+@media only screen and (max-width: 369px) {
+  body #invisalign .container .conteudo {
+    padding-bottom: 7.5rem;
+  }
+  body #invisalign .container .conteudo img {
+    width: 99%;
+  }
+  body #invisalign .container .conteudo .cta p {
+    font-size: 1.8rem;
+    line-height: 40px;
+  }
+}
 body #depoimentos {
   background-color: #FFF5DC;
 }
@@ -1504,7 +1608,7 @@ body #estrutura .container #e-slider .keen-slider__slide {
   flex-direction: column;
   max-height: 812px;
   min-width: fit-content;
-  background-color: #A56E73;
+  background-color: #FFF5DC;
   background-image: url("/img/loader.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -1520,6 +1624,7 @@ body #estrutura .container #e-slider .content img {
   max-height: 812px;
   object-fit: contain;
   position: relative;
+  filter: drop-shadow(1px 1px 10px #313131);
 }
 body #estrutura .container #e-slider .blur {
   position: relative;
@@ -1554,7 +1659,7 @@ body #estrutura .container .img-dots > span {
 body #estrutura .container .img-dots .img-dots-active {
   background-color: #9B1982;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1216px) {
   body #estrutura .container .gradient {
     height: 120px;
   }

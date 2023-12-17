@@ -1,0 +1,142 @@
+#invisalign {
+  background-color: transparent;
+
+  .container {
+    position: relative;
+
+    .arco-1 {
+      padding-top: 10rem;
+      margin-top: 3.438rem;
+      display: inline-block;
+      background-color: $chumbo;
+      width: 100%;
+      // clip-path: ellipse(62% 78% at 47% -3%);
+      clip-path: ellipse(82% 66% at 30% -6%);
+      position: relative;
+      z-index: -2;
+    }
+
+    .arco-2 {
+      padding-top: 13rem;
+      display: inline-block;
+      background-image: linear-gradient(to bottom, $chumbo, $cinzaClarissimo);
+      width: 100%;
+      // clip-path: ellipse(62% 78% at 47% -3%);
+      clip-path: ellipse(74% 58% at 47% -3%);
+      position: absolute;
+      top: 84px;
+      left: 0;
+      z-index: -3;
+    }
+
+    .conteudo {
+      padding-top: 12rem;
+      padding-bottom: 10rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 50%;
+      }
+
+      .cta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        p {
+          font-size: 2.9rem;
+          line-height: 54px;
+          margin-bottom: 2rem;
+          font-weight: 400;
+          color: $cinza;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1216px) {
+    .container {
+
+      .arco-1 {
+        margin-top: -1rem;
+      }
+
+      .arco-2 {
+        margin-top: -4rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 980px) {
+    .container {
+      .conteudo {
+        padding-top: 5rem;
+        flex-direction: column-reverse;
+
+        img {
+          width: 90%;
+        }
+
+        .cta {
+          margin-top: 5rem;
+          flex-direction: column;
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 650px) {
+    .container {
+      .conteudo {
+        img {
+          width: 90%;
+        }
+
+        .cta {
+          p {
+            font-size: 2rem;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    .container {
+      .arco-1 {
+        margin-top: -2.5rem;
+        clip-path: ellipse(77% 66% at 30% -6%);
+      }
+
+      .arco-2 {
+        margin-top: -6.5rem;
+        clip-path: ellipse(74% 58% at 47% -3%);
+      }
+    }
+  }
+
+  @media only screen and (max-width: 369px) {
+    .container {
+      .conteudo {
+        padding-bottom: 7.5rem;
+
+        img {
+          width: 99%;
+        }
+
+        .cta {
+          p {
+            font-size: 1.8rem;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  }
+}

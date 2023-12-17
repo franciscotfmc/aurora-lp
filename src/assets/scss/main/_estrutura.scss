@@ -36,8 +36,7 @@
         flex-direction: column;
         max-height: 812px;
         min-width: fit-content;
-
-        background-color: $cobreEscuro;
+        background-color: $amareloPastel;
         background-image: url('/img/loader.svg');
         background-position: center;
         background-repeat: no-repeat;
@@ -54,7 +53,7 @@
           max-height: 812px;
           object-fit: contain;
           position: relative;
-          // filter: drop-shadow(1px 1px 10px $sombra);
+          filter: drop-shadow(1px 1px 10px $chumbo);
         }
       }
 
@@ -98,7 +97,7 @@
     }
   }
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1216px) {
     .container {
       .gradient {
         height: 120px;
