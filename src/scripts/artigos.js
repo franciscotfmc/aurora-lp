@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/protese-dentadura-removivel-ouro-preto/idosa-sorrindo-protese',
+  imageDescription: 'Mulher idosa sorrindo ao lado da filha',
+  name: 'protese-dentadura-removivel-ouro-preto',
+  time: '12/01/2023',
+  title: 'Como funciona a dentadura removível + 3 coisas que você precisa saber',
+  description: 'Primeiramente, existem vários fatores que influenciam o preço e a durabilidade de uma prótese removível, como os materiais usados, a qualidade do trabalho, a dificuldade do caso, a localização e a experiência...',
+  href: '/blog/protese-dentadura-removivel-ouro-preto/'
+}, {
   image: '/img/blog/recontorno-estetico-dental-contorno-dentes/sorriso-recontorno-cosmetico',
   imageDescription: 'Mulher preocupada com as mãos tampando a boca',
   name: 'recontorno-estetico-dental-contorno-dentes',
