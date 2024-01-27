@@ -1,10 +1,18 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/crianca-quebrou-dente-ouro-preto/crianca-sorrindo',
+  imageDescription: 'Retrato de um menino com síndrome de down enquanto brinca em um parque',
+  name: 'crianca-quebrou-dente-ouro-preto',
+  time: '27/01/2024',
+  title: 'Criança caiu, quebrou o dente ou sofreu algum trauma dentário? Veja dicas de odontopediatras em Ouro Preto',
+  description: 'Seu filho quebrou ou perdeu algum dente? Esses casos são comuns nos consultórios de odontopediatria, já que é na infância...',
+  href: '/blog/crianca-quebrou-dente-ouro-preto/'
+}, {
   image: '/img/blog/protese-dentadura-removivel-ouro-preto/idosa-sorrindo-protese',
   imageDescription: 'Mulher idosa sorrindo ao lado da filha',
   name: 'protese-dentadura-removivel-ouro-preto',
-  time: '12/01/2023',
+  time: '12/01/2024',
   title: 'Como funciona a dentadura removível + 3 coisas que você precisa saber',
   description: 'Primeiramente, existem vários fatores que influenciam o preço e a durabilidade de uma prótese removível, como os materiais usados, a qualidade do trabalho, a dificuldade do caso, a localização e a experiência...',
   href: '/blog/protese-dentadura-removivel-ouro-preto/'

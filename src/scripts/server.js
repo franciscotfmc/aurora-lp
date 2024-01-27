@@ -284,6 +284,17 @@ app.get('/blog/protese-dentadura-removivel-ouro-preto/', function (req, res) {
   res.render('blog/protese-dentadura-removivel-ouro-preto/index', data);
 });
 
+app.get('/blog/crianca-quebrou-dente-ouro-preto/', function (req, res) {
+
+  let data = {
+    cssIndex: '/blog/crianca-quebrou-dente-ouro-preto/index.css',
+    GA: false
+  };
+
+  res.render('blog/crianca-quebrou-dente-ouro-preto/index', data);
+});
+
+
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`)
 });
