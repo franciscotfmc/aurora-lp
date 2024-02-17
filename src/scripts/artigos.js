@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = [{
+  image: '/img/blog/invisalign-aparelho-invisivel-ouro-preto/invisa',
+  imageDescription: 'Aparelho superior invisível da Invisalign',
+  name: 'invisalign-aparelho-invisivel-ouro-preto',
+  time: '17/02/2024',
+  title: 'Invisalign em Ouro Preto: por onde começar com os alinhadores invisíveis?',
+  description: 'A demanda pelo tratamento com Invisalign tem crescido bastante, e isso não é mera coincidência. Por estar mais popular e pelo surgimento de mais empresas especializadas...',
+  href: '/blog/invisalign-aparelho-invisivel-ouro-preto/'
+}, {
   image: '/img/blog/crianca-quebrou-dente-ouro-preto/crianca-sorrindo',
   imageDescription: 'Retrato de um menino com síndrome de down enquanto brinca em um parque',
   name: 'crianca-quebrou-dente-ouro-preto',
